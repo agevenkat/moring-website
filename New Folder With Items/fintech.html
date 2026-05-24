@@ -18,25 +18,6 @@
     <div class="nav-links">
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" type="button">
-          Solutions
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aidlc.html" class="nav-dropdown-item">
-            <span class="dd-title">AI-DLC</span>
-            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
-          </a>
-          <a href="aiops.html" class="nav-dropdown-item">
-            <span class="dd-title">AI Ops</span>
-            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
-          </a>
-        </div>
-      </div>
-      <a href="platform.html">Platform</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
           Verticals
           <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,7 +71,7 @@
         your AI-DLC on rails before procurement asks.
       </p>
       <div class="hero-ctas">
-        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
+        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop with Rajarajan</a>
         <a href="#compliance" class="btn btn-secondary btn-lg">See the audit posture</a>
       </div>
       <div class="hero-meta">
@@ -109,113 +90,18 @@
       </div>
     </div>
 
-    <!-- Fintech scenario · payment transaction → fraud-aware adjudication -->
-    <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fintech scenario: a card-not-present transaction flows through Moring's fraud-aware adjudication agent under SR 11-7 model-risk controls; output is approve, decline, or a drafted SAR with audit-trail evidence retained for regulator review.">
-      <!-- LEFT · inbound transaction -->
-      <text x="20" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">INBOUND · CARD-NOT-PRESENT</text>
-
-      <g font-family="'JetBrains Mono', monospace" font-size="11">
-        <rect x="20" y="50" width="160" height="44" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="36" cy="72" r="4" fill="#D85F2C"/>
-        <text x="50" y="76" fill="#1A1815">Payment auth</text>
-        <text x="50" y="88" fill="#8A8278" font-size="9">$1,847 · merchant-3F</text>
-
-        <rect x="20" y="102" width="160" height="44" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="36" cy="124" r="4" fill="#D85F2C"/>
-        <text x="50" y="128" fill="#1A1815">Customer signal</text>
-        <text x="50" y="140" fill="#8A8278" font-size="9">device · geo · velocity</text>
-
-        <rect x="20" y="154" width="160" height="44" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="36" cy="176" r="4" fill="#D85F2C"/>
-        <text x="50" y="180" fill="#1A1815">Historical pattern</text>
-        <text x="50" y="192" fill="#8A8278" font-size="9">90-day baseline</text>
-
-        <rect x="20" y="206" width="160" height="44" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="36" cy="228" r="4" fill="#D85F2C"/>
-        <text x="50" y="232" fill="#1A1815">Watchlist hit</text>
-        <text x="50" y="244" fill="#8A8278" font-size="9">OFAC · internal lists</text>
-
-        <rect x="20" y="258" width="160" height="44" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="36" cy="280" r="4" fill="#D85F2C"/>
-        <text x="50" y="284" fill="#1A1815">CMDB · core ledger</text>
-        <text x="50" y="296" fill="#8A8278" font-size="9">account standing</text>
-      </g>
-
-      <!-- SLA counter -->
-      <text x="20" y="324" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="1.5">DECISION SLA</text>
-      <text x="20" y="358" font-family="'Fraunces', serif" font-size="36" font-weight="600" fill="#1A1815" letter-spacing="-0.02em">280<tspan font-size="20" fill="#8A8278">ms</tspan></text>
-
-      <!-- converging arrows -->
-      <g stroke="#D85F2C" stroke-width="1.2" fill="none" opacity="0.8">
-        <path d="M 182 72 Q 220 90 250 200" />
-        <path d="M 182 124 Q 220 140 252 210" />
-        <path d="M 182 176 L 252 220" />
-        <path d="M 182 228 Q 220 234 252 230" />
-        <path d="M 182 280 Q 220 260 252 240" />
-      </g>
-
-      <!-- CENTER · Moring fraud-aware adjudication brain -->
-      <rect x="252" y="142" width="174" height="174" rx="14" fill="#1A1815"/>
-      <text x="266" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C" letter-spacing="1.8">MORING · FRAUD-AWARE</text>
-      <text x="266" y="190" font-family="'Fraunces', serif" font-size="16" fill="#FAF7F2" font-weight="600">Adjudication</text>
-      <text x="266" y="208" font-family="'Fraunces', serif" font-size="16" fill="#FAF7F2" font-weight="600" font-style="italic">sub-agent.</text>
-
-      <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#FAF7F2">
-        <rect x="266" y="226" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="300" y="241" text-anchor="middle">Score</text>
-
-        <rect x="342" y="226" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="376" y="241" text-anchor="middle">Reason</text>
-
-        <rect x="266" y="254" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="300" y="269" text-anchor="middle">SAR draft</text>
-
-        <rect x="342" y="254" width="68" height="22" rx="3" fill="rgba(216,95,44,0.18)" stroke="#D85F2C"/>
-        <text x="376" y="269" text-anchor="middle" fill="#D85F2C">Analyst-in-loop</text>
-      </g>
-
-      <text x="266" y="296" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(250,247,242,0.55)" letter-spacing="1.2">SR 11-7 · MODEL PINNED</text>
-
-      <!-- pulse -->
-      <circle cx="408" cy="158" r="3.5" fill="#2E5D3F">
-        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- outflow arrow -->
-      <g stroke="#D85F2C" stroke-width="2" fill="none">
-        <path d="M 426 222 L 458 222" />
-        <path d="M 454 218 L 462 222 L 454 226" fill="#D85F2C"/>
-      </g>
-
-      <!-- RIGHT · decision output -->
-      <text x="466" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.5">DECISION</text>
-
-      <g font-family="'JetBrains Mono', monospace" font-size="9">
-        <rect x="446" y="180" width="80" height="40" rx="4" fill="#fff" stroke="#2E5D3F"/>
-        <text x="454" y="196" fill="#2E5D3F" font-weight="600">CLEAR</text>
-        <text x="454" y="212" fill="#1A1815" font-size="8">approved</text>
-
-        <rect x="446" y="228" width="80" height="40" rx="4" fill="#fff" stroke="#D85F2C"/>
-        <text x="454" y="244" fill="#D85F2C" font-weight="600">REVIEW</text>
-        <text x="454" y="260" fill="#1A1815" font-size="8">SAR drafted</text>
-
-        <rect x="446" y="276" width="80" height="40" rx="4" fill="#1A1815"/>
-        <text x="454" y="292" fill="#D85F2C" font-weight="600">BLOCK</text>
-        <text x="454" y="308" fill="#FAF7F2" font-size="8">notify FinCrime</text>
-      </g>
-
-      <!-- BOTTOM · audit + compliance -->
-      <rect x="20" y="390" width="280" height="100" rx="8" fill="#F2EDE2" stroke="#DDD5C7"/>
-      <text x="36" y="412" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.5">EVERY DECISION · TRACE-ID KEYED</text>
-      <text x="36" y="438" font-family="'Fraunces', serif" font-size="13" fill="#1A1815" font-weight="600">Audit lake · forensics in 60s</text>
-      <text x="36" y="458" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C">Reasoning chain · model ver · inputs</text>
-      <text x="36" y="476" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">7-year retention · regulator schedule</text>
-
-      <rect x="312" y="390" width="208" height="100" rx="8" fill="#1A1815"/>
-      <text x="328" y="412" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C" letter-spacing="1.5">FRAUD CATCH UPLIFT</text>
-      <text x="328" y="446" font-family="'Fraunces', serif" font-size="22" fill="#FAF7F2" font-weight="600">4× detection</text>
-      <text x="328" y="476" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(250,247,242,0.6)">60% call-volume reduction</text>
-    </svg>
+    <div class="viz-card">
+      <div class="viz-title">Audit lake · one engineer's pull request</div>
+      <div class="viz-row"><span class="k">trace_id</span><span class="v">3e02-pr-ff19</span></div>
+      <div class="viz-row"><span class="k">team</span><span class="v">payments-core</span></div>
+      <div class="viz-row"><span class="k">repo</span><span class="v">core/transactions#8842</span></div>
+      <div class="viz-row"><span class="k">data_class</span><span class="v">pci-tier-2 · masked</span></div>
+      <div class="viz-row"><span class="k">model</span><span class="v">frontier · pinned-v3.2</span></div>
+      <div class="viz-row"><span class="k">secret_redact</span><span class="v">2 keys redacted · pre-egress</span></div>
+      <div class="viz-row"><span class="k">cost</span><span class="v">$0.41 · charged to payments-core</span></div>
+      <div class="viz-row"><span class="k">retention</span><span class="v">7-year · regulator schedule</span></div>
+      <div class="viz-title" style="margin-top: 18px; margin-bottom: 0;">Same row, four query surfaces</div>
+    </div>
   </div>
 </header>
 
@@ -414,7 +300,7 @@
     <p>Fourteen days from now, your CISO has live forensics. Your CFO has a per-team
       attribution dashboard. Your engineers code in the substrate they already use.</p>
     <div class="hero-ctas">
-      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
+      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop with Rajarajan</a>
       <a href="moring-ai-homepage.html" class="btn btn-secondary btn-lg">See the platform</a>
     </div>
   </div>
@@ -428,15 +314,12 @@
         <div class="foot-tagline">AI-DLC infrastructure for regulated enterprises.</div>
       </div>
       <div>
-        <h4>Solutions</h4>
-        <a href="aidlc.html">AI-DLC · Engineering</a>
-        <a href="aiops.html">AI Ops · Operations</a>
-        <a href="platform.html">The Moring Platform</a>
-      </div>
-      <div>
-        <h4>Industries &amp; Partners</h4>
+        <h4>Verticals</h4>
         <a href="insurance.html">Insurance</a>
         <a href="fintech.html">Fintech &amp; Banks</a>
+      </div>
+      <div>
+        <h4>Partners</h4>
         <a href="aws.html">AWS</a>
         <a href="anthropic.html">Anthropic</a>
       </div>

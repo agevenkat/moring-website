@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Moring.ai · Supercharge your AI-DLC with Moring</title>
+<meta name="description" content="Moring is the infrastructure that supercharges enterprise AI-DLC. Five live components — cost observability, governed workflow, plugin distribution, failure drill, engineering case study — for Fortune-500 platform teams." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="moring.css">
+<style>
+  /* homepage-specific viz styles */
+  .hero h1 { max-width: 14ch; }
+  .hero h1 em { font-style: italic; color: var(--orange); font-weight: 500; }
+
+  .viz-bar {
+    margin-top: 16px;
+    height: 8px;
+    background: var(--cream-deep);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .viz-bar-fill { height: 100%; background: var(--orange); border-radius: 4px; }
+
+  /* failure drill viz */
+  .attack-list { display: flex; flex-direction: column; gap: 14px; }
+  .attack {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 18px;
+  }
+  .attack-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .attack-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 4px; letter-spacing: 0.05em; }
+  .attack-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: var(--green);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+  }
+
+  /* case-study viz */
+  .study-metric { padding: 14px 0; border-top: 1px solid var(--line); }
+  .study-metric:first-child { border-top: none; }
+  .study-metric .lbl { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; }
+  .study-metric .val { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 600; color: var(--ink); margin-top: 2px; }
+  .study-metric .val em { color: var(--orange); font-style: normal; }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav>
+  <div class="container nav-inner">
+    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button">
+          Verticals
+          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="insurance.html" class="nav-dropdown-item">
+            <span class="dd-title">Insurance</span>
+            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
+          </a>
+          <a href="fintech.html" class="nav-dropdown-item">
+            <span class="dd-title">Fintech &amp; Banks</span>
+            <span class="dd-desc">SR 11-7, FFIEC, agentic SDLC under MRM</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button">
+          Partners
+          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="aws.html" class="nav-dropdown-item">
+            <span class="dd-title">AWS</span>
+            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
+          </a>
+          <a href="anthropic.html" class="nav-dropdown-item">
+            <span class="dd-title">Anthropic</span>
+            <span class="dd-desc">Govern Claude at enterprise scale</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">AI&#8209;DLC infrastructure</span>
+      <h1>Supercharge your <em>AI&#8209;DLC</em> with Moring.</h1>
+      <p class="hero-sub">
+        Five live components — cost observability, governed workflow, plugin distribution,
+        failure drill, engineering case study — that put your agentic SDLC on
+        enterprise rails. Built for Fortune&#8209;500 platform teams.
+      </p>
+      <div class="hero-ctas">
+        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop with Rajarajan</a>
+        <a href="#security" class="btn btn-secondary btn-lg">Watch the failure drill</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="num">14 days</div>
+          <div class="lbl">To live substrate</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">$5–10M</div>
+          <div class="lbl">Y1 P&amp;L, eng-only</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">9 of 11</div>
+          <div class="lbl">SDLC stages instrumented</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="viz-card">
+      <div class="viz-title">Live · gateway in your cloud</div>
+      <div class="viz-row"><span class="k">trace_id</span><span class="v">e8f3-aa10-4f2c</span></div>
+      <div class="viz-row"><span class="k">team</span><span class="v">payments</span></div>
+      <div class="viz-row"><span class="k">agent</span><span class="v">code-agent · frontier-tier</span></div>
+      <div class="viz-row"><span class="k">tokens</span><span class="v">12,480 in (11,200 cached) · 640 out</span></div>
+      <div class="viz-row"><span class="k">cost</span><span class="v">$0.0381</span></div>
+      <div class="viz-row"><span class="k">hooks</span><span class="v" style="color: var(--green);">secret_redact:pass · budget_cap:pass</span></div>
+      <div class="viz-row"><span class="k">audit</span><span class="v">s3://audit-lake/2026/05/e8f3.jsonl</span></div>
+      <div class="viz-title" style="margin-top: 18px; margin-bottom: 0;">Same data · CLI · API · Grafana · Slack</div>
+    </div>
+  </div>
+</header>
+
+<!-- ====== SOCIAL PROOF ====== -->
+<section class="social">
+  <div class="container">
+    <h3>Built for platform teams running agentic coding at Fortune&#8209;500 scale.</h3>
+    <div class="logos">
+      <div class="logo-placeholder">Customer A</div>
+      <div class="logo-placeholder">Customer B</div>
+      <div class="logo-placeholder">Customer C</div>
+      <div class="logo-placeholder">Customer D</div>
+      <div class="logo-placeholder">Customer E</div>
+      <div class="logo-placeholder">Customer F</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FIVE COMPONENTS ====== -->
+<section class="band" id="product">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">The product · five live components</span>
+      <h2>One substrate. Five levers. Zero slides.</h2>
+      <p>Every component is curl-able, queryable, reproducible.
+        CTO hits the API on day 4. Platform team owns the source by day 12.</p>
+    </div>
+    <div class="components">
+      <div class="component">
+        <div class="day">Live · day 4</div>
+        <div class="num">01</div>
+        <div class="name">Cost Observability</div>
+        <div class="desc">Every AI call attributed by team, agent, and PR. One gateway, four surfaces.</div>
+      </div>
+      <div class="component">
+        <div class="day">Live · day 9</div>
+        <div class="num">02</div>
+        <div class="name">Governed Workflow</div>
+        <div class="desc">Hooks fire. MCP refuses out-of-scope. PRs auto-describe with cost and trace ID.</div>
+      </div>
+      <div class="component">
+        <div class="day">Live · day 7</div>
+        <div class="num">03</div>
+        <div class="name">Plugin Distribution</div>
+        <div class="desc">Governance ships like Helm charts. Soft, medium, hard enforcement — one dial.</div>
+      </div>
+      <div class="component">
+        <div class="day">Live · day 12</div>
+        <div class="num">04</div>
+        <div class="name">Failure Drill</div>
+        <div class="desc">Three live attacks. Zero reach the model. Every attempt audit-logged.</div>
+      </div>
+      <div class="component">
+        <div class="day">Real · days 5–12</div>
+        <div class="num">05</div>
+        <div class="name">5-Engineer Case Study</div>
+        <div class="desc">Real engineers. Real PRs. Recipe open-sourced to your platform team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BENEFIT 1: COST ====== -->
+<section class="band" style="padding-top: 0; padding-bottom: 0;">
+  <div class="container">
+    <div class="benefit">
+      <div class="benefit-copy">
+        <div class="marker">01</div>
+        <span class="eyebrow">Cost · FinOps for AI</span>
+        <h2 style="margin-top: 14px;">Attribute every dollar of AI spend.</h2>
+        <p>Most AI bills are "around $200K somewhere." One gateway tags every call by team,
+          agent, and PR — queryable from CLI, API, Grafana, or Slack.</p>
+        <ul class="proofs">
+          <li><span><b>Per-PR cost in days, not quarters.</b></span></li>
+          <li><span><b>50–90% off cacheable input</b> via prompt caching.</span></li>
+          <li><span><b>50% off async work</b> via the Batch API. 60–80% blended savings with tier-routing.</span></li>
+          <li><span><b>$100–200k of shadow spend recovered</b> annually.</span></li>
+        </ul>
+      </div>
+      <div class="viz-card">
+        <div class="viz-title">Y1 cost lever · 200 engineers</div>
+        <div class="viz-row"><span class="k">Naive bill</span><span class="v">$2.0M</span></div>
+        <div class="viz-row"><span class="k">After caching</span><span class="v">$1.1M</span></div>
+        <div class="viz-row"><span class="k">After batch routing</span><span class="v">$0.7M</span></div>
+        <div class="viz-row"><span class="k">After tier routing</span><span class="v">$0.4M</span></div>
+        <div class="viz-row"><span class="k" style="color: var(--orange); font-weight: 600;">Year-1 recovery</span><span class="v" style="color: var(--orange); font-weight: 600;">$1.6M</span></div>
+        <div class="viz-bar"><div class="viz-bar-fill" style="width: 80%;"></div></div>
+        <div style="margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em;">Payback &lt; 2 months on this lever alone</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BENEFIT 2: GOVERNANCE ====== -->
+<section class="band" style="padding-top: 0; padding-bottom: 0;" id="security">
+  <div class="container">
+    <div class="benefit reverse">
+      <div class="benefit-copy">
+        <div class="marker">02</div>
+        <span class="eyebrow">Governance · CISO buy-in</span>
+        <h2 style="margin-top: 14px;">Govern every agent action.</h2>
+        <p>Optimism is not a control. Policy enforced at the substrate — not in the prompt.
+          Hooks redact secrets. MCP catalogs scope tools. Plugins are signed.
+          Every decision lands in an audit lake.</p>
+        <ul class="proofs">
+          <li><span><b>Three live attacks blocked</b> — secret-in-prompt, indirect injection, unapproved MCP.</span></li>
+          <li><span><b>Soft / medium / hard enforcement</b> on one dial.</span></li>
+          <li><span><b>Audit lake in S3,</b> forensics retrievable by trace ID in under a minute.</span></li>
+          <li><span><b>&lt;30 ms latency overhead</b> across the full defense stack.</span></li>
+        </ul>
+      </div>
+      <div class="viz-card">
+        <div class="viz-title">Failure drill · live</div>
+        <div class="attack-list">
+          <div class="attack">
+            <div>
+              <div class="attack-title">Secret in prompt</div>
+              <div class="attack-sub">AKIA… pasted into context</div>
+            </div>
+            <span class="attack-status">REDACTED</span>
+          </div>
+          <div class="attack">
+            <div>
+              <div class="attack-title">Indirect injection</div>
+              <div class="attack-sub">"ignore previous" inside repo doc</div>
+            </div>
+            <span class="attack-status">REFUSED</span>
+          </div>
+          <div class="attack">
+            <div>
+              <div class="attack-title">Unapproved MCP</div>
+              <div class="attack-sub">External GitHub-helper server</div>
+            </div>
+            <span class="attack-status">DENIED</span>
+          </div>
+        </div>
+        <div style="margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em;">3 attacks · 0 reach the model · 3 audit entries</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BENEFIT 3: PROOF ====== -->
+<section class="band" style="padding-top: 0;">
+  <div class="container">
+    <div class="benefit">
+      <div class="benefit-copy">
+        <div class="marker">03</div>
+        <span class="eyebrow">Proof · the case study</span>
+        <h2 style="margin-top: 14px;">Defend the ROI with your own data.</h2>
+        <p>Synthetic benchmarks won't survive your CFO. Five engineers. Ten days.
+          Real PRs through a scoped GitHub App. The deltas your board will ask about —
+          and the recipe handed to your platform team.</p>
+        <ul class="proofs">
+          <li><span><b>Real engineers, real PRs.</b> No synthetic benchmark.</span></li>
+          <li><span><b>Aggregate + per-dev dashboards,</b> privacy-respecting.</span></li>
+          <li><span><b>Open-sourced recipe</b> on day 12 — github.com/moring/aidlc-stats.</span></li>
+          <li><span><b>Year-2:</b> same recipe, n=50, no consultants.</span></li>
+        </ul>
+      </div>
+      <div class="viz-card">
+        <div class="viz-title">5-engineer study · typical deltas</div>
+        <div class="study-metric">
+          <div class="lbl">Review time, p50</div>
+          <div class="val">−47% <em>·</em> <em>auto-summaries land</em></div>
+        </div>
+        <div class="study-metric">
+          <div class="lbl">Time-to-merge, p50</div>
+          <div class="val">−22%</div>
+        </div>
+        <div class="study-metric">
+          <div class="lbl">AI cost per merged PR</div>
+          <div class="val">$0.42</div>
+        </div>
+        <div class="study-metric">
+          <div class="lbl">SPACE friction · focus</div>
+          <div class="val">−1.1 <em>·</em> +0.7</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PERSONAS ====== -->
+<section class="band" style="background: var(--cream-deep);">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">For the buying committee</span>
+      <h2>Three signers. One substrate.</h2>
+      <p>Built for the room where the CTO, CISO, and CFO all have to say yes.
+        Each gets a different answer from the same foundation.</p>
+    </div>
+    <div class="cards-grid-3">
+      <div class="card-tile">
+        <div class="role">CTO · VP Engineering</div>
+        <h3>Agentic productivity, governed.</h3>
+        <p>Same agent UX your engineers use, governed underneath. $3.0–5.0M Y1 productivity on 200 engineers.</p>
+        <div class="link">For Engineering</div>
+      </div>
+      <div class="card-tile">
+        <div class="role">CISO · CRO</div>
+        <h3>Tested controls, not claims.</h3>
+        <p>Three live attacks blocked. Every attempt in your audit lake. Tested controls you can hand to auditors.</p>
+        <div class="link">For Security</div>
+      </div>
+      <div class="card-tile">
+        <div class="role">CFO · FinOps</div>
+        <h3>Per-PR attribution by day 4.</h3>
+        <p>Caching, batch, and routing cut blended spend 50–90%. 40–80× Y1 ROI. Payback under two months.</p>
+        <div class="link">For FinOps</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== HOW IT WORKS ====== -->
+<section class="band" id="how">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">How it works · the 14-day path</span>
+      <h2>The demo is the artifact. The substrate is the moat.</h2>
+      <p>No PoC theater. We ship in three phases. On day 14, your platform team owns the source.</p>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="day-range">Day 1 — 4 · Foundation</div>
+        <div class="step-num">01</div>
+        <h3>Cost layer goes live.</h3>
+        <p>LLM gateway deployed in your cloud. Every call attributed by team, agent, and PR.
+          CFO refreshes the dashboard on day four.</p>
+      </div>
+      <div class="step">
+        <div class="day-range">Day 5 — 12 · Workflow + Study</div>
+        <div class="step-num">02</div>
+        <h3>Engineers code in the substrate.</h3>
+        <p>Five volunteers run real sprint work through the governed workflow.
+          Hooks fire, MCPs scope, PRs auto-describe. Metrics roll up daily.</p>
+      </div>
+      <div class="step">
+        <div class="day-range">Day 12 — 14 · Handover</div>
+        <div class="step-num">03</div>
+        <h3>You own the moat.</h3>
+        <p>Plugin source, registry, and GitHub-stats recipe handed over.
+          Failure drill in front of the room: three attacks, all blocked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ROI ====== -->
+<section class="roi-band" id="roi">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">The number · engineering only · year one</span>
+      <h2>$5–10M defended five different ways.</h2>
+      <p>200 engineers. Engineering-only. No business-vertical claims.
+        Floor holds even if four of five levers underperform.</p>
+    </div>
+    <div class="roi-grid">
+      <div>
+        <div class="roi-big">$5–10<em>M</em></div>
+        <div class="roi-caption">Y1 P&amp;L impact · engineering only</div>
+        <div class="roi-floor">
+          <b>Downside floor:</b> if levers 2–5 entirely underperform, the cost lever alone still returns 12–16× ROI.
+        </div>
+      </div>
+      <ul class="roi-breakdown">
+        <li><span class="lever">Cost · gateway, caching, routing</span><span class="range">$0.8 — 1.7M</span></li>
+        <li><span class="lever">Productivity · 200 eng × uplift</span><span class="range">$3.0 — 5.0M</span></li>
+        <li><span class="lever">Governance · plugin distribution</span><span class="range">$0.8 — 2.0M</span></li>
+        <li><span class="lever">Risk · substrate catches incidents</span><span class="range">$0.3 — 1.0M</span></li>
+        <li><span class="lever">Cycles · DORA + retention</span><span class="range">$0.5 — 1.5M</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BOTTOM CTA ====== -->
+<section class="cta-band" id="cta">
+  <div class="container">
+    <span class="eyebrow">Book your pilot</span>
+    <h2 style="margin-top: 18px;">After 14 days the substrate is in your cloud. <em>Your CFO has a dashboard. Your CISO has forensics. Your CTO has a number.</em></h2>
+    <p>The cost lever pays the pilot back in under two months. The other four are upside.</p>
+    <div class="hero-ctas">
+      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop with Rajarajan</a>
+      <a href="#" class="btn btn-secondary btn-lg">Download the demo brief</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
+        <div class="foot-tagline">The governed agentic SDLC substrate. In your cloud, in 14 days.</div>
+      </div>
+      <div>
+        <h4>Verticals</h4>
+        <a href="insurance.html">Insurance</a>
+        <a href="fintech.html">Fintech &amp; Banks</a>
+      </div>
+      <div>
+        <h4>Partners</h4>
+        <a href="aws.html">AWS</a>
+        <a href="anthropic.html">Anthropic</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="signup.html">Request a workshop</a>
+        <a href="mailto:hello@moring.ai">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Moring, Inc.</div>
+      <div>Built in San Francisco · the demo is the artifact</div>
+    </div>
+  </div>
+</footer>
+
+<script src="moring.js" defer></script>
+</body>
+</html>
