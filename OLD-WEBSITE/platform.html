@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Moring Agentic AI Platform · Intelligent infrastructure for agents</title>
+<meta name="description" content="A composable, enterprise-grade platform that provides the infrastructure primitives your AI agents need — RAG pipelines, model gateways, observability, security. Deployed on your cloud, managed by our team." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="moring.css">
+<style>
+  .hero h1 { max-width: 16ch; }
+  .hero h1 em { font-style: italic; color: var(--orange); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav>
+  <div class="container nav-inner">
+    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button">
+          Solutions
+          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="aidlc.html" class="nav-dropdown-item">
+            <span class="dd-title">AI-DLC</span>
+            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
+          </a>
+          <a href="aiops.html" class="nav-dropdown-item">
+            <span class="dd-title">AI Ops</span>
+            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
+          </a>
+        </div>
+      </div>
+      <a href="platform.html">Platform</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button">
+          Verticals
+          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="insurance.html" class="nav-dropdown-item">
+            <span class="dd-title">Insurance</span>
+            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
+          </a>
+          <a href="fintech.html" class="nav-dropdown-item">
+            <span class="dd-title">Fintech &amp; Banks</span>
+            <span class="dd-desc">SR 11-7, FFIEC, regulated agentic adoption</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button">
+          Partners
+          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="aws.html" class="nav-dropdown-item">
+            <span class="dd-title">AWS</span>
+            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
+          </a>
+          <a href="anthropic.html" class="nav-dropdown-item">
+            <span class="dd-title">Anthropic</span>
+            <span class="dd-desc">Govern Claude at enterprise scale</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="solution-label">The Platform</span>
+      <h1>Agentic AI Platform. <em>Intelligent infrastructure for agents.</em></h1>
+      <p class="hero-sub">
+        A composable, enterprise-grade platform that provides the infrastructure primitives
+        your AI agents need — from RAG pipelines and model gateways to observability and security.
+        Deployed on your cloud. Managed by our team. Powers both AI-DLC and AI Ops.
+      </p>
+      <div class="hero-ctas">
+        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
+        <a href="#components" class="btn btn-secondary btn-lg">See the components</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="num">99.9%</div>
+          <div class="lbl">Uptime SLA</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">&lt; 200ms</div>
+          <div class="lbl">Average latency</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">40%</div>
+          <div class="lbl">Cost savings, typical</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform architecture illustration -->
+    <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Platform architecture: AI Solutions Layer with persona suites sits on top of the AI Platform Layer with ten components, which sits on your existing cloud (AWS, Azure, GCP, on-premises).">
+      <!-- AI SOLUTIONS LAYER (top) -->
+      <text x="32" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">LAYER 03 · AI SOLUTIONS</text>
+      <g>
+        <rect x="32" y="50" width="115" height="56" rx="6" fill="#fff" stroke="#DDD5C7"/>
+        <text x="46" y="74" font-family="'Fraunces', serif" font-size="13" fill="#1A1815" font-weight="600">AI-DLC</text>
+        <text x="46" y="92" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">engineering</text>
+      </g>
+      <g>
+        <rect x="155" y="50" width="115" height="56" rx="6" fill="#fff" stroke="#DDD5C7"/>
+        <text x="169" y="74" font-family="'Fraunces', serif" font-size="13" fill="#1A1815" font-weight="600">AI Ops</text>
+        <text x="169" y="92" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">operations</text>
+      </g>
+      <g>
+        <rect x="278" y="50" width="115" height="56" rx="6" fill="#F2EDE2" stroke="#DDD5C7" stroke-dasharray="3 3"/>
+        <text x="292" y="74" font-family="'Fraunces', serif" font-size="13" fill="#8A8278" font-weight="600">Finance</text>
+        <text x="292" y="92" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">year 2</text>
+      </g>
+      <g>
+        <rect x="401" y="50" width="107" height="56" rx="6" fill="#F2EDE2" stroke="#DDD5C7" stroke-dasharray="3 3"/>
+        <text x="415" y="74" font-family="'Fraunces', serif" font-size="13" fill="#8A8278" font-weight="600">CS &amp; Service</text>
+        <text x="415" y="92" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">year 2</text>
+      </g>
+
+      <!-- connecting band -->
+      <g stroke="#D85F2C" stroke-width="1.2" fill="none">
+        <path d="M 90 106 L 90 130" />
+        <path d="M 212 106 L 212 130" />
+        <path d="M 336 106 L 336 130" />
+        <path d="M 454 106 L 454 130" />
+      </g>
+
+      <!-- MORING PLATFORM LAYER (middle, dark, 10 components in 5x2) -->
+      <rect x="32" y="136" width="476" height="240" rx="10" fill="#1A1815"/>
+      <text x="48" y="160" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C" letter-spacing="2">LAYER 02 · MORING PLATFORM</text>
+      <text x="48" y="184" font-family="'Fraunces', serif" font-size="18" fill="#FAF7F2" font-weight="600">Ten composable primitives.</text>
+
+      <!-- 10 component pills in 5x2 grid -->
+      <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#FAF7F2">
+        <!-- row 1 -->
+        <rect x="48" y="202" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="91" y="223" text-anchor="middle">RAG Pipelines</text>
+
+        <rect x="142" y="202" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="185" y="223" text-anchor="middle">AI Gateway</text>
+
+        <rect x="236" y="202" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="279" y="223" text-anchor="middle">Observability</text>
+
+        <rect x="330" y="202" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="373" y="223" text-anchor="middle">MCP Servers</text>
+
+        <rect x="424" y="202" width="68" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="458" y="223" text-anchor="middle">GPU</text>
+
+        <!-- row 2 -->
+        <rect x="48" y="244" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="91" y="265" text-anchor="middle">Model Serving</text>
+
+        <rect x="142" y="244" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="185" y="265" text-anchor="middle">Model Perf</text>
+
+        <rect x="236" y="244" width="86" height="34" rx="4" fill="rgba(216,95,44,0.18)" stroke="#D85F2C"/>
+        <text x="279" y="265" text-anchor="middle" fill="#D85F2C">Security</text>
+
+        <rect x="330" y="244" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="373" y="265" text-anchor="middle">Cost</text>
+
+        <rect x="424" y="244" width="68" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
+        <text x="458" y="265" text-anchor="middle">Evals</text>
+      </g>
+
+      <!-- platform stats footer inside dark band -->
+      <g font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(250,247,242,0.55)" letter-spacing="1.4">
+        <text x="48" y="306">99.9% UPTIME SLA</text>
+        <text x="180" y="306">·</text>
+        <text x="196" y="306">&lt;200MS LATENCY</text>
+        <text x="326" y="306">·</text>
+        <text x="342" y="306">40% COST SAVINGS</text>
+      </g>
+      <text x="48" y="330" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(250,247,242,0.55)" letter-spacing="1.4">SOC 2 · ISO 27001 · HIPAA · ZERO DATA EXFILTRATION</text>
+
+      <!-- composable indicator -->
+      <text x="48" y="358" font-family="'Fraunces', serif" font-style="italic" font-size="13" fill="#D85F2C">Composable. Start with one. Add as you grow.</text>
+
+      <!-- connecting band down -->
+      <g stroke="#D85F2C" stroke-width="1.2" fill="none">
+        <path d="M 270 376 L 270 396" />
+      </g>
+
+      <!-- YOUR CLOUD LAYER (bottom) -->
+      <text x="32" y="412" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">LAYER 01 · YOUR EXISTING CLOUD</text>
+      <rect x="32" y="426" width="476" height="74" rx="10" fill="#F2EDE2" stroke="#DDD5C7"/>
+      <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#1A1815">
+        <rect x="48" y="442" width="68" height="42" rx="4" fill="#fff" stroke="#DDD5C7"/>
+        <text x="82" y="466" text-anchor="middle">AWS</text>
+
+        <rect x="124" y="442" width="68" height="42" rx="4" fill="#fff" stroke="#DDD5C7"/>
+        <text x="158" y="466" text-anchor="middle">Azure</text>
+
+        <rect x="200" y="442" width="68" height="42" rx="4" fill="#fff" stroke="#DDD5C7"/>
+        <text x="234" y="466" text-anchor="middle">GCP</text>
+
+        <rect x="276" y="442" width="98" height="42" rx="4" fill="#fff" stroke="#DDD5C7"/>
+        <text x="325" y="466" text-anchor="middle">On-Premises</text>
+      </g>
+      <text x="384" y="461" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.4">KUBERNETES · CI/CD</text>
+      <text x="384" y="475" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.4">IAC · YOUR SECURITY</text>
+    </svg>
+  </div>
+</header>
+
+<!-- ====== ARCHITECTURE OVERVIEW ====== -->
+<section class="band">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">Architecture</span>
+      <h2>One AI layer. Your existing cloud underneath.</h2>
+      <p>The Moring Platform deploys on top of the cloud infrastructure you already operate.
+        We add the agentic AI capabilities your team needs without disrupting what already works
+        — Kubernetes, observability, CI/CD, IaC, your existing security and compliance posture all stay.</p>
+    </div>
+
+    <div class="stack-diagram">
+      <div class="stack-layer moring">
+        <div class="lbl">Layer 02 · Our new AI infrastructure</div>
+        <div class="name">Moring Agentic AI Platform</div>
+        <div class="stack-pills">
+          <span class="stack-pill">RAG Pipelines</span>
+          <span class="stack-pill">AI Gateway</span>
+          <span class="stack-pill">Agent Observability &amp; Analytics</span>
+          <span class="stack-pill">Secure Hosted MCP Servers</span>
+          <span class="stack-pill">GPU Optimization</span>
+          <span class="stack-pill">Model Serving &amp; Inference</span>
+          <span class="stack-pill">Model Performance Optimization</span>
+          <span class="stack-pill">AI Security &amp; Compliance</span>
+          <span class="stack-pill">Cost Optimization</span>
+          <span class="stack-pill">Evaluation Suite</span>
+        </div>
+      </div>
+
+      <div class="stack-layer cloud">
+        <div class="lbl">Layer 01 · Your existing cloud infrastructure</div>
+        <div class="name">Cloud Native Platform</div>
+        <div class="stack-pills">
+          <span class="stack-pill">Kubernetes</span>
+          <span class="stack-pill">Observability</span>
+          <span class="stack-pill">CI/CD</span>
+          <span class="stack-pill">IaC</span>
+          <span class="stack-pill">Reliability</span>
+          <span class="stack-pill">Cloud Security &amp; Compliance</span>
+        </div>
+        <div class="stack-providers">
+          <span class="provider-pill">AWS</span>
+          <span class="provider-pill">Azure</span>
+          <span class="provider-pill">GCP</span>
+          <span class="provider-pill">On-Premises</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CORE COMPONENTS (10) ====== -->
+<section class="band" id="components" style="background: var(--cream-deep);">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">Core components · ten primitives</span>
+      <h2>Everything you need to build &amp; run AI.</h2>
+      <p>Each component is production-grade on its own. Together they form the most complete
+        infrastructure for enterprise agentic AI. Start with one. Compose the rest as you scale.</p>
+    </div>
+    <div class="components-10">
+      <div class="module-cell">
+        <div class="cat">Data</div>
+        <h3>RAG Pipelines</h3>
+        <p>End-to-end retrieval-augmented generation with advanced chunking, embedding, and retrieval. Multi-modal documents and custom knowledge bases.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Routing</div>
+        <h3>AI Gateway</h3>
+        <p>Unified model routing. Intelligent load balancing, fallback, rate limiting, and cost tracking across multiple LLM providers.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Monitoring</div>
+        <h3>Agent Observability</h3>
+        <p>Full visibility into agent behavior — trace every decision, monitor latency, track token usage, detect anomalies in real time.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Integration</div>
+        <h3>Hosted MCP Servers</h3>
+        <p>Managed Model Context Protocol servers that securely connect agents to enterprise tools, APIs, and data with granular access controls.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Compute</div>
+        <h3>GPU Optimization</h3>
+        <p>Intelligent GPU scheduling and resource allocation. Maximize hardware utilization while minimizing inference cost across multi-tenant workloads.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Inference</div>
+        <h3>Model Serving</h3>
+        <p>High-performance model serving with auto-scaling, batching, and caching. Custom models, fine-tuned variants, multi-model pipelines.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Optimization</div>
+        <h3>Model Performance</h3>
+        <p>Continuous model evaluation, A/B testing, automatic prompt optimization. Accuracy, latency, and cost tracked per model version.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Security</div>
+        <h3>AI Security &amp; Compliance</h3>
+        <p>Enterprise-grade controls — data encryption, PII detection, prompt-injection prevention, audit logging for regulatory compliance.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">FinOps</div>
+        <h3>Cost Optimization</h3>
+        <p>Real-time cost tracking across all AI operations. Set budgets, get alerts, automatically route to cost-effective models.</p>
+      </div>
+      <div class="module-cell">
+        <div class="cat">Testing</div>
+        <h3>Evaluation Suite</h3>
+        <p>Comprehensive evaluation framework for testing agent behavior, accuracy, safety, and reliability before production deployment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DEPLOY ON YOUR CLOUD ====== -->
+<section class="band" style="padding-top: 0; padding-bottom: 0;">
+  <div class="container">
+    <div class="benefit">
+      <div class="benefit-copy">
+        <div class="marker">01</div>
+        <span class="eyebrow">Deploy on your cloud</span>
+        <h2 style="margin-top: 14px;">Your infrastructure. Our AI layer. Full control.</h2>
+        <p>The platform runs on the cloud infrastructure you already operate — AWS, Azure, GCP, or
+          on-premises. Your data never leaves your environment. Your keys, your perimeter, your audit trail.</p>
+        <ul class="proofs">
+          <li><span><b>Multi-cloud and hybrid</b> deployment supported out of the box.</span></li>
+          <li><span><b>Zero data exfiltration</b> — everything stays inside your VPC.</span></li>
+          <li><span><b>Kubernetes-native</b> with Helm charts and Terraform modules.</span></li>
+          <li><span><b>SOC 2, ISO 27001, HIPAA</b> compliant infrastructure patterns.</span></li>
+        </ul>
+      </div>
+      <div class="viz-card">
+        <div class="viz-title">Deployment footprint · single tenant</div>
+        <div class="viz-row"><span class="k">cloud</span><span class="v">your AWS · ap-southeast-2</span></div>
+        <div class="viz-row"><span class="k">cluster</span><span class="v">EKS · 3 AZ · private subnets</span></div>
+        <div class="viz-row"><span class="k">data plane</span><span class="v">your S3, your KMS keys</span></div>
+        <div class="viz-row"><span class="k">identity</span><span class="v">your IAM, your SSO, your SCIM</span></div>
+        <div class="viz-row"><span class="k">audit</span><span class="v">your CloudTrail · your SIEM</span></div>
+        <div class="viz-row"><span class="k">data exit</span><span class="v" style="color: var(--green);">never</span></div>
+        <div style="margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em;">Helm + Terraform · runbook on day 14</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== COMPOSABLE ====== -->
+<section class="band" style="padding-top: 0; padding-bottom: 0;">
+  <div class="container">
+    <div class="benefit reverse">
+      <div class="benefit-copy">
+        <div class="marker">02</div>
+        <span class="eyebrow">Composable by design</span>
+        <h2 style="margin-top: 14px;">Start with one component. Expand as you grow.</h2>
+        <p>No big-bang deployment. Each module works independently and integrates seamlessly
+          with your existing observability, CI/CD, and security tooling.</p>
+        <ul class="proofs">
+          <li><span><b>Incremental adoption</b> — start small, scale fast.</span></li>
+          <li><span><b>Works with your stack</b> — your existing observability and CI/CD tools.</span></li>
+          <li><span><b>API-first design</b> with comprehensive SDKs.</span></li>
+          <li><span><b>Each component production-ready</b> on its own.</span></li>
+        </ul>
+      </div>
+      <div class="viz-card">
+        <div class="viz-title">Composition example · phased rollout</div>
+        <div class="viz-row"><span class="k">phase 1</span><span class="v">AI Gateway · cost attribution</span></div>
+        <div class="viz-row"><span class="k">phase 2</span><span class="v">+ Observability · evals</span></div>
+        <div class="viz-row"><span class="k">phase 3</span><span class="v">+ MCP servers · RAG</span></div>
+        <div class="viz-row"><span class="k">phase 4</span><span class="v">+ Security · injection &amp; PII</span></div>
+        <div class="viz-row"><span class="k">phase 5</span><span class="v">+ Self-healing automation</span></div>
+        <div style="margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em;">You decide the pace. No forced sequence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BUILT FOR PRODUCTION ====== -->
+<section class="band" style="background: var(--cream-deep); padding-top: 0;">
+  <div class="container" style="padding-top: 96px;">
+    <div class="band-header">
+      <span class="eyebrow">Built for production</span>
+      <h2>Enterprise AI needs the same rigor as enterprise software.</h2>
+      <p>Reliability, security, and observability baked in from day one — not as an afterthought.
+        These are the numbers the platform operates against, every day, across every customer.</p>
+    </div>
+    <div class="prod-stats">
+      <div class="prod-stat">
+        <div class="num">99.9%</div>
+        <div class="lbl">Uptime SLA</div>
+      </div>
+      <div class="prod-stat">
+        <div class="num">&lt;200ms</div>
+        <div class="lbl">Average latency</div>
+      </div>
+      <div class="prod-stat">
+        <div class="num">40%</div>
+        <div class="lbl">Cost savings, typical</div>
+      </div>
+      <div class="prod-stat">
+        <div class="num">A+</div>
+        <div class="lbl">Security score</div>
+      </div>
+    </div>
+    <ul class="proofs" style="border-top: 1px solid var(--line); max-width: 820px; margin-top: 40px;">
+      <li><span><b>99.9% uptime SLA</b> with automated failover.</span></li>
+      <li><span><b>Real-time cost tracking</b> and budget controls.</span></li>
+      <li><span><b>Full audit trails</b> for compliance and governance.</span></li>
+      <li><span><b>Automated evaluation</b> before every deployment.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====== ONE PLATFORM, BOTH SOLUTIONS ====== -->
+<section class="band">
+  <div class="container">
+    <div class="band-header">
+      <span class="eyebrow">One platform · powers both solutions</span>
+      <h2>The same primitives ship AI-DLC and AI Ops.</h2>
+      <p>Whichever solution you start with, you're standing on the same infrastructure.
+        Year-two business agents amortize on the same gateway, the same observability,
+        the same security layer. Build once, deploy many.</p>
+    </div>
+    <div class="cards-grid-3">
+      <div class="card-tile">
+        <div class="role">AI-DLC</div>
+        <h3>AI-DLC for engineering.</h3>
+        <p>Governed agentic SDLC. Per-PR cost attribution. Failure drill. 5-engineer case study.
+          Same platform components, scoped to the engineering use case.</p>
+        <a href="aidlc.html" class="link">Explore AI-DLC</a>
+      </div>
+      <div class="card-tile">
+        <div class="role">AI Ops</div>
+        <h3>AI Ops for operations.</h3>
+        <p>Event correlation. Topology-aware RCA. Predictive ops. Automated remediation.
+          Same platform components, applied to operational intelligence.</p>
+        <a href="aiops.html" class="link">Explore AI Ops</a>
+      </div>
+      <div class="card-tile">
+        <div class="role">Future suites</div>
+        <h3>Finance · Customer ops · more.</h3>
+        <p>Year-two persona suites for Finance and CS &amp; Service ship on the same platform.
+          The substrate amortizes. The second agent costs less than the first.</p>
+        <a href="moring-ai-homepage.html" class="link">See the roadmap</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="cta-band">
+  <div class="container">
+    <span class="eyebrow">Ready to build on Moring AI?</span>
+    <h2 style="margin-top: 18px;">See how the platform <em>accelerates your AI initiatives</em>.</h2>
+    <p>A 30-minute AI Discovery workshop with Rajarajan gets you a baseline metric,
+      an architecture sketch against your stack, and a yes/no on outcome pricing
+      — before anyone signs anything.</p>
+    <div class="hero-ctas">
+      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
+      <a href="moring-ai-homepage.html" class="btn btn-secondary btn-lg">See both solutions</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
+        <div class="foot-tagline">Applied AI for enterprise outcomes. Built right. Delivered fast.</div>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="aidlc.html">AI-DLC · Engineering</a>
+        <a href="aiops.html">AI Ops · Operations</a>
+        <a href="platform.html">The Moring Platform</a>
+      </div>
+      <div>
+        <h4>Industries &amp; Partners</h4>
+        <a href="insurance.html">Insurance</a>
+        <a href="fintech.html">Fintech &amp; Banks</a>
+        <a href="aws.html">AWS</a>
+        <a href="anthropic.html">Anthropic</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="signup.html">Request a workshop</a>
+        <a href="mailto:nikhil.devlapur@moring.ai">Contact sales</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Moring, Inc.</div>
+      <div>Composable · production-grade · deployed in your cloud</div>
+    </div>
+  </div>
+</footer>
+
+<script src="moring.js" defer></script>
+</body>
+</html>

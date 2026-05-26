@@ -1,598 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Moring.ai · Bespoke AI for Software Engineering and Operations</title>
-<meta name="description" content="Two solutions, one platform. Moring builds bespoke AI-DLC for engineering teams and AI Ops for operations teams. Deployed in your cloud, governed underneath, outcome-priced." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="moring.css">
-<style>
-  /* homepage-specific viz styles */
-  .hero h1 { max-width: 18ch; }
-  .hero h1 em { font-style: italic; color: var(--orange); font-weight: 500; }
-  .solutions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Moring. AI-DLC. The lifecycle that ships AI in production.</title>
+  <meta name="description" content="Moring is a forward-deployed AI engineering firm building agentic AI for the Global 2000. Outcomes over platforms.">
+
+  <link rel="canonical" href="https://moring.ai/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Moring">
+  <meta property="og:title" content="Moring. AI-DLC. The lifecycle that ships AI in production.">
+  <meta property="og:description" content="Forward-deployed AI engineering for the Global 2000. AI-DLC runs underneath every engagement.">
+  <meta property="og:url" content="https://moring.ai/">
+  <meta property="og:image" content="https://moring.ai/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moring. AI-DLC. The lifecycle that ships AI in production.">
+  <meta name="twitter:description" content="Multi-agent AI for the Global 2000. Outcomes over platforms.">
+  <meta name="twitter:image" content="https://moring.ai/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="moring.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://moring.ai/#org",
+        "name": "Moring",
+        "alternateName": "Moring AI",
+        "url": "https://moring.ai/",
+        "logo": "https://moring.ai/favicon.svg",
+        "description": "Forward-deployed AI engineering firm building agentic AI for the Global 2000.",
+        "address": [
+          { "@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA", "addressCountry": "US" },
+          { "@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN" }
+        ],
+        "areaServed": "Worldwide",
+        "knowsAbout": ["Agentic AI", "Multi-agent systems", "AI-DLC", "AI Gateway", "Model evaluation", "FinOps for AI", "AWS Bedrock", "Anthropic", "OpenAI"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Moring services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI for Finance", "url": "https://moring.ai/finance.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI for Customer Support", "url": "https://moring.ai/customer-support.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Ops", "url": "https://moring.ai/ai-ops.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive Workshop", "url": "https://moring.ai/workshop.html" } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://moring.ai/#site",
+        "url": "https://moring.ai/",
+        "name": "Moring",
+        "publisher": { "@id": "https://moring.ai/#org" }
+      }
+    ]
   }
-  @media (max-width: 960px) {
-    .solutions-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  </script>
 </head>
 <body>
 
-<!-- ====== NAV ====== -->
-<nav>
-  <div class="container nav-inner">
-    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
-    <div class="nav-links">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Solutions
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aidlc.html" class="nav-dropdown-item">
-            <span class="dd-title">AI-DLC</span>
-            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
-          </a>
-          <a href="aiops.html" class="nav-dropdown-item">
-            <span class="dd-title">AI Ops</span>
-            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
-          </a>
-        </div>
-      </div>
-      <a href="platform.html">Platform</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Verticals
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="insurance.html" class="nav-dropdown-item">
-            <span class="dd-title">Insurance</span>
-            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
-          </a>
-          <a href="fintech.html" class="nav-dropdown-item">
-            <span class="dd-title">Fintech &amp; Banks</span>
-            <span class="dd-desc">SR 11-7, FFIEC, regulated agentic adoption</span>
-          </a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Partners
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aws.html" class="nav-dropdown-item">
-            <span class="dd-title">AWS</span>
-            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
-          </a>
-          <a href="anthropic.html" class="nav-dropdown-item">
-            <span class="dd-title">Anthropic</span>
-            <span class="dd-desc">Govern Claude at enterprise scale</span>
-          </a>
-        </div>
-      </div>
-      <a href="about.html">About</a>
-      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
-    </div>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div id="workshop-bar" class="workshop-bar">
+  <div class="workshop-bar-inner">
+    <a class="bar-link" href="workshop.html">
+      <span class="bar-flag">NEW</span>
+      <span class="bar-msg"><strong>Executive Workshop.</strong> Ten hours with Moring engineering leadership. Four weeks to ranked strategy. Ninety days to multi-agent in production.</span>
+      <span class="bar-cta">Book the workshop <span class="arrow">&rarr;</span></span>
+    </a>
+    <button class="bar-close" aria-label="Dismiss">
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+</div>
+
+<nav id="nav" class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span> moring</a>
+    <ul class="nav-links">
+      <li class="nav-dd">
+        <a href="#">Solutions</a>
+        <ul class="nav-dd-menu">
+          <li><a href="finance.html">AI for Finance<div class="dd-sub">Fraud &middot; AML &middot; Advisor productivity</div></a></li>
+          <li><a href="customer-support.html">AI for Customer Support<div class="dd-sub">Warranty &middot; Tier 1 to 3 deflection</div></a></li>
+          <li><a href="ai-ops.html">AI Ops<div class="dd-sub">Autonomous IT operations</div></a></li>
+        </ul>
+      </li>
+      <li><a href="platform.html">Platform</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li class="nav-mobile-hide"><a href="workshop.html">Workshop</a></li>
+      <li><a href="contact.html" class="nav-cta-outline">Contact us</a></li>
+      <li><a href="https://cal.moring.ai/discovery" class="nav-cta">Book a meeting</a></li>
+    </ul>
   </div>
 </nav>
 
-<!-- ====== HERO (sliding two-frame) ====== -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-slider" id="heroSlider">
-      <div class="hero-track">
+<main id="main">
 
-        <!-- FRAME 1 · AI-DLC -->
-        <div class="hero-frame">
-          <div class="hero-grid">
-            <div>
-              <span class="solution-label">AI for Software Engineering</span>
-              <h1>Engineering built for the <em>AI era</em>.</h1>
-              <p class="hero-sub">
-                The AI-powered SDLC for enterprises that demand cost, control, and governance.
-              </p>
-              <div class="hero-ctas">
-                <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-                <a href="aidlc.html" class="btn btn-secondary btn-lg">See AI-DLC details</a>
-              </div>
-              <div class="hero-meta">
-                <div class="hero-meta-item">
-                  <div class="num">14 days</div>
-                  <div class="lbl">To live substrate</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">$5–10M</div>
-                  <div class="lbl">Y1 P&amp;L, eng-only</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">9 of 11</div>
-                  <div class="lbl">SDLC stages instrumented</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- AI-DLC architecture illustration -->
-            <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-DLC architecture diagram: engineers in IDE, Moring substrate layer with hooks, gateway, MCP catalog, plugins, audit; flowing into LLM providers and audit lake in your cloud.">
-              <!-- ENGINEERS LANE -->
-              <text x="32" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">ENGINEERS · IDE + AGENT</text>
-              <g>
-                <rect x="32" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="60" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="82" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">VS Code</text>
-                <text x="82" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">code-agent · v3</text>
-              </g>
-              <g>
-                <rect x="196" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="224" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="246" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Claude Code</text>
-                <text x="246" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">hooks · MCP</text>
-              </g>
-              <g>
-                <rect x="360" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="388" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="410" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Cursor</text>
-                <text x="410" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">runtime · pinned</text>
-              </g>
-
-              <!-- Arrows down to substrate -->
-              <g stroke="#D85F2C" stroke-width="1.5" fill="none">
-                <path d="M 106 118 L 106 150" />
-                <path d="M 270 118 L 270 150" />
-                <path d="M 434 118 L 434 150" />
-                <path d="M 102 148 L 110 150 L 102 152" />
-                <path d="M 266 148 L 274 150 L 266 152" />
-                <path d="M 430 148 L 438 150 L 430 152" />
-              </g>
-
-              <!-- MORING SUBSTRATE LANE (dark ink) -->
-              <rect x="32" y="158" width="476" height="184" rx="10" fill="#1A1815"/>
-              <text x="48" y="184" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C" letter-spacing="2">MORING AI-DLC SUBSTRATE</text>
-              <text x="48" y="210" font-family="'Fraunces', serif" font-size="20" fill="#FAF7F2" font-weight="600">Governed at the substrate.</text>
-              <!-- Component pills -->
-              <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#FAF7F2">
-                <rect x="48" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="91" y="256" text-anchor="middle">Gateway</text>
-
-                <rect x="142" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="185" y="256" text-anchor="middle">Hooks</text>
-
-                <rect x="236" y="234" width="120" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="296" y="256" text-anchor="middle">Scoped MCP</text>
-
-                <rect x="364" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="407" y="256" text-anchor="middle">Plugins</text>
-
-                <rect x="458" y="234" width="48" height="34" rx="4" fill="rgba(216,95,44,0.18)" stroke="#D85F2C"/>
-                <text x="482" y="256" text-anchor="middle" fill="#D85F2C">Audit</text>
-              </g>
-              <text x="48" y="296" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(250,247,242,0.55)" letter-spacing="1">9 OF 11 SDLC STAGES INSTRUMENTED · &lt;30MS OVERHEAD</text>
-              <text x="48" y="320" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(250,247,242,0.55)" letter-spacing="1">EVERY CALL TAGGED · TEAM · TRACE_ID · PR · COST</text>
-
-              <!-- Arrows down (split) -->
-              <g stroke="#D85F2C" stroke-width="1.5" fill="none">
-                <path d="M 160 342 L 160 376" />
-                <path d="M 156 374 L 164 376 L 156 378" />
-                <path d="M 380 342 L 380 376" />
-                <path d="M 376 374 L 384 376 L 376 378" />
-              </g>
-
-              <!-- YOUR CLOUD LANE -->
-              <text x="32" y="400" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">YOUR CLOUD</text>
-              <g>
-                <rect x="32" y="416" width="232" height="84" rx="6" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="50" y="440" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">LLM providers</text>
-                <text x="50" y="460" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278">Anthropic · Bedrock · OpenAI</text>
-                <text x="50" y="480" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C">cached + tier-routed</text>
-              </g>
-              <g>
-                <rect x="276" y="416" width="232" height="84" rx="6" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="294" y="440" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Audit lake · S3</text>
-                <text x="294" y="460" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278">every call · trace_id keyed</text>
-                <text x="294" y="480" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2E5D3F">SOC 2 evidence ready</text>
-              </g>
-            </svg>
+  <!-- ─── HERO ─────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-eyebrow">Moring AI-DLC <span class="dot">&middot;</span> the agentic AI lifecycle for the Global 2000</p>
+          <h1 class="hero-title">AI-DLC is the new SDLC. <em>Yours launches in weeks.</em></h1>
+          <p class="hero-sub">AI-DLC is the lifecycle that takes a real business outcome from week one to multi-agent in production by week twelve. Four pillars built once and reused across every engagement: agents, orchestrations, observability, cost. Our engineers ship it inside your VPC.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="workshop.html">Book the workshop <span class="arrow">&rarr;</span></a>
+            <a class="btn btn-secondary" href="#ai-dlc">See the lifecycle</a>
           </div>
         </div>
 
-        <!-- FRAME 2 · AI OPS -->
-        <div class="hero-frame">
-          <div class="hero-grid">
-            <div>
-              <span class="solution-label">AI for Operations</span>
-              <h1>Operations built for the <em>AI era</em>.</h1>
-              <p class="hero-sub">
-                The AI-powered operations for enterprises that can't be down.
-              </p>
-              <div class="hero-ctas">
-                <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-                <a href="aiops.html" class="btn btn-secondary btn-lg">See AI Ops details</a>
+        <!-- Rotating stage -->
+        <div class="stage" aria-hidden="true">
+          <!-- Card 1: Console -->
+          <div class="stage-card card-console is-active">
+            <div class="stage-eyebrow"><span>AI-DLC <span style="color:var(--accent)">&middot;</span> console</span><span class="pill">live</span></div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-bottom:8px">moring &middot; production overview</div>
+            <div class="console-row">
+              <div class="console-mini">
+                <div class="mini-label">cases / day</div>
+                <div class="mini-val">147 <em>&uarr;</em></div>
               </div>
-              <div class="hero-meta">
-                <div class="hero-meta-item">
-                  <div class="num">70–85%</div>
-                  <div class="lbl">Alert noise reduction</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">−50–70%</div>
-                  <div class="lbl">MTTR improvement</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">40–60%</div>
-                  <div class="lbl">Of repetitive tasks automated</div>
-                </div>
+              <div class="console-mini">
+                <div class="mini-label">auto triaged</div>
+                <div class="mini-val">89%</div>
               </div>
             </div>
+            <div class="console-bar">
+              <div class="bar-line"><span>cost / 1M calls</span><span>-74%</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="console-row">
+              <div class="console-mini">
+                <div class="mini-label">audit response</div>
+                <div class="mini-val">&lt; 2 min</div>
+              </div>
+              <div class="console-mini">
+                <div class="mini-label">model neutral</div>
+                <div class="mini-val">4 tiers</div>
+              </div>
+            </div>
+          </div>
 
-            <!-- AI Ops architecture illustration -->
-            <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Ops architecture diagram: five observability tools feed thousands of alerts into Moring's AI brain, which correlates, reasons, predicts, and remediates; output is twelve actionable incidents.">
-              <!-- LEFT COLUMN · monitoring tools -->
-              <text x="20" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">YOUR OBSERVABILITY STACK</text>
+          <!-- Card 2: Terminal -->
+          <div class="stage-card card-terminal">
+            <div class="stage-eyebrow"><span style="color:#a89f8c">moring &middot; estimate</span><span class="pill" style="background:#1a1a19;color:#c4bdac">$ shell</span></div>
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">moring estimate --calls 5M --model claude</span></pre>
+            <pre class="term-line"><span class="term-dim">loading tier map ...</span></pre>
+            <pre class="term-line"><span class="term-dim">  routing 5,000,000 calls across 4 tiers</span></pre>
+            <pre class="term-line">&nbsp;</pre>
+            <pre class="term-line"><span class="term-dim">  baseline</span>     <span style="color:#fff">$42,800</span> <span class="term-dim">/ 1M</span></pre>
+            <pre class="term-line"><span class="term-dim">  + routing</span>    <span style="color:#fff">$24,820</span> <span class="term-ok">tier-aware</span></pre>
+            <pre class="term-line"><span class="term-dim">  + cache</span>      <span style="color:#fff">$16,260</span> <span class="term-ok">semantic</span></pre>
+            <pre class="term-line"><span class="term-dim">  + governance</span> <span style="color:var(--accent)">$11,150</span> <span class="term-ok">budget gates</span></pre>
+            <pre class="term-line">&nbsp;</pre>
+            <pre class="term-line"><span class="term-dim">  savings</span>      <span style="color:var(--accent)">$1.9M / yr</span> <span class="term-dim">(-74%)</span></pre>
+          </div>
 
-              <g font-family="'JetBrains Mono', monospace" font-size="11">
-                <rect x="20" y="50" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="70" r="4" fill="#D85F2C"/>
-                <text x="50" y="74" fill="#1A1815">Dynatrace</text>
-                <text x="116" y="74" fill="#8A8278" font-size="9">·874</text>
+          <!-- Card 3: Slack -->
+          <div class="stage-card card-slack">
+            <div class="stage-eyebrow"><span>slack <span style="color:var(--accent)">&middot;</span> #fraud-ops</span><span class="pill">human in loop</span></div>
+            <div class="slack-channel"># fraud-ops &middot; thread &middot; 09:47</div>
+            <div class="slack-msg">
+              <div class="av">FA</div>
+              <div>
+                <div><span class="who">fraud-agent</span><span class="when">9:47 AM</span></div>
+                <div class="body">Case <strong>TXN-4892</strong> ready for review. Confidence 0.93. Recommended action: <strong>file SAR</strong>. Lineage attached.</div>
+              </div>
+            </div>
+            <div class="slack-msg">
+              <div class="av" style="background:#eaf6f0;color:#047857">JS</div>
+              <div>
+                <div><span class="who">J. Smith</span><span class="when">9:48 AM</span></div>
+                <div class="body">Approved. Push to FinCEN queue.</div>
+              </div>
+            </div>
+            <div class="slack-msg">
+              <div class="av">FA</div>
+              <div>
+                <div><span class="who">fraud-agent</span><span class="when">9:48 AM</span></div>
+                <div class="body">Filed. Audit packet written to lake. Reg-E timer started: 9d 23h.</div>
+              </div>
+            </div>
+          </div>
 
-                <rect x="20" y="98" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="118" r="4" fill="#D85F2C"/>
-                <text x="50" y="122" fill="#1A1815">ELK</text>
-                <text x="116" y="122" fill="#8A8278" font-size="9">·1,402</text>
+          <!-- Card 4: Tile grid -->
+          <div class="stage-card card-tiles">
+            <div class="stage-eyebrow"><span>AI-DLC <span style="color:var(--accent)">&middot;</span> capabilities</span><span class="pill">substrate</span></div>
+            <div style="font-family:var(--serif);font-size:18px;letter-spacing:-0.012em;margin:6px 0 10px">Built once. <em style="color:var(--accent);font-style:italic">Reused across every engagement.</em></div>
+            <div class="tile-grid">
+              <div class="tile lit"><div class="t-label">// agents</div><div class="t-val"><em>14</em></div></div>
+              <div class="tile"><div class="t-label">// orchestrations</div><div class="t-val">6</div></div>
+              <div class="tile"><div class="t-label">// observability</div><div class="t-val">100%</div></div>
+              <div class="tile"><div class="t-label">// gateway</div><div class="t-val">1</div></div>
+              <div class="tile lit"><div class="t-label">// evals</div><div class="t-val"><em>342</em></div></div>
+              <div class="tile"><div class="t-label">// finops</div><div class="t-val">$</div></div>
+            </div>
+          </div>
 
-                <rect x="20" y="146" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="166" r="4" fill="#D85F2C"/>
-                <text x="50" y="170" fill="#1A1815">SolarWinds</text>
-                <text x="116" y="170" fill="#8A8278" font-size="9">·687</text>
+          <div class="stage-indicator">
+            <span class="is-active"></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <rect x="20" y="194" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="214" r="4" fill="#D85F2C"/>
-                <text x="50" y="218" fill="#1A1815">Oracle EM</text>
-                <text x="116" y="218" fill="#8A8278" font-size="9">·506</text>
+  <!-- ─── AI-DLC FOUR PILLARS ─────────────────────────── -->
+  <section class="section" id="ai-dlc">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">01 <span class="dot">&middot;</span> What's inside AI-DLC</p>
+        <h2 class="section-title">Four pillars. The AI-DLC <em>our customers ship on.</em></h2>
+        <p class="section-lede">AI-DLC is four things working together. Each pillar has its own contract, its own tests, and its own owner on our side. Together they are the difference between a demo and a system a CISO will sign off on.</p>
+      </div>
 
-                <rect x="20" y="242" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="262" r="4" fill="#D85F2C"/>
-                <text x="50" y="266" fill="#1A1815">CMDB · Jira</text>
-                <text x="116" y="266" fill="#8A8278" font-size="9">·658</text>
-              </g>
+      <div class="aspects">
+        <div class="aspect">
+          <div class="a-num">// pillar 01</div>
+          <h3 class="a-title"><em>Agents.</em> Scoped reasoning.</h3>
+          <p class="a-body">Each agent has one job and one set of tools. Tool-aware, retry-safe, multi-model so the planner can run on a small fast model and the writer can run on a larger one. No god-agent.</p>
+          <div class="a-chips">
+            <span class="a-chip">scoped</span>
+            <span class="a-chip">tool-aware</span>
+            <span class="a-chip">retry-safe</span>
+            <span class="a-chip">multi-model</span>
+          </div>
+        </div>
+        <div class="aspect">
+          <div class="a-num">// pillar 02</div>
+          <h3 class="a-title"><em>Orchestrations.</em> Durable graphs.</h3>
+          <p class="a-body">Multi-agent workflows that survive process restarts, branch on policy, and surface a human checkpoint when the call is too big to make alone. Graph native, not chained prompts.</p>
+          <div class="a-chips">
+            <span class="a-chip">durable</span>
+            <span class="a-chip">branching</span>
+            <span class="a-chip">HITL</span>
+            <span class="a-chip">graph-native</span>
+          </div>
+        </div>
+        <div class="aspect">
+          <div class="a-num">// pillar 03</div>
+          <h3 class="a-title"><em>Observability.</em> Per conversation.</h3>
+          <p class="a-body">Every conversation traced, every prompt versioned, every output evaluated against a regression suite. Evals run on every change so the model upgrade conversation stops being a leap of faith.</p>
+          <div class="a-chips">
+            <span class="a-chip">per-conversation</span>
+            <span class="a-chip">evals-as-code</span>
+            <span class="a-chip">regression-gated</span>
+            <span class="a-chip">domain-aware</span>
+          </div>
+        </div>
+        <div class="aspect">
+          <div class="a-num">// pillar 04</div>
+          <h3 class="a-title"><em>Cost.</em> Built in, not bolted on.</h3>
+          <p class="a-body">Per-call attribution, semantic cache, tier routing, and budget gates. The FinOps team gets the same view as the engineering team. Surprises happen on the test bill, not the production one.</p>
+          <div class="a-chips">
+            <span class="a-chip">per-call</span>
+            <span class="a-chip">semantic-cache</span>
+            <span class="a-chip">tier-routing</span>
+            <span class="a-chip">budget-gates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <!-- INFLOW counter -->
-              <text x="20" y="306" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="1.5">RAW ALERTS · LAST HOUR</text>
-              <text x="20" y="346" font-family="'Fraunces', serif" font-size="36" font-weight="600" fill="#1A1815" letter-spacing="-0.02em">4,127</text>
+  <!-- ─── OUTCOMES ────────────────────────────────────── -->
+  <section class="section bg-2">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">02 <span class="dot">&middot;</span> What AI-DLC delivers</p>
+        <h2 class="section-title">Numbers your CFO <em>already asked for</em> last quarter.</h2>
+        <p class="section-lede">The substrate exists because outcomes are the only thing a Fortune 500 buyer cares about. These are typical results, not best case, after the first six months.</p>
+      </div>
 
-              <!-- Converging arrows into brain -->
-              <g stroke="#D85F2C" stroke-width="1.2" fill="none" opacity="0.8">
-                <path d="M 170 70 Q 220 80 250 200" />
-                <path d="M 170 118 Q 220 130 252 210" />
-                <path d="M 170 166 L 252 220" />
-                <path d="M 170 214 Q 220 224 252 230" />
-                <path d="M 170 262 Q 220 250 252 240" />
-              </g>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num"><em>-74%</em></div>
+          <span class="stat-label">// cost per 1M agent calls</span>
+        </div>
+        <div class="stat">
+          <div class="stat-num">14 <span style="font-size:0.5em">days</span></div>
+          <span class="stat-label">// discovery to first suite</span>
+        </div>
+        <div class="stat">
+          <div class="stat-num">&lt;2 <span style="font-size:0.5em">min</span></div>
+          <span class="stat-label">// audit response time</span>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>$5</em> to <em>10M</em></div>
+          <span class="stat-label">// typical Y1 savings</span>
+        </div>
+      </div>
 
-              <!-- CENTER · Moring AI brain -->
-              <rect x="252" y="142" width="174" height="160" rx="14" fill="#1A1815"/>
-              <text x="266" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C" letter-spacing="1.8">MORING AI OPS</text>
-              <text x="266" y="190" font-family="'Fraunces', serif" font-size="16" fill="#FAF7F2" font-weight="600">The operational</text>
-              <text x="266" y="208" font-family="'Fraunces', serif" font-size="16" fill="#FAF7F2" font-weight="600" font-style="italic">brain.</text>
-              <!-- Brain components inside -->
-              <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#FAF7F2">
-                <rect x="266" y="226" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="300" y="241" text-anchor="middle">Correlate</text>
-
-                <rect x="342" y="226" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="376" y="241" text-anchor="middle">RCA</text>
-
-                <rect x="266" y="254" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="300" y="269" text-anchor="middle">Predict</text>
-
-                <rect x="342" y="254" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="376" y="269" text-anchor="middle">Remediate</text>
-              </g>
-              <!-- pulse indicator -->
-              <circle cx="410" cy="158" r="3.5" fill="#2E5D3F">
-                <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-              </circle>
-
-              <!-- Outflow arrow -->
-              <g stroke="#D85F2C" stroke-width="2" fill="none">
-                <path d="M 426 222 L 458 222" />
-                <path d="M 454 218 L 462 222 L 454 226" fill="#D85F2C"/>
-              </g>
-
-              <!-- RIGHT COLUMN · output incidents -->
-              <text x="466" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.5">ACTIONABLE</text>
-              <text x="466" y="184" font-family="'Fraunces', serif" font-size="22" fill="#D85F2C" font-weight="600">12</text>
-
-              <!-- 3 incident chips on right -->
-              <g font-family="'JetBrains Mono', monospace" font-size="9">
-                <rect x="446" y="200" width="80" height="44" rx="4" fill="#fff" stroke="#D85F2C"/>
-                <text x="454" y="216" fill="#D85F2C" font-weight="600">P1</text>
-                <text x="454" y="232" fill="#1A1815" font-size="8">Payments</text>
-
-                <rect x="446" y="252" width="80" height="44" rx="4" fill="#fff" stroke="#DDD5C7"/>
-                <text x="454" y="268" fill="#8A8278" font-weight="600">P2</text>
-                <text x="454" y="284" fill="#1A1815" font-size="8">Kafka GC</text>
-              </g>
-
-              <!-- Bottom: predictive + remediation -->
-              <rect x="20" y="390" width="280" height="100" rx="8" fill="#F2EDE2" stroke="#DDD5C7"/>
-              <text x="36" y="412" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.5">CAPACITY PREDICTION · 7M EARLY</text>
-              <text x="36" y="438" font-family="'Fraunces', serif" font-size="13" fill="#1A1815" font-weight="600">Oracle tablespace → 95% in 7 min</text>
-              <text x="36" y="458" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C">Auto-remediation queued</text>
-              <text x="36" y="476" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">awaiting human approval</text>
-
-              <rect x="312" y="390" width="208" height="100" rx="8" fill="#1A1815"/>
-              <text x="328" y="412" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C" letter-spacing="1.5">NOISE COLLAPSE</text>
-              <text x="328" y="446" font-family="'Fraunces', serif" font-size="22" fill="#FAF7F2" font-weight="600">4,127 → 12</text>
-              <text x="328" y="476" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(250,247,242,0.6)">99.7% reduction · last hour</text>
-            </svg>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-eyebrow">// spend per 1M calls</div>
+          <h3 class="chart-title">Where the <em>cost</em> goes when the substrate runs.</h3>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bl-label">baseline</span>
+              <div class="bl-track"><div class="bl-fill" style="width:100%"></div></div>
+              <span class="bl-num">$42,800</span>
+            </div>
+            <div class="bar-row">
+              <span class="bl-label">+ routing</span>
+              <div class="bl-track"><div class="bl-fill" style="width:58%"></div></div>
+              <span class="bl-num">$24,820</span>
+            </div>
+            <div class="bar-row">
+              <span class="bl-label">+ cache</span>
+              <div class="bl-track"><div class="bl-fill" style="width:38%"></div></div>
+              <span class="bl-num">$16,260</span>
+            </div>
+            <div class="bar-row lit">
+              <span class="bl-label">+ governance</span>
+              <div class="bl-track"><div class="bl-fill" style="width:26%"></div></div>
+              <span class="bl-num">$11,150</span>
+            </div>
           </div>
         </div>
 
-      </div>
-
-      <!-- slider arrows -->
-      <div class="slider-arrows">
-        <button class="slider-arrow" id="prevSlide" aria-label="Previous solution">←</button>
-        <button class="slider-arrow" id="nextSlide" aria-label="Next solution">→</button>
-      </div>
-    </div>
-
-    <!-- slider dots -->
-    <div class="slider-controls">
-      <button class="slider-dot active" data-target="0" type="button">AI-DLC · Engineering</button>
-      <button class="slider-dot" data-target="1" type="button">AI Ops · Operations</button>
-    </div>
-  </div>
-</header>
-
-<!-- ====== TWO SOLUTIONS, ONE PLATFORM ====== -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">Two solutions · one platform · bespoke per customer</span>
-      <h2>We don't sell a product. We ship the outcome.</h2>
-      <p>Moring builds two distinct AI solutions for enterprise customers. Each is bespoke — scoped to your
-        architecture, your data, your regulatory environment. Both run on the same underlying
-        Moring Platform, deployed inside your cloud, with your team owning the source at handoff.</p>
-    </div>
-
-    <div class="solutions-grid">
-      <!-- AI-DLC card -->
-      <div class="solution-card">
-        <div class="badge">Engineering</div>
-        <h3>AI-DLC · <em>governed agentic SDLC</em></h3>
-        <p>For CTOs, VPs of Engineering, and platform leads scaling agentic coding past the Copilot plateau.
-          The substrate under your engineers' IDE so Claude Code, Cursor, or your internal runtime
-          run governed, attributed, and audited.</p>
-        <ul>
-          <li><span><b>Cost Observability</b> — per-PR attribution, caching/batch/tier routing levers</span></li>
-          <li><span><b>Governed Dev Workflow</b> — hooks, MCP scopes, plugin distribution</span></li>
-          <li><span><b>Failure Drill</b> — three live attacks blocked, full audit lake</span></li>
-          <li><span><b>5-Engineer Case Study</b> — defensible productivity number for your CFO</span></li>
-        </ul>
-        <a href="aidlc.html" class="link">Explore AI-DLC</a>
-      </div>
-
-      <!-- AI Ops card -->
-      <div class="solution-card">
-        <div class="badge">Operations</div>
-        <h3>AI Ops · <em>autonomous operational brain</em></h3>
-        <p>For CIOs, VPs of Infrastructure, and heads of SRE running mission-critical systems.
-          The intelligent layer above your existing observability stack — Dynatrace, ELK, SolarWinds,
-          OEM, CMDB, Jira — that correlates, predicts, and remediates across silos.</p>
-        <ul>
-          <li><span><b>Intelligent Event Correlation</b> — cross-tool noise reduction, root-cause priority</span></li>
-          <li><span><b>AI-Driven RCA</b> — topology-aware, dependency-mapped, historically-grounded</span></li>
-          <li><span><b>Predictive Operations</b> — capacity forecasting, anomaly detection before impact</span></li>
-          <li><span><b>Automated Remediation</b> — self-healing for known scenarios, human-in-the-loop for the rest</span></li>
-        </ul>
-        <a href="aiops.html" class="link">Explore AI Ops</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== THE MORING PLATFORM (underlying layer) ====== -->
-<section class="platform-band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">The Moring Platform</span>
-      <h2>One substrate underneath both solutions.</h2>
-      <p>Every Moring engagement runs on the same foundation. Two layers: an AI Solutions Layer where
-        the persona-specific workflows live, and an AI Platform Layer that provides observability,
-        governance, security, and gateway services across everything.
-        <a href="platform.html" style="color: var(--orange); border-bottom: 1px solid var(--orange);">Explore the platform →</a></p>
-    </div>
-    <div class="platform-layers">
-      <div class="platform-layer">
-        <h3>AI Solutions Layer</h3>
-        <p>The persona-specific suites that ship outcomes. Bespoke per customer, deployed inside your environment, owned by your team.</p>
-        <div class="platform-modules">
-          <div class="platform-module">AI-DLC suite</div>
-          <div class="platform-module">AI Ops suite</div>
-          <div class="platform-module">Finance suite</div>
-          <div class="platform-module">CS suite</div>
+        <div class="chart-card">
+          <div class="chart-eyebrow">// time to production</div>
+          <h3 class="chart-title">Twelve weeks. <em>Not eighteen months.</em></h3>
+          <div class="ring-wrap">
+            <div class="ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="50" stroke="#e0dcd2" stroke-width="10" fill="none"/>
+                <circle cx="60" cy="60" r="50" stroke="#d94e1f" stroke-width="10" fill="none"
+                  stroke-dasharray="273 314" stroke-linecap="round"/>
+              </svg>
+              <div class="ring-num"><em>87%</em></div>
+            </div>
+            <p class="ring-cap">faster than the 18-week industry baseline</p>
+          </div>
         </div>
       </div>
-      <div class="platform-layer">
-        <h3>AI Platform Layer</h3>
-        <p>Shared infrastructure for every agentic solution. Built once, applied everywhere — same governance, same audit lake, same cost gateway.</p>
-        <div class="platform-modules">
-          <div class="platform-module">Observability · traces · evals</div>
-          <div class="platform-module">Governance · policy · audit</div>
-          <div class="platform-module">Security · secrets · DLP</div>
-          <div class="platform-module">AI Gateway · routing · cost</div>
+
+      <div class="tcards">
+        <div class="tcard">
+          <p class="tc-quote">"The substrate showed up working. We stopped debating what a model could do and started shipping against named metrics."</p>
+          <div class="tc-attr">VP Engineering &middot; APAC bank</div>
+        </div>
+        <div class="tcard">
+          <p class="tc-quote">"By day twenty-eight we had a real number and a real plan. The yes was easy. The no would have been easy too."</p>
+          <div class="tc-attr">CTO &middot; global retailer</div>
+        </div>
+        <div class="tcard">
+          <p class="tc-quote">"Our regulators were asking for the same traces our engineers were. Moring just built one trail."</p>
+          <div class="tc-attr">Head of Platform &middot; insurer</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ====== BESPOKE BY DESIGN ====== -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">Why bespoke</span>
-      <h2>Generic AI doesn't survive an enterprise architecture review.</h2>
-      <p>Customers usually arrive after a generic AI tool failed compliance or stalled in evaluation.
-        Each Moring engagement is scoped to your stack — your regulators, your audit requirements,
-        your existing observability or development tooling — and shipped as a system you own.</p>
-    </div>
-    <div class="cards-grid-3">
-      <div class="card-tile">
-        <div class="role">01 · Scoped to your architecture</div>
-        <h3>Your cloud, your stack, your perimeter.</h3>
-        <p>AWS, Azure, GCP, or on-prem. Dynatrace, ELK, ServiceNow, OpenShift, Bedrock — whatever
-          you already operate. Moring composes on top.</p>
+  <!-- ─── COST SIMULATOR ──────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">interlude <span class="dot">&middot;</span> run the math</p>
+        <h2 class="section-title">Don't take our word for it. <em>Run it.</em></h2>
+        <p class="section-lede">Plug your volume and your preferred model. The substrate cost line uses the same formula our FinOps team uses on new engagements. Edit the command and press Enter.</p>
       </div>
-      <div class="card-tile">
-        <div class="role">02 · Outcome-priced</div>
-        <h3>Fee tied to a named, measured outcome.</h3>
-        <p>Baseline first. Verify second. Bill third. Not effort, not hours, not seats. If the
-          outcome doesn't ship, the fee doesn't trigger.</p>
-      </div>
-      <div class="card-tile">
-        <div class="role">03 · Knowledge transfer is the deliverable</div>
-        <h3>Your team owns the system at handoff.</h3>
-        <p>Source, runbooks, evals, decision logs — all yours. We're shipping a substrate and
-          handing you the keys. No ongoing vendor lock-in unless you choose ops support.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ====== ROI ====== -->
-<section class="roi-band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">The number · year-one impact</span>
-      <h2>One foundation. Many measurable outcomes.</h2>
-      <p>Year-one P&amp;L impact for a 200-engineer / multi-domain operations rollout. Floor defensible
-        even if individual levers underperform — the platform amortizes across both solutions.</p>
-    </div>
-    <div class="roi-grid">
-      <div>
-        <div class="roi-big">$10–25<em>M</em></div>
-        <div class="roi-caption">Y1 P&amp;L · across both solutions</div>
-        <div class="roi-floor">
-          <b>Downside floor:</b> AI-DLC cost lever alone (gateway + caching + tier routing) returns 12–16× ROI on the pilot. Every additional lever adds upside.
+      <div id="term-sim" class="term-sim">
+        <div class="term-bar">
+          <span class="tb-dots"><span></span><span></span><span></span></span>
+          <span>moring &middot; bash &middot; ~/estimate</span>
+        </div>
+        <div class="term-output"></div>
+        <div class="term-input-row">
+          <span class="prompt">$</span>
+          <input type="text" value="moring estimate --calls 5M --model claude" spellcheck="false" autocomplete="off" aria-label="cost simulator command">
+          <span class="hint">try: --calls 12M --model gpt-4o-mini</span>
         </div>
       </div>
-      <ul class="roi-breakdown">
-        <li><span class="lever">AI-DLC · cost &amp; productivity</span><span class="range">$5 — 10M</span></li>
-        <li><span class="lever">AI Ops · MTTR + automation</span><span class="range">$3 — 8M</span></li>
-        <li><span class="lever">Predictive ops · avoided outages</span><span class="range">$1 — 3M</span></li>
-        <li><span class="lever">SME productivity · knowledge AI</span><span class="range">$0.5 — 2M</span></li>
-        <li><span class="lever">Audit &amp; compliance readiness</span><span class="range">$0.5 — 2M</span></li>
-      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ====== BOTTOM CTA ====== -->
-<section class="cta-band" id="cta">
-  <div class="container">
-    <span class="eyebrow">Get started</span>
-    <h2 style="margin-top: 18px;">Two solutions. One platform. <em>Bespoke for your enterprise.</em></h2>
-    <p>A 30-minute AI Discovery workshop with Rajarajan gets you a baseline metric,
-      an architecture sketch against your stack, and a yes/no on outcome pricing — before anyone signs anything.</p>
-    <div class="hero-ctas">
-      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-      <a href="mailto:nikhil.devlapur@moring.ai" class="btn btn-secondary btn-lg">nikhil.devlapur@moring.ai</a>
-    </div>
-  </div>
-</section>
-
-<!-- ====== FOOTER ====== -->
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
-        <div class="foot-tagline">AI Outcomes, delivered. Bespoke AI-DLC and AI Ops for the enterprise.</div>
+  <!-- ─── ARCHITECTURE ────────────────────────────────── -->
+  <section class="section dark">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">03 <span class="dot">&middot;</span> How we do it</p>
+        <h2 class="section-title">The AI-DLC substrate. Three layers. <em>Built once, used by every suite.</em></h2>
+        <p class="section-lede">Each Solutions engagement plugs into the substrate. Build once for the bank means build once for the bank's next four use cases too. The second build is always cheaper.</p>
       </div>
-      <div>
+
+      <div class="arch-wrap">
+        <div class="arch-layer">
+          <div class="layer-head">
+            <span class="layer-num">// layer 01 &middot; your business</span>
+            <span class="layer-title">What we run for you</span>
+          </div>
+          <div class="arch-tiles">
+            <span class="arch-tile">Finance</span>
+            <span class="arch-tile">Customer service</span>
+            <span class="arch-tile">Revenue ops</span>
+            <span class="arch-tile">Vertical suite</span>
+          </div>
+        </div>
+
+        <div class="arch-layer featured">
+          <div class="layer-head">
+            <span class="layer-num" style="color:var(--accent)">// layer 02 &middot; Moring AI-DLC</span>
+            <span class="layer-title"><em>The substrate</em></span>
+          </div>
+          <div class="arch-tiles">
+            <span class="arch-tile">Agents</span>
+            <span class="arch-tile">Orchestrations</span>
+            <span class="arch-tile">Observability</span>
+            <span class="arch-tile">Cost plugins</span>
+            <span class="arch-tile">Evaluation harness</span>
+            <span class="arch-tile">MCP gateway</span>
+            <span class="arch-tile">Audit lake</span>
+          </div>
+        </div>
+
+        <div class="arch-layer">
+          <div class="layer-head">
+            <span class="layer-num">// layer 03 &middot; your stack</span>
+            <span class="layer-title">Where it plugs in</span>
+          </div>
+          <div class="arch-tiles">
+            <span class="arch-tile">OpenAI</span>
+            <span class="arch-tile">Anthropic</span>
+            <span class="arch-tile">Bedrock</span>
+            <span class="arch-tile">Vertex</span>
+            <span class="arch-tile">Snowflake</span>
+            <span class="arch-tile">Databricks</span>
+            <span class="arch-tile">Salesforce</span>
+            <span class="arch-tile">ServiceNow</span>
+            <span class="arch-tile">SAP</span>
+            <span class="arch-tile">NetSuite</span>
+            <span class="arch-tile">Zendesk</span>
+            <span class="arch-tile">+ your own</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW WE WORK ─────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">04 <span class="dot">&middot;</span> How we work</p>
+        <h2 class="section-title">Four things <em>worth knowing.</em></h2>
+        <p class="section-lede">Most of our engagements are won on these four answers more than on a deck. We try to make them obvious before a contract is signed.</p>
+      </div>
+
+      <div class="aspects">
+        <div class="aspect">
+          <div class="a-num">// 01</div>
+          <h3 class="a-title"><em>Our engineers</em> do the work.</h3>
+          <p class="a-body">Forward deployed. No subcontracted delivery. The Moring engineer who scoped your discovery is on the team that ships your day-84 system. They own it when it goes live.</p>
+          <div class="a-chips"><span class="a-chip">forward deployed</span><span class="a-chip">no offshore relay</span></div>
+        </div>
+        <div class="aspect">
+          <div class="a-num">// 02</div>
+          <h3 class="a-title"><em>We charge</em> for outcomes.</h3>
+          <p class="a-body">Fixed fee tied to a named metric. The discovery workshop is the place to decide whether the metric and the price match. If they don't, we don't sign. That is the point of the four weeks.</p>
+          <div class="a-chips"><span class="a-chip">fixed fee</span><span class="a-chip">metric-anchored</span></div>
+        </div>
+        <div class="aspect">
+          <div class="a-num">// 03</div>
+          <h3 class="a-title"><em>We stay</em> for years.</h3>
+          <p class="a-body">Because the substrate is shared across your engagements, the second build is cheaper than the first and the third is cheaper than the second. The relationship is designed to compound, not to land and leave.</p>
+          <div class="a-chips"><span class="a-chip">shared substrate</span><span class="a-chip">long arc</span></div>
+        </div>
+        <div class="aspect">
+          <div class="a-num">// 04</div>
+          <h3 class="a-title"><em>We say</em> what we haven't built.</h3>
+          <p class="a-body">If a capability is on the roadmap and not in production, we name it as such. No invented case studies, no anonymous logo wall sourced from cold emails. The early practices on this site are labeled early.</p>
+          <div class="a-chips"><span class="a-chip">no theater</span><span class="a-chip">labeled early</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="container">
+      <p class="cta-eyebrow">// start your AI-DLC</p>
+      <h2>Start your <em>AI-DLC.</em></h2>
+      <p class="cta-sub">Most teams start with the workshop. It runs four weeks. At the end you'll have a real plan, real pricing, and a clear answer on whether to keep going. If you'd rather meet first, grab thirty minutes on the calendar.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="workshop.html">Book the workshop <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-secondary" href="https://cal.moring.ai/discovery">Book a meeting</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> moring</a>
+        <p class="footer-tag">Forward-deployed AI engineering. Outcomes over platforms. Built natively on AWS. Atlanta HQ, engineering in Chennai.</p>
+      </div>
+      <div class="footer-col">
         <h4>Solutions</h4>
-        <a href="aidlc.html">AI-DLC · Engineering</a>
-        <a href="aiops.html">AI Ops · Operations</a>
-        <a href="platform.html">The Moring Platform</a>
+        <ul>
+          <li><a href="finance.html">AI for Finance</a></li>
+          <li><a href="customer-support.html">AI for Customer Support</a></li>
+          <li><a href="ai-ops.html">AI Ops</a></li>
+        </ul>
       </div>
-      <div>
-        <h4>Industries &amp; Partners</h4>
-        <a href="insurance.html">Insurance</a>
-        <a href="fintech.html">Fintech &amp; Banks</a>
-        <a href="aws.html">AWS</a>
-        <a href="anthropic.html">Anthropic</a>
+      <div class="footer-col">
+        <h4>Foundation</h4>
+        <ul>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="partners.html#aws">AWS</a></li>
+        </ul>
       </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="signup.html">Request a workshop</a>
-        <a href="mailto:nikhil.devlapur@moring.ai">Contact sales</a>
+      <div class="footer-col">
+        <h4>Engage</h4>
+        <ul>
+          <li><a href="workshop.html">Workshop</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="https://cal.moring.ai/discovery">Book a meeting</a></li>
+        </ul>
       </div>
     </div>
-    <div class="foot-bottom">
-      <div>© 2026 Moring, Inc.</div>
-      <div>Outcomes, not tools, not hours.</div>
+    <div class="footer-base">
+      <span>&copy; 2026 Moring, Inc. &middot; Atlanta HQ &middot; Engineering in Chennai &middot; CONFIDENTIAL</span>
+      <span>moring.ai</span>
     </div>
   </div>
 </footer>
 
-<script src="moring.js" defer></script>
-<script>
-  /* hero slider auto-advance + manual control */
-  (function () {
-    var slider = document.getElementById('heroSlider');
-    if (!slider) return;
-    var dots = document.querySelectorAll('.slider-dot');
-    var prev = document.getElementById('prevSlide');
-    var next = document.getElementById('nextSlide');
-    var current = 0;
-    var total = 2;
-    var timer;
-
-    function go(i) {
-      current = (i + total) % total;
-      slider.classList.toggle('slide-1', current === 1);
-      dots.forEach(function (d, idx) { d.classList.toggle('active', idx === current); });
-    }
-    function start() {
-      stop();
-      timer = setInterval(function () { go(current + 1); }, 15000);
-    }
-    function stop() { if (timer) clearInterval(timer); }
-
-    dots.forEach(function (d) {
-      d.addEventListener('click', function () {
-        go(parseInt(d.dataset.target, 10));
-        start();
-      });
-    });
-    if (prev) prev.addEventListener('click', function () { go(current - 1); start(); });
-    if (next) next.addEventListener('click', function () { go(current + 1); start(); });
-    slider.addEventListener('mouseenter', stop);
-    slider.addEventListener('mouseleave', start);
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') { go(current - 1); start(); }
-      if (e.key === 'ArrowRight') { go(current + 1); start(); }
-    });
-    start();
-  })();
-</script>
+<script src="moring.js"></script>
 </body>
 </html>
