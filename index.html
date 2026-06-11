@@ -3,595 +3,306 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Moring.ai · Bespoke AI for Software Engineering and Operations</title>
-<meta name="description" content="Two solutions, one platform. Moring builds bespoke AI-DLC for engineering teams and AI Ops for operations teams. Deployed in your cloud, governed underneath, outcome-priced." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="moring.css">
-<style>
-  /* homepage-specific viz styles */
-  .hero h1 { max-width: 18ch; }
-  .hero h1 em { font-style: italic; color: var(--orange); font-weight: 500; }
-  .solutions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  @media (max-width: 960px) {
-    .solutions-grid { grid-template-columns: 1fr; }
-  }
-</style>
+<title>moring · Bespoke AI for Software Engineering & Operations</title>
+<meta name="description" content="Two solutions, one platform. moring builds bespoke AI-DLC for engineering teams and AI Ops for operations teams — deployed in your cloud, governed underneath, outcome-priced." />
+<link rel="stylesheet" href="site.css" />
 </head>
-<body>
+<body data-page="home">
 
-<!-- ====== NAV ====== -->
-<nav>
-  <div class="container nav-inner">
-    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
-    <div class="nav-links">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Solutions
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aidlc.html" class="nav-dropdown-item">
-            <span class="dd-title">AI-DLC</span>
-            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
-          </a>
-          <a href="aiops.html" class="nav-dropdown-item">
-            <span class="dd-title">AI Ops</span>
-            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
-          </a>
-        </div>
-      </div>
-      <a href="platform.html">Platform</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Verticals
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="insurance.html" class="nav-dropdown-item">
-            <span class="dd-title">Insurance</span>
-            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
-          </a>
-          <a href="fintech.html" class="nav-dropdown-item">
-            <span class="dd-title">Fintech &amp; Banks</span>
-            <span class="dd-desc">SR 11-7, FFIEC, regulated agentic adoption</span>
-          </a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Partners
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aws.html" class="nav-dropdown-item">
-            <span class="dd-title">AWS</span>
-            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
-          </a>
-          <a href="anthropic.html" class="nav-dropdown-item">
-            <span class="dd-title">Anthropic</span>
-            <span class="dd-desc">Govern Claude at enterprise scale</span>
-          </a>
-        </div>
-      </div>
-      <a href="about.html">About</a>
-      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
-    </div>
-  </div>
-</nav>
+<main>
 
-<!-- ====== HERO (sliding two-frame) ====== -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-slider" id="heroSlider">
-      <div class="hero-track">
+<!-- ============================================================ HERO CAROUSEL ============================================================ -->
+<section class="hero">
+  <div class="hero-carousel" id="heroCarousel">
+    <div class="hero-track" id="heroTrack">
 
-        <!-- FRAME 1 · AI-DLC -->
-        <div class="hero-frame">
+      <!-- ===== SLIDE 1 · ENGINEERING ===== -->
+      <div class="hero-slide" data-screen-label="hero-engineering">
+        <div class="wrap">
           <div class="hero-grid">
-            <div>
-              <span class="solution-label">AI for Software Engineering</span>
-              <h1>Engineering built for the <em>AI era</em>.</h1>
-              <p class="hero-sub">
-                The AI-powered SDLC for enterprises that demand cost, control, and governance.
-              </p>
-              <div class="hero-ctas">
-                <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-                <a href="aidlc.html" class="btn btn-secondary btn-lg">See AI-DLC details</a>
+            <div class="hero-copy">
+              <span class="eyebrow hero-enter">AI for software engineering</span>
+              <h1 class="hero-enter d1" style="width: 576px;">Engineering built for the <em>AI</em> era.</h1>
+              <p class="lede hero-enter d2">The AI-powered SDLC for enterprises that demand cost, control, and governance.</p>
+              <div class="hero-actions hero-enter d3">
+                <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+                <a class="btn btn-secondary btn-lg" href="aidlc.html">See AI-DLC details <span class="arr">→</span></a>
               </div>
-              <div class="hero-meta">
-                <div class="hero-meta-item">
-                  <div class="num">14 days</div>
-                  <div class="lbl">To live substrate</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">$5–10M</div>
-                  <div class="lbl">Y1 P&amp;L, eng-only</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">9 of 11</div>
-                  <div class="lbl">SDLC stages instrumented</div>
-                </div>
+              <div class="hero-stats hero-enter d4">
+                <div class="stat"><div class="num">14 days</div><div class="lbl">To live substrate</div></div>
+                <div class="stat"><div class="num">$5–10<b>M</b></div><div class="lbl">Y1 P&amp;L · <span>eng-only</span></div></div>
+                <div class="stat"><div class="num">9 of 11</div><div class="lbl">SDLC stages instrumented</div></div>
               </div>
             </div>
-
-            <!-- AI-DLC architecture illustration -->
-            <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-DLC architecture diagram: engineers in IDE, Moring substrate layer with hooks, gateway, MCP catalog, plugins, audit; flowing into LLM providers and audit lake in your cloud.">
-              <!-- ENGINEERS LANE -->
-              <text x="32" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">ENGINEERS · IDE + AGENT</text>
-              <g>
-                <rect x="32" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="60" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="82" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">VS Code</text>
-                <text x="82" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">code-agent · v3</text>
-              </g>
-              <g>
-                <rect x="196" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="224" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="246" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Claude Code</text>
-                <text x="246" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">hooks · MCP</text>
-              </g>
-              <g>
-                <rect x="360" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="388" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="410" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Cursor</text>
-                <text x="410" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">runtime · pinned</text>
-              </g>
-
-              <!-- Arrows down to substrate -->
-              <g stroke="#D85F2C" stroke-width="1.5" fill="none">
-                <path d="M 106 118 L 106 150" />
-                <path d="M 270 118 L 270 150" />
-                <path d="M 434 118 L 434 150" />
-                <path d="M 102 148 L 110 150 L 102 152" />
-                <path d="M 266 148 L 274 150 L 266 152" />
-                <path d="M 430 148 L 438 150 L 430 152" />
-              </g>
-
-              <!-- MORING SUBSTRATE LANE (dark ink) -->
-              <rect x="32" y="158" width="476" height="184" rx="10" fill="#1A1815"/>
-              <text x="48" y="184" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C" letter-spacing="2">MORING AI-DLC SUBSTRATE</text>
-              <text x="48" y="210" font-family="'Fraunces', serif" font-size="20" fill="#FAF7F2" font-weight="600">Governed at the substrate.</text>
-              <!-- Component pills -->
-              <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#FAF7F2">
-                <rect x="48" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="91" y="256" text-anchor="middle">Gateway</text>
-
-                <rect x="142" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="185" y="256" text-anchor="middle">Hooks</text>
-
-                <rect x="236" y="234" width="120" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="296" y="256" text-anchor="middle">Scoped MCP</text>
-
-                <rect x="364" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="407" y="256" text-anchor="middle">Plugins</text>
-
-                <rect x="458" y="234" width="48" height="34" rx="4" fill="rgba(216,95,44,0.18)" stroke="#D85F2C"/>
-                <text x="482" y="256" text-anchor="middle" fill="#D85F2C">Audit</text>
-              </g>
-              <text x="48" y="296" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(250,247,242,0.55)" letter-spacing="1">9 OF 11 SDLC STAGES INSTRUMENTED · &lt;30MS OVERHEAD</text>
-              <text x="48" y="320" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(250,247,242,0.55)" letter-spacing="1">EVERY CALL TAGGED · TEAM · TRACE_ID · PR · COST</text>
-
-              <!-- Arrows down (split) -->
-              <g stroke="#D85F2C" stroke-width="1.5" fill="none">
-                <path d="M 160 342 L 160 376" />
-                <path d="M 156 374 L 164 376 L 156 378" />
-                <path d="M 380 342 L 380 376" />
-                <path d="M 376 374 L 384 376 L 376 378" />
-              </g>
-
-              <!-- YOUR CLOUD LANE -->
-              <text x="32" y="400" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">YOUR CLOUD</text>
-              <g>
-                <rect x="32" y="416" width="232" height="84" rx="6" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="50" y="440" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">LLM providers</text>
-                <text x="50" y="460" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278">Anthropic · Bedrock · OpenAI</text>
-                <text x="50" y="480" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C">cached + tier-routed</text>
-              </g>
-              <g>
-                <rect x="276" y="416" width="232" height="84" rx="6" fill="#F2EDE2" stroke="#DDD5C7"/>
-                <text x="294" y="440" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Audit lake · S3</text>
-                <text x="294" y="460" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278">every call · trace_id keyed</text>
-                <text x="294" y="480" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2E5D3F">SOC 2 evidence ready</text>
-              </g>
-            </svg>
+            <div class="hero-visual hero-img hero-enter vis">
+              <span class="hero-fx">
+                <img src="images/home-hero.png" style="width: 800px;" alt="moring AI-DLC substrate — developers (VS Code, Claude Code, Cursor) feed a governed substrate (gateway, hooks, scoped MCP, plugins, audit) routing to models, producing measurable outcomes" />
+              </span>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- FRAME 2 · AI OPS -->
-        <div class="hero-frame">
+      <!-- ===== SLIDE 2 · OPERATIONS ===== -->
+      <div class="hero-slide" data-screen-label="hero-operations">
+        <div class="wrap">
           <div class="hero-grid">
-            <div>
-              <span class="solution-label">AI for Operations</span>
-              <h1>Operations built for the <em>AI era</em>.</h1>
-              <p class="hero-sub">
-                The AI-powered operations for enterprises that can't be down.
-              </p>
-              <div class="hero-ctas">
-                <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-                <a href="aiops.html" class="btn btn-secondary btn-lg">See AI Ops details</a>
+            <div class="hero-copy">
+              <span class="eyebrow">AI for operations</span>
+              <h1>Operations built for the <em>AI</em> era.</h1>
+              <p class="lede">The AI-powered operations for enterprises that can't be down.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+                <a class="btn btn-secondary btn-lg" href="aiops.html">See AI Ops details <span class="arr">→</span></a>
               </div>
-              <div class="hero-meta">
-                <div class="hero-meta-item">
-                  <div class="num">70–85%</div>
-                  <div class="lbl">Alert noise reduction</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">−50–70%</div>
-                  <div class="lbl">MTTR improvement</div>
-                </div>
-                <div class="hero-meta-item">
-                  <div class="num">40–60%</div>
-                  <div class="lbl">Of repetitive tasks automated</div>
-                </div>
+              <div class="hero-stats">
+                <div class="stat"><div class="num">70–85<b>%</b></div><div class="lbl">Alert noise reduction</div></div>
+                <div class="stat"><div class="num">−50–70<b>%</b></div><div class="lbl">MTTR improvement</div></div>
+                <div class="stat"><div class="num">40–60<b>%</b></div><div class="lbl">Tasks automated</div></div>
               </div>
             </div>
-
-            <!-- AI Ops architecture illustration -->
-            <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Ops architecture diagram: five observability tools feed thousands of alerts into Moring's AI brain, which correlates, reasons, predicts, and remediates; output is twelve actionable incidents.">
-              <!-- LEFT COLUMN · monitoring tools -->
-              <text x="20" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">YOUR OBSERVABILITY STACK</text>
-
-              <g font-family="'JetBrains Mono', monospace" font-size="11">
-                <rect x="20" y="50" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="70" r="4" fill="#D85F2C"/>
-                <text x="50" y="74" fill="#1A1815">Dynatrace</text>
-                <text x="116" y="74" fill="#8A8278" font-size="9">·874</text>
-
-                <rect x="20" y="98" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="118" r="4" fill="#D85F2C"/>
-                <text x="50" y="122" fill="#1A1815">ELK</text>
-                <text x="116" y="122" fill="#8A8278" font-size="9">·1,402</text>
-
-                <rect x="20" y="146" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="166" r="4" fill="#D85F2C"/>
-                <text x="50" y="170" fill="#1A1815">SolarWinds</text>
-                <text x="116" y="170" fill="#8A8278" font-size="9">·687</text>
-
-                <rect x="20" y="194" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="214" r="4" fill="#D85F2C"/>
-                <text x="50" y="218" fill="#1A1815">Oracle EM</text>
-                <text x="116" y="218" fill="#8A8278" font-size="9">·506</text>
-
-                <rect x="20" y="242" width="148" height="40" rx="6" fill="#fff" stroke="#DDD5C7"/>
-                <circle cx="36" cy="262" r="4" fill="#D85F2C"/>
-                <text x="50" y="266" fill="#1A1815">CMDB · Jira</text>
-                <text x="116" y="266" fill="#8A8278" font-size="9">·658</text>
-              </g>
-
-              <!-- INFLOW counter -->
-              <text x="20" y="306" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="1.5">RAW ALERTS · LAST HOUR</text>
-              <text x="20" y="346" font-family="'Fraunces', serif" font-size="36" font-weight="600" fill="#1A1815" letter-spacing="-0.02em">4,127</text>
-
-              <!-- Converging arrows into brain -->
-              <g stroke="#D85F2C" stroke-width="1.2" fill="none" opacity="0.8">
-                <path d="M 170 70 Q 220 80 250 200" />
-                <path d="M 170 118 Q 220 130 252 210" />
-                <path d="M 170 166 L 252 220" />
-                <path d="M 170 214 Q 220 224 252 230" />
-                <path d="M 170 262 Q 220 250 252 240" />
-              </g>
-
-              <!-- CENTER · Moring AI brain -->
-              <rect x="252" y="142" width="174" height="160" rx="14" fill="#1A1815"/>
-              <text x="266" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C" letter-spacing="1.8">MORING AI OPS</text>
-              <text x="266" y="190" font-family="'Fraunces', serif" font-size="16" fill="#FAF7F2" font-weight="600">The operational</text>
-              <text x="266" y="208" font-family="'Fraunces', serif" font-size="16" fill="#FAF7F2" font-weight="600" font-style="italic">brain.</text>
-              <!-- Brain components inside -->
-              <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#FAF7F2">
-                <rect x="266" y="226" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="300" y="241" text-anchor="middle">Correlate</text>
-
-                <rect x="342" y="226" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="376" y="241" text-anchor="middle">RCA</text>
-
-                <rect x="266" y="254" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="300" y="269" text-anchor="middle">Predict</text>
-
-                <rect x="342" y="254" width="68" height="22" rx="3" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-                <text x="376" y="269" text-anchor="middle">Remediate</text>
-              </g>
-              <!-- pulse indicator -->
-              <circle cx="410" cy="158" r="3.5" fill="#2E5D3F">
-                <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-              </circle>
-
-              <!-- Outflow arrow -->
-              <g stroke="#D85F2C" stroke-width="2" fill="none">
-                <path d="M 426 222 L 458 222" />
-                <path d="M 454 218 L 462 222 L 454 226" fill="#D85F2C"/>
-              </g>
-
-              <!-- RIGHT COLUMN · output incidents -->
-              <text x="466" y="166" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.5">ACTIONABLE</text>
-              <text x="466" y="184" font-family="'Fraunces', serif" font-size="22" fill="#D85F2C" font-weight="600">12</text>
-
-              <!-- 3 incident chips on right -->
-              <g font-family="'JetBrains Mono', monospace" font-size="9">
-                <rect x="446" y="200" width="80" height="44" rx="4" fill="#fff" stroke="#D85F2C"/>
-                <text x="454" y="216" fill="#D85F2C" font-weight="600">P1</text>
-                <text x="454" y="232" fill="#1A1815" font-size="8">Payments</text>
-
-                <rect x="446" y="252" width="80" height="44" rx="4" fill="#fff" stroke="#DDD5C7"/>
-                <text x="454" y="268" fill="#8A8278" font-weight="600">P2</text>
-                <text x="454" y="284" fill="#1A1815" font-size="8">Kafka GC</text>
-              </g>
-
-              <!-- Bottom: predictive + remediation -->
-              <rect x="20" y="390" width="280" height="100" rx="8" fill="#F2EDE2" stroke="#DDD5C7"/>
-              <text x="36" y="412" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278" letter-spacing="1.5">CAPACITY PREDICTION · 7M EARLY</text>
-              <text x="36" y="438" font-family="'Fraunces', serif" font-size="13" fill="#1A1815" font-weight="600">Oracle tablespace → 95% in 7 min</text>
-              <text x="36" y="458" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C">Auto-remediation queued</text>
-              <text x="36" y="476" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">awaiting human approval</text>
-
-              <rect x="312" y="390" width="208" height="100" rx="8" fill="#1A1815"/>
-              <text x="328" y="412" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D85F2C" letter-spacing="1.5">NOISE COLLAPSE</text>
-              <text x="328" y="446" font-family="'Fraunces', serif" font-size="22" fill="#FAF7F2" font-weight="600">4,127 → 12</text>
-              <text x="328" y="476" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(250,247,242,0.6)">99.7% reduction · last hour</text>
-            </svg>
+            <div class="hero-visual hero-img">
+              <span class="hero-fx">
+                <img src="images/aiops-hero-topology.png" style="width: 800px;" alt="moring AI Ops topology — noisy signals (catch cascade, capacity drift, webhook backlog) flow into the moring AI Ops core, which correlates across Stripe-Proxy, Checkout-svc, cart-svc, webhook queue, ServiceNow and Oracle, routing a clean signal to the audit lake" />
+              </span>
+            </div>
           </div>
         </div>
-
       </div>
 
-      <!-- slider arrows -->
-      <div class="slider-arrows">
-        <button class="slider-arrow" id="prevSlide" aria-label="Previous solution">←</button>
-        <button class="slider-arrow" id="nextSlide" aria-label="Next solution">→</button>
-      </div>
-    </div>
-
-    <!-- slider dots -->
-    <div class="slider-controls">
-      <button class="slider-dot active" data-target="0" type="button">AI-DLC · Engineering</button>
-      <button class="slider-dot" data-target="1" type="button">AI Ops · Operations</button>
     </div>
   </div>
-</header>
 
-<!-- ====== TWO SOLUTIONS, ONE PLATFORM ====== -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">Two solutions · one platform · bespoke per customer</span>
-      <h2>We don't sell a product. We ship the outcome.</h2>
-      <p>Moring builds two distinct AI solutions for enterprise customers. Each is bespoke — scoped to your
-        architecture, your data, your regulatory environment. Both run on the same underlying
-        Moring Platform, deployed inside your cloud, with your team owning the source at handoff.</p>
-    </div>
-
-    <div class="solutions-grid">
-      <!-- AI-DLC card -->
-      <div class="solution-card">
-        <div class="badge">Engineering</div>
-        <h3>AI-DLC · <em>governed agentic SDLC</em></h3>
-        <p>For CTOs, VPs of Engineering, and platform leads scaling agentic coding past the Copilot plateau.
-          The substrate under your engineers' IDE so Claude Code, Cursor, or your internal runtime
-          run governed, attributed, and audited.</p>
-        <ul>
-          <li><span><b>Cost Observability</b> — per-PR attribution, caching/batch/tier routing levers</span></li>
-          <li><span><b>Governed Dev Workflow</b> — hooks, MCP scopes, plugin distribution</span></li>
-          <li><span><b>Failure Drill</b> — three live attacks blocked, full audit lake</span></li>
-          <li><span><b>5-Engineer Case Study</b> — defensible productivity number for your CFO</span></li>
-        </ul>
-        <a href="aidlc.html" class="link">Explore AI-DLC</a>
+  <!-- ===== CONTROLS ===== -->
+  <div class="wrap">
+    <div class="hero-controls">
+      <div class="hero-arrows">
+        <button class="hero-arrow" id="heroPrev" aria-label="Previous">←</button>
+        <button class="hero-arrow" id="heroNext" aria-label="Next">→</button>
       </div>
-
-      <!-- AI Ops card -->
-      <div class="solution-card">
-        <div class="badge">Operations</div>
-        <h3>AI Ops · <em>autonomous operational brain</em></h3>
-        <p>For CIOs, VPs of Infrastructure, and heads of SRE running mission-critical systems.
-          The intelligent layer above your existing observability stack — Dynatrace, ELK, SolarWinds,
-          OEM, CMDB, Jira — that correlates, predicts, and remediates across silos.</p>
-        <ul>
-          <li><span><b>Intelligent Event Correlation</b> — cross-tool noise reduction, root-cause priority</span></li>
-          <li><span><b>AI-Driven RCA</b> — topology-aware, dependency-mapped, historically-grounded</span></li>
-          <li><span><b>Predictive Operations</b> — capacity forecasting, anomaly detection before impact</span></li>
-          <li><span><b>Automated Remediation</b> — self-healing for known scenarios, human-in-the-loop for the rest</span></li>
-        </ul>
-        <a href="aiops.html" class="link">Explore AI Ops</a>
+      <div class="hero-tabs" id="heroTabs">
+        <button class="hero-tab active" data-go="0">AI-DLC · Engineering</button>
+        <button class="hero-tab" data-go="1">AI Ops · Operations</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====== THE MORING PLATFORM (underlying layer) ====== -->
-<section class="platform-band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">The Moring Platform</span>
-      <h2>One substrate underneath both solutions.</h2>
-      <p>Every Moring engagement runs on the same foundation. Two layers: an AI Solutions Layer where
-        the persona-specific workflows live, and an AI Platform Layer that provides observability,
-        governance, security, and gateway services across everything.
-        <a href="platform.html" style="color: var(--orange); border-bottom: 1px solid var(--orange);">Explore the platform →</a></p>
+<!-- ============================================================ WE SHIP THE OUTCOME + CONTROL PLANE ============================================================ -->
+<section class="section">
+  <div class="rail">
+    <div class="section-head reveal">
+      <span class="eyebrow">Two solutions · one platform · bespoke</span>
+      <h2>We don't sell a product.<br/>We ship the outcome.</h2>
+      <p>moring builds two distinct AI solutions for enterprise customers. Each is bespoke — scoped to your architecture, your data, your regulatory environment. Both run on the same underlying moring Platform, deployed inside your cloud, with your team owning the source at handoff.</p>
     </div>
-    <div class="platform-layers">
-      <div class="platform-layer">
-        <h3>AI Solutions Layer</h3>
+
+    <div class="cp reveal">
+      <div class="cp-tabs">
+        <span class="cp-tab">Requests</span>
+        <span class="cp-tab">Policy &amp; Context</span>
+        <span class="cp-tab">Telemetry</span>
+      </div>
+      <div class="cp-stages">
+        <div class="cp-stage"><div class="t">Plan</div><div class="d">Architecture &amp; design chats <span class="ar">→</span> opus, generous budget</div></div>
+        <div class="cp-stage"><div class="t">Build / Reflector</div><div class="d">Architecture <span class="ar">→</span> Haiku<br/>Reflector <span class="ar">→</span> Sonnet</div></div>
+        <div class="cp-stage"><div class="t">Test Gen</div><div class="d">Coverage targets, style-guide injection</div></div>
+        <div class="cp-stage"><div class="t">PR Review</div><div class="d">IP / license firewall, AI-rationale on PRs</div></div>
+        <div class="cp-stage"><div class="t">Prod Incident</div><div class="d">Runbook context, fast lane, audit trail</div></div>
+      </div>
+      <div class="cp-clients">
+        <div class="lab">AI Coding Clients</div>
+        <div class="row">
+          <div class="client"><b>Claude Code</b><i>Terminal agent</i></div>
+          <div class="client"><b>Cursor</b><i>IDE</i></div>
+          <div class="client"><b>Codex</b><i>CLI</i></div>
+          <div class="client"><b>IDE / Plugins</b><i>VS Code, JetBrains</i></div>
+          <div class="client"><b>Automated agents</b><i>MCP clients</i></div>
+        </div>
+      </div>
+      <div class="cp-plane">
+        <div class="cp-plane-head">
+          <div class="cp-plane-title">moring Control Plane <span class="pill"><span class="dot"></span>Foundational layer</span></div>
+          <div class="cp-plane-note">Every dev interaction lands here — 8 capability pillars on one governed substrate</div>
+        </div>
+        <div class="cp-substrate">
+          <div class="lab"><b>Shared substrate</b> — one policy &amp; data layer beneath every pillar</div>
+          <div class="caps">
+            <span class="cap">Per-tenant isolation</span>
+            <span class="cap">BYOK</span>
+            <span class="cap">Full audit trail</span>
+            <span class="cap">Data residency</span>
+            <span class="cap">OAuth / on-behalf-of</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SOLUTION CARDS ============================================================ -->
+<section class="solutions">
+  <div class="rail">
+    <div class="sol-grid">
+      <article class="sol reveal">
+        <img class="sol-ico" src="images/icon-engineering.png" alt="" width="64" height="64" />
+        <span class="eyebrow">Engineering</span>
+        <h3>AI-DLC <span class="sub">· governed agentic SDLC</span></h3>
+        <p>For CTOs, VPs of Engineering, and platform leads scaling agentic coding past the Copilot plateau. The substrate under your engineers' IDE so Claude Code, Cursor, or your internal runtime run governed, attributed, and audited.</p>
+        <a class="link" href="aidlc.html">Explore AI-DLC <span class="arr">→</span></a>
+      </article>
+      <article class="sol reveal">
+        <img class="sol-ico" src="images/icon-operations.png" alt="" width="64" height="64" />
+        <span class="eyebrow">Operations</span>
+        <h3>AI Ops <span class="sub">· autonomous operational brain</span></h3>
+        <p>For CIOs, VPs of Infrastructure, and heads of SRE running mission-critical systems. The intelligent layer above your existing observability stack — Dynatrace, ELK, SolarWinds, OEM, CMDB, Jira — that correlates, predicts, and remediates across silos.</p>
+        <a class="link" href="aiops.html">Explore AI Ops <span class="arr">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PLATFORM (dark band) ============================================================ -->
+<section class="band band-platform section">
+  <div class="rail">
+    <div class="platform-top">
+      <div class="section-head reveal">
+        <span class="eyebrow">The moring Platform</span>
+        <h2>One substrate underneath both solutions.</h2>
+        <p>Every moring engagement runs on the same foundation. Two layers: an AI Solutions Layer where the persona-specific workflows live, and an AI Platform Layer that provides observability, governance, security, and gateway services across everything.</p>
+        <a class="link-inline" href="platform.html">Explore the platform <span class="arr">→</span></a>
+      </div>
+      <div class="spark reveal" aria-hidden="true">
+        <img class="spark-star" src="images/star.png" alt="" />
+      </div>
+    </div>
+    <div class="layers">
+      <div class="layer reveal">
+        <h4>AI Solutions Layer</h4>
         <p>The persona-specific suites that ship outcomes. Bespoke per customer, deployed inside your environment, owned by your team.</p>
-        <div class="platform-modules">
-          <div class="platform-module">AI-DLC suite</div>
-          <div class="platform-module">AI Ops suite</div>
-          <div class="platform-module">Finance suite</div>
-          <div class="platform-module">CS suite</div>
+        <div class="chips">
+          <span class="chip">AI-DLC suite</span>
+          <span class="chip">AI Ops suite</span>
+          <span class="chip">Finance suite</span>
+          <span class="chip">CS suite</span>
         </div>
       </div>
-      <div class="platform-layer">
-        <h3>AI Platform Layer</h3>
+      <div class="layer reveal">
+        <h4>AI Platform Layer</h4>
         <p>Shared infrastructure for every agentic solution. Built once, applied everywhere — same governance, same audit lake, same cost gateway.</p>
-        <div class="platform-modules">
-          <div class="platform-module">Observability · traces · evals</div>
-          <div class="platform-module">Governance · policy · audit</div>
-          <div class="platform-module">Security · secrets · DLP</div>
-          <div class="platform-module">AI Gateway · routing · cost</div>
+        <div class="chips">
+          <span class="chip">Observability · traces · evals</span>
+          <span class="chip">Governance · policy · audit</span>
+          <span class="chip">Security · secrets · DLP</span>
+          <span class="chip">AI Gateway · routing · cost</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====== BESPOKE BY DESIGN ====== -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
+<!-- ============================================================ WHY BESPOKE ============================================================ -->
+<section class="section">
+  <div class="rail">
+    <div class="section-head reveal">
       <span class="eyebrow">Why bespoke</span>
       <h2>Generic AI doesn't survive an enterprise architecture review.</h2>
-      <p>Customers usually arrive after a generic AI tool failed compliance or stalled in evaluation.
-        Each Moring engagement is scoped to your stack — your regulators, your audit requirements,
-        your existing observability or development tooling — and shipped as a system you own.</p>
+      <p>Customers usually arrive after a generic AI tool failed compliance or stalled in evaluation. Each moring engagement is scoped to your stack — your regulators, your audit requirements, your existing observability or development tooling — and shipped as a system you own.</p>
     </div>
-    <div class="cards-grid-3">
-      <div class="card-tile">
-        <div class="role">01 · Scoped to your architecture</div>
+    <div class="bespoke-grid">
+      <div class="bespoke-col reveal">
+        <span class="eyebrow">01 · Scoped to your architecture</span>
         <h3>Your cloud, your stack, your perimeter.</h3>
-        <p>AWS, Azure, GCP, or on-prem. Dynatrace, ELK, ServiceNow, OpenShift, Bedrock — whatever
-          you already operate. Moring composes on top.</p>
+        <p>AWS, Azure, GCP, or on-prem. Dynatrace, ELK, ServiceNow, OpenShift, Bedrock — whatever you already operate. moring composes on top.</p>
       </div>
-      <div class="card-tile">
-        <div class="role">02 · Outcome-priced</div>
+      <div class="bespoke-col reveal">
+        <span class="eyebrow">02 · Outcome-priced</span>
         <h3>Fee tied to a named, measured outcome.</h3>
-        <p>Baseline first. Verify second. Bill third. Not effort, not hours, not seats. If the
-          outcome doesn't ship, the fee doesn't trigger.</p>
+        <p>Baseline first. Verify second. Bill third. Not effort, not hours, not seats. If the outcome doesn't ship, the fee doesn't trigger.</p>
       </div>
-      <div class="card-tile">
-        <div class="role">03 · Knowledge transfer is the deliverable</div>
+      <div class="bespoke-col reveal">
+        <span class="eyebrow">03 · Knowledge transfer is the deliverable</span>
         <h3>Your team owns the system at handoff.</h3>
-        <p>Source, runbooks, evals, decision logs — all yours. We're shipping a substrate and
-          handing you the keys. No ongoing vendor lock-in unless you choose ops support.</p>
+        <p>Source, runbooks, evals, decision logs — all yours. We're shipping a substrate and handing you the keys. No ongoing vendor lock-in unless you choose ops support.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====== ROI ====== -->
-<section class="roi-band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">The number · year-one impact</span>
-      <h2>One foundation. Many measurable outcomes.</h2>
-      <p>Year-one P&amp;L impact for a 200-engineer / multi-domain operations rollout. Floor defensible
-        even if individual levers underperform — the platform amortizes across both solutions.</p>
-    </div>
-    <div class="roi-grid">
-      <div>
-        <div class="roi-big">$10–25<em>M</em></div>
-        <div class="roi-caption">Y1 P&amp;L · across both solutions</div>
-        <div class="roi-floor">
-          <b>Downside floor:</b> AI-DLC cost lever alone (gateway + caching + tier routing) returns 12–16× ROI on the pilot. Every additional lever adds upside.
+<!-- ============================================================ THE NUMBER (dark band) ============================================================ -->
+<section class="band band-number section">
+  <div class="rail">
+    <div class="num-grid">
+      <div class="num-copy">
+        <div class="section-head reveal" style="max-width:none">
+          <span class="eyebrow">The number · year-one impact</span>
+          <h2>One foundation. Many measurable outcomes.</h2>
+          <p>Year-one P&amp;L impact for a 200-engineer / multi-domain operations rollout. Floor defensible even if individual levers underperform — the platform amortizes across both solutions.</p>
         </div>
+        <div class="bignum reveal">$10–25<b>M</b></div>
+        <div class="num-lbl reveal">Y1 P&amp;L · across both solutions</div>
+        <div class="floor reveal"><b>Downside floor:</b> AI-DLC cost lever alone (gateway + caching + tier routing) returns 12–16× ROI on the pilot. Every additional lever adds upside.</div>
       </div>
-      <ul class="roi-breakdown">
-        <li><span class="lever">AI-DLC · cost &amp; productivity</span><span class="range">$5 — 10M</span></li>
-        <li><span class="lever">AI Ops · MTTR + automation</span><span class="range">$3 — 8M</span></li>
-        <li><span class="lever">Predictive ops · avoided outages</span><span class="range">$1 — 3M</span></li>
-        <li><span class="lever">SME productivity · knowledge AI</span><span class="range">$0.5 — 2M</span></li>
-        <li><span class="lever">Audit &amp; compliance readiness</span><span class="range">$0.5 — 2M</span></li>
-      </ul>
+      <div class="num-visual reveal">
+        <img class="num-stack-img" src="images/outcomes-stack.png" alt="Outcomes stack — AI-DLC cost &amp; productivity, AI Ops MTTR + automation, predictive ops, SME productivity, and audit &amp; compliance readiness summing to year-one P&amp;L impact" />
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ====== BOTTOM CTA ====== -->
-<section class="cta-band" id="cta">
-  <div class="container">
-    <span class="eyebrow">Get started</span>
-    <h2 style="margin-top: 18px;">Two solutions. One platform. <em>Bespoke for your enterprise.</em></h2>
-    <p>A 30-minute AI Discovery workshop with Rajarajan gets you a baseline metric,
-      an architecture sketch against your stack, and a yes/no on outcome pricing — before anyone signs anything.</p>
-    <div class="hero-ctas">
-      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-      <a href="mailto:nikhil.devlapur@moring.ai" class="btn btn-secondary btn-lg">nikhil.devlapur@moring.ai</a>
+<!-- ============================================================ CTA ============================================================ -->
+<section class="cta">
+  <div class="wrap inner">
+    <img class="cta-motif reveal" src="images/two-solutions.png" alt="" />
+    <span class="eyebrow plain reveal">Get started</span>
+    <h2 class="reveal">Two solutions. One platform.<br/><em>Bespoke for your enterprise.</em></h2>
+    <p class="reveal">A 30-minute AI Discovery workshop with Rajarajan gets you a baseline metric, an architecture sketch against your stack, and a yes/no on outcome pricing — before anyone signs anything.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+      <a class="btn btn-secondary btn-lg" href="mailto:nikhil.devlapur@moring.ai">nikhil.devlapur@moring.ai</a>
     </div>
   </div>
 </section>
 
-<!-- ====== FOOTER ====== -->
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
-        <div class="foot-tagline">AI Outcomes, delivered. Bespoke AI-DLC and AI Ops for the enterprise.</div>
-      </div>
-      <div>
-        <h4>Solutions</h4>
-        <a href="aidlc.html">AI-DLC · Engineering</a>
-        <a href="aiops.html">AI Ops · Operations</a>
-        <a href="platform.html">The Moring Platform</a>
-      </div>
-      <div>
-        <h4>Industries &amp; Partners</h4>
-        <a href="insurance.html">Insurance</a>
-        <a href="fintech.html">Fintech &amp; Banks</a>
-        <a href="aws.html">AWS</a>
-        <a href="anthropic.html">Anthropic</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="signup.html">Request a workshop</a>
-        <a href="mailto:nikhil.devlapur@moring.ai">Contact sales</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div>© 2026 Moring, Inc.</div>
-      <div>Outcomes, not tools, not hours.</div>
-    </div>
-  </div>
-</footer>
+</main>
 
-<script src="moring.js" defer></script>
+<script src="image-slot.js"></script>
+<script src="chrome.js"></script>
 <script>
-  /* hero slider auto-advance + manual control */
   (function () {
-    var slider = document.getElementById('heroSlider');
-    if (!slider) return;
-    var dots = document.querySelectorAll('.slider-dot');
-    var prev = document.getElementById('prevSlide');
-    var next = document.getElementById('nextSlide');
-    var current = 0;
-    var total = 2;
-    var timer;
+    var track = document.getElementById('heroTrack');
+    var tabs = [].slice.call(document.querySelectorAll('#heroTabs .hero-tab'));
+    var slides = [].slice.call(document.querySelectorAll('#heroTrack .hero-slide'));
+    var n = slides.length, i = 0, timer = null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function go(i) {
-      current = (i + total) % total;
-      slider.classList.toggle('slide-1', current === 1);
-      dots.forEach(function (d, idx) { d.classList.toggle('active', idx === current); });
+    // honor reduced-motion for the SVG flow pulses (SMIL ignores the media query)
+    if (reduce) {
+      var fxSvg = document.querySelector('.hero-fx-svg');
+      if (fxSvg) {
+        if (fxSvg.pauseAnimations) fxSvg.pauseAnimations();
+        fxSvg.style.display = 'none';
+      }
     }
-    function start() {
-      stop();
-      timer = setInterval(function () { go(current + 1); }, 15000);
-    }
-    function stop() { if (timer) clearInterval(timer); }
 
-    dots.forEach(function (d) {
-      d.addEventListener('click', function () {
-        go(parseInt(d.dataset.target, 10));
-        start();
-      });
-    });
-    if (prev) prev.addEventListener('click', function () { go(current - 1); start(); });
-    if (next) next.addEventListener('click', function () { go(current + 1); start(); });
-    slider.addEventListener('mouseenter', stop);
-    slider.addEventListener('mouseleave', start);
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') { go(current - 1); start(); }
-      if (e.key === 'ArrowRight') { go(current + 1); start(); }
-    });
-    start();
+    function go(to) {
+      i = (to + n) % n;
+      track.style.transform = 'translateX(' + (-100 * i) + '%)';
+      tabs.forEach(function (t, k) { t.classList.toggle('active', k === i); });
+    }
+    function next() { go(i + 1); }
+    function prev() { go(i - 1); }
+    function restart() { if (timer) clearInterval(timer); if (!reduce) timer = setInterval(next, 6500); }
+
+    document.getElementById('heroNext').addEventListener('click', function () { next(); restart(); });
+    document.getElementById('heroPrev').addEventListener('click', function () { prev(); restart(); });
+    tabs.forEach(function (t) { t.addEventListener('click', function () { go(+t.getAttribute('data-go')); restart(); }); });
+
+    var carousel = document.getElementById('heroCarousel');
+    carousel.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+    carousel.addEventListener('mouseleave', restart);
+
+    go(0); restart();
   })();
 </script>
 </body>

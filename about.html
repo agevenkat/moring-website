@@ -3,359 +3,157 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About Moring · The team behind enterprise AI-DLC</title>
-<meta name="description" content="Moring is a small team of AI and GTM engineers building the substrate enterprise agentic AI assumes already exists. Meet the founders and engineers." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="moring.css">
-<style>
-  /* About-specific tweaks */
-  .principles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .principle {
-    background: var(--cream);
-    padding: 32px 28px;
-  }
-  .principle .pnum {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--orange);
-    margin-bottom: 12px;
-  }
-  .principle h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-  }
-  .principle p { font-size: 14px; line-height: 1.55; }
-  @media (max-width: 960px) {
-    .principles { grid-template-columns: 1fr; }
-  }
-</style>
+<title>moring · About — Outcomes, not tools, not hours</title>
+<meta name="description" content="moring builds bespoke AI solutions for the enterprise — deployed in your cloud, governed underneath, priced on outcomes. Founded on one belief: generic AI doesn't survive an enterprise architecture review." />
+<link rel="stylesheet" href="site.css" />
 </head>
-<body>
+<body data-page="about">
 
-<nav>
-  <div class="container nav-inner">
-    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
-    <div class="nav-links">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Solutions
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aidlc.html" class="nav-dropdown-item">
-            <span class="dd-title">AI-DLC</span>
-            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
-          </a>
-          <a href="aiops.html" class="nav-dropdown-item">
-            <span class="dd-title">AI Ops</span>
-            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
-          </a>
-        </div>
-      </div>
-      <a href="platform.html">Platform</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Verticals
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="insurance.html" class="nav-dropdown-item">
-            <span class="dd-title">Insurance</span>
-            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
-          </a>
-          <a href="fintech.html" class="nav-dropdown-item">
-            <span class="dd-title">Fintech &amp; Banks</span>
-            <span class="dd-desc">SR 11-7, FFIEC, agentic SDLC under MRM</span>
-          </a>
-        </div>
-      </div>
+<main>
 
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Partners
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aws.html" class="nav-dropdown-item">
-            <span class="dd-title">AWS</span>
-            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
-          </a>
-          <a href="anthropic.html" class="nav-dropdown-item">
-            <span class="dd-title">Anthropic</span>
-            <span class="dd-desc">Govern Claude at enterprise scale</span>
-          </a>
-        </div>
+<!-- ===== HERO (dark · outcome funnel) ===== -->
+<section class="about-hero">
+  <div class="wrap ah-inner">
+    <div class="ah-copy">
+      <h1 class="hero-enter">Outcomes. <em>Not&nbsp;tools, not&nbsp;hours.</em></h1>
+      <p class="ah-lede hero-enter d1">moring builds bespoke AI solutions for enterprises that demand cost, control, and governance. We deploy inside your cloud, govern underneath your agents, and tie our fee to a named, measured outcome. Then we hand you the keys.</p>
+      <div class="ah-actions hero-enter d2">
+        <a class="btn btn-coral-line btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+        <a class="btn btn-dark-pill btn-lg" href="index.html">See both solutions</a>
       </div>
-
-      <a href="about.html">About</a>
-      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
+    </div>
+    <div class="ah-anim hero-enter d1">
+      <div id="aboutLottie" class="ah-lottie" role="img" aria-label="moring — outcomes funnel animation"></div>
     </div>
   </div>
-</nav>
+</section>
 
-<!-- Hero -->
-<header class="hero">
-  <div class="container">
-    <div style="max-width: 880px;">
-      <span class="eyebrow">About Moring</span>
-      <h1 style="margin: 18px 0 24px; max-width: 18ch;">World-class agentic AI talent. <em>Outcomes in 90 days.</em></h1>
-      <p class="hero-sub" style="max-width: 64ch;">
-        Led by a former VP of Platform at Fidelity and an AWS Container Hero, Moring delivers
-        enterprise AI-DLC outcomes faster than your internal engineering team can stand them up —
-        and with deeper governance than any consultancy can produce. We've already built the
-        substrate. You get the outcome.
-      </p>
-      <div class="hero-ctas">
-        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-        <a href="#team" class="btn btn-secondary btn-lg">Meet the team</a>
+<!-- ===== BELIEF ===== -->
+<section class="section" style="padding-top:0">
+  <div class="rail">
+    <div class="feature-row reveal" style="border:0">
+      <div class="fr-text">
+        <span class="eyebrow">Why we exist</span>
+        <h2>Generic AI doesn't survive an enterprise architecture review.</h2>
+        <p class="body" style="font-size:16px; color:var(--fg-2)">Most enterprises come to us after a generic AI tool failed compliance or stalled in evaluation. The demos were impressive. The procurement was painful. The governance was an afterthought. And nobody could attribute the spend.</p>
+        <p class="body" style="font-size:16px; color:var(--fg-2)">We started moring to do the opposite: scope every engagement to the customer's exact architecture, govern at the substrate instead of the prompt, and prove the value with the customer's own data — then transfer ownership so they're never locked in.</p>
       </div>
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <div class="num">90 days</div>
-          <div class="lbl">To business outcome</div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="num">14 days</div>
-          <div class="lbl">To live substrate</div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="num">Ex-Fidelity</div>
-          <div class="lbl">Platform leadership</div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="num">AWS Hero</div>
-          <div class="lbl">Containers · production at scale</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- Team (moved to top) -->
-<section class="band" id="team" style="background: var(--cream-deep);">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">The team</span>
-      <h2>Engineers building for engineers.</h2>
-      <p>Small, senior, embedded with your platform team from day one. The same people who
-        write the code are the ones in the room on day four.</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-card with-photo">
-        <div class="team-photo">
-          <span class="initial">RP</span>
-          <span class="photo-tag">Portrait</span>
-        </div>
-        <div>
-          <div class="role">Co-Founder &amp; CEO</div>
-          <div class="name">Rajarajan Pudupatti</div>
-          <div class="credentials" style="margin-top: 10px;">
-            <span class="cred-chip featured">Ex-VP Platform · Fidelity</span>
-            <span class="cred-chip aws">AWS Container Hero</span>
-          </div>
-        </div>
-        <p>Architects the agentic systems Moring ships. Former VP of Platform at Fidelity, where
-          he scaled engineering infrastructure for thousands of developers under regulated-industry
-          governance. AWS Container Hero — recognized by AWS for production expertise in containers
-          and Kubernetes at enterprise scale. Owns architecture and customer outcomes end-to-end.</p>
-      </div>
-      <div class="team-card with-photo">
-        <div class="team-photo">
-          <span class="initial">B</span>
-          <span class="photo-tag">Portrait</span>
-        </div>
-        <div>
-          <div class="role">AI Engineer</div>
-          <div class="name">Balaji</div>
-        </div>
-        <p>Builds the runtime. Agent orchestration, governance enforcement, the failure-drill
-          harness, and the trace-keyed audit pipeline that feeds it. The reason latency overhead
-          stays under 30 ms across the full defense stack.</p>
-      </div>
-      <div class="team-card with-photo">
-        <div class="team-photo">
-          <span class="initial">ND</span>
-          <span class="photo-tag">Portrait</span>
-        </div>
-        <div>
-          <div class="role">VP of Sales</div>
-          <div class="name">Nikhil Devlapur</div>
-        </div>
-        <p>Owns customer conversations end-to-end — from the 30-minute AI Discovery workshop through
-          baseline measurement, outcome agreement, and signed charter. The first call you'll
-          have with Moring is with Nikhil.</p>
+      <div class="panel">
+        <div class="panel-h">What we believe</div>
+        <div class="panel-row"><span class="k">Pricing</span><span class="v coral">outcomes, not hours</span></div>
+        <div class="panel-row"><span class="k">Deployment</span><span class="v">your cloud, your keys</span></div>
+        <div class="panel-row"><span class="k">Governance</span><span class="v">substrate, not prompt</span></div>
+        <div class="panel-row"><span class="k">Proof</span><span class="v">your data, not ours</span></div>
+        <div class="panel-row total"><span class="k">Deliverable</span><span class="v">you own the system</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Why we exist -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">Why we exist</span>
-      <h2>Tier-2 productivity exists. Tier-1 risk discipline exists. The substrate that makes them compose did not.</h2>
-      <p>Every Fortune-500 engineering org is running the same playbook: stand up Claude Code or
-        Cursor, watch productivity tick up, then stall when the CISO, CFO, and audit committee
-        ask for evidence. The engineering tooling matured faster than the infrastructure underneath
-        it. We're building that infrastructure.</p>
+<!-- ===== PRINCIPLES ===== -->
+<section class="section band" style="padding-top:clamp(64px,8vw,104px)">
+  <div class="rail">
+    <div class="section-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>Four principles. No exceptions.</h2>
+      <p>They show up in every engagement, on every page of this site, in every contract we sign. They're the reason enterprises in regulated industries can adopt agentic AI without failing their next audit.</p>
     </div>
-    <div class="principles">
-      <div class="principle">
-        <div class="pnum">Principle 01</div>
-        <h3>The demo is the artifact.</h3>
-        <p>No slideware, no synthetic agents, no business-vertical pretense. Every component we ship is curl-able, queryable, and reproducible after the room empties.</p>
+    <div class="cards reveal" style="--cols:4">
+      <div class="card-n"><div class="n">01</div><h3>Bespoke, not boxed.</h3><p>Scoped to your stack, your data, your regulators. Composed on top of what you already operate.</p></div>
+      <div class="card-n"><div class="n">02</div><h3>Governed underneath.</h3><p>Policy enforced at the substrate. Hooks, scoped MCP, signed plugins, an audit lake — not optimism.</p></div>
+      <div class="card-n"><div class="n">03</div><h3>Outcome-priced.</h3><p>Baseline first. Verify second. Bill third. If the outcome doesn't ship, the fee doesn't trigger.</p></div>
+      <div class="card-n"><div class="n">04</div><h3>Knowledge transferred.</h3><p>Source, runbooks, evals, decision logs — all yours at handoff. No lock-in unless you choose support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section">
+  <div class="rail">
+    <div class="section-head reveal">
+      <span class="eyebrow">Team</span>
+      <h2>Operators who've run the architecture review from the other side.</h2>
+      <p>moring is built by people who've deployed, governed, and paid for enterprise software at scale — and who got tired of AI that couldn't survive procurement.</p>
+    </div>
+    <div class="cards reveal" style="--cols:3; max-width:80%; margin-left:auto; margin-right:auto;">
+      <div class="card-n">
+        <img class="ill" src="images/team-rajarajan-sq.png" alt="Rajarajan" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block" />
+        <h3 style="margin-top:14px">Rajarajan</h3><div class="tag">Founder · AI Discovery</div>
+        <p>Runs every AI Discovery workshop personally. Translates an enterprise's architecture into a baseline metric and an outcome-priced plan.</p>
       </div>
-      <div class="principle">
-        <div class="pnum">Principle 02</div>
-        <h3>The substrate is the moat.</h3>
-        <p>One foundation, five levers. Cost, governance, distribution, risk, and engineering measurement amortize on the same code. Year-two business agents ship at marginal cost.</p>
+      <div class="card-n">
+        <img class="ill" src="images/team-balaji-sq.png" alt="Balaji Nagaraj Kumar" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block" />
+        <h3 style="margin-top:14px">Balaji Nagaraj Kumar</h3><div class="tag">VP of Engineering</div>
+        <p>Leads platform and delivery engineering — turning each bespoke engagement into a substrate the customer's team owns at handoff.</p>
       </div>
-      <div class="principle">
-        <div class="pnum">Principle 03</div>
-        <h3>Governance is a tested control.</h3>
-        <p>Tier-3 governance isn't a marketing claim. It's deterministic policy at request time, audit evidence on demand, and live forensics retrievable by trace ID.</p>
+      <div class="card-n">
+        <img class="ill" src="images/team-nikhil-sq.png?v=2" alt="Nikhil Devlapur" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block" />
+        <h3 style="margin-top:14px">Nikhil Devlapur</h3><div class="tag">Go-to-market · Partnerships</div>
+        <p>Owns enterprise relationships and the AWS &amp; Anthropic partnerships. First point of contact for new engagements.</p>
       </div>
-      <div class="principle">
-        <div class="pnum">Principle 04</div>
-        <h3>ROI must survive the CFO.</h3>
-        <p>Synthetic benchmarks won't. The number you take to finance has to come from your engineers, your repos, your data — and be defensible five different ways.</p>
+      <div class="card-n">
+        <img class="ill" src="images/team-ashvath-sq.png?v=2" alt="Ashvath Narayan" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block" />
+        <h3 style="margin-top:14px">Ashvath Narayan</h3><div class="tag">AI Engineer</div>
+        <p>Builds the platform's agentic primitives — model gateway, RAG pipelines, and the observability that traces every call.</p>
+      </div>
+      <div class="card-n">
+        <img class="ill" src="images/team-ellakkia-sq.png?v=2" alt="Ellakkia" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block" />
+        <h3 style="margin-top:14px">Ellakkia</h3><div class="tag">AI Engineer</div>
+        <p>Builds the governance and evaluation layer — policy enforcement, audit lake, and the evals that keep agents production-ready.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Why faster than internal -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">Why 90 days beats 9 months</span>
-      <h2>Faster than your internal team. Deeper than any consultancy.</h2>
-      <p>Standing up AI-DLC internally takes 6–12 months and pulls senior engineers off your
-        roadmap. Consultancies bill headcount for slideware they can't hand back. Moring is
-        the third option — a senior team that ships outcomes and walks away leaving you the
-        substrate.</p>
+<!-- ===== PARTNERS ===== -->
+<section class="section" style="padding-top:0">
+  <div class="rail">
+    <div class="section-head reveal">
+      <span class="eyebrow">Partners &amp; ecosystem</span>
+      <h2>We build on the platforms your enterprise already trusts.</h2>
     </div>
-    <div class="compare-grid">
-      <div class="compare-col">
-        <h3>Internal build</h3>
-        <div class="headline">6–12 months. Senior engineers borrowed from sprint.</div>
-        <ul>
-          <li>Roadmap slips while platform team builds infrastructure.</li>
-          <li>No prior pattern to copy — every decision is first-principles.</li>
-          <li>Governance and audit added last, after the engineers have moved on.</li>
-          <li>You own the result, but you own the delay too.</li>
-        </ul>
-      </div>
-      <div class="compare-col">
-        <h3>Consultancy</h3>
-        <div class="headline">6 months. Slideware and headcount.</div>
-        <ul>
-          <li>Bills by the hour. Incentive is duration, not outcome.</li>
-          <li>Deliverables are documents, not curl-able infrastructure.</li>
-          <li>No IP transfer — when they leave, you start over.</li>
-          <li>Compliance-readiness arrives as a recommendation, not a control.</li>
-        </ul>
-      </div>
-      <div class="compare-col us">
-        <h3>Moring</h3>
-        <div class="headline">90 days. Outcomes. Then you own it.</div>
-        <ul>
-          <li>Pre-built substrate. We ship what we've already shipped before.</li>
-          <li>Senior team, dedicated, embedded with your platform engineers.</li>
-          <li>Source + recipe handed over by day 12. You keep the moat.</li>
-          <li>Business outcome — UW agent live, fraud catch rolling — by day 90.</li>
-        </ul>
-      </div>
+    <div class="intg-grid reveal" style="grid-template-columns:repeat(4,1fr)">
+      <div class="intg"><b>AWS</b><span>Bedrock-native, IAM-aware, marketplace-listed</span></div>
+      <div class="intg"><b>Anthropic</b><span>Govern Claude at enterprise scale</span></div>
+      <div class="intg"><b>Insurance carriers</b><span>NAIC, MRM, claims &amp; underwriting agents</span></div>
+      <div class="intg"><b>Fintech &amp; banks</b><span>SR 11-7, FFIEC, regulated adoption</span></div>
     </div>
   </div>
 </section>
 
-<!-- Hiring callout -->
-<section class="band">
-  <div class="container">
-    <div class="band-header" style="max-width: 56ch;">
-      <span class="eyebrow">We're hiring</span>
-      <h2>Build the substrate with us.</h2>
-      <p>If you've shipped agentic AI inside a regulated enterprise and felt the gap we're
-        building against, we want to talk. AI engineers, platform engineers, and GTM engineers
-        especially.</p>
-    </div>
-    <div class="hero-ctas">
-      <a href="mailto:hello@moring.ai?subject=Joining%20the%20Moring%20team" class="btn btn-primary btn-lg">Write to us</a>
-      <a href="moring-ai-homepage.html" class="btn btn-secondary btn-lg">See the platform</a>
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="wrap inner">
+    <img class="reveal" src="images/cta-diamonds.webp" alt="moring — two solutions, one platform" style="width: 200px; height: auto; margin: 0 auto 26px;" />
+    <span class="eyebrow plain reveal">Work with us</span>
+    <h2 class="reveal">Two solutions. One platform. <em>Bespoke for your enterprise.</em></h2>
+    <p class="reveal">Start with a 30-minute AI Discovery workshop. Walk away with a baseline metric, an architecture sketch, and a yes/no on outcome pricing.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+      <a class="btn btn-secondary btn-lg" href="mailto:nikhil.devlapur@moring.ai">nikhil.devlapur@moring.ai</a>
     </div>
   </div>
 </section>
 
-<!-- Bottom CTA -->
-<section class="cta-band">
-  <div class="container">
-    <span class="eyebrow">Talk to us</span>
-    <h2 style="margin-top: 18px;">Same engineers in the demo. <em>Same engineers in your cloud.</em></h2>
-    <p>If you're standing up an AI-DLC inside a Fortune-500 engineering org and want a substrate
-      that's defensible to your CFO, CISO, and audit committee — we should talk.</p>
-    <div class="hero-ctas">
-      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-      <a href="mailto:hello@moring.ai" class="btn btn-secondary btn-lg">hello@moring.ai</a>
-    </div>
-  </div>
-</section>
+</main>
 
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
-        <div class="foot-tagline">AI-DLC infrastructure for regulated enterprises.</div>
-      </div>
-      <div>
-        <h4>Solutions</h4>
-        <a href="aidlc.html">AI-DLC · Engineering</a>
-        <a href="aiops.html">AI Ops · Operations</a>
-        <a href="platform.html">The Moring Platform</a>
-      </div>
-      <div>
-        <h4>Industries &amp; Partners</h4>
-        <a href="insurance.html">Insurance</a>
-        <a href="fintech.html">Fintech &amp; Banks</a>
-        <a href="aws.html">AWS</a>
-        <a href="anthropic.html">Anthropic</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="signup.html">Request a workshop</a>
-        <a href="mailto:hello@moring.ai">Contact</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div>© 2026 Moring, Inc.</div>
-      <div>The demo is the artifact</div>
-    </div>
-  </div>
-</footer>
-
-<script src="moring.js" defer></script>
+<script src="image-slot.js"></script>
+<script src="chrome.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script>
+  (function () {
+    var el = document.getElementById('aboutLottie');
+    if (!el || !window.lottie) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var anim = lottie.loadAnimation({
+      container: el,
+      renderer: 'svg',
+      loop: !reduce,
+      autoplay: !reduce,
+      path: 'images/about-hero-v3.json'
+    });
+    if (reduce) anim.addEventListener('DOMLoaded', function () { anim.goToAndStop(anim.totalFrames - 1, true); });
+  })();
+</script>
 </body>
 </html>

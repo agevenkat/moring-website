@@ -1,0 +1,314 @@
+/* ============================================================
+   moring.ai · colors_and_type.css
+   Foundations: fonts, color tokens, type scale, semantic styles
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   FONTS — Geist (sans) + Geist Mono (mono)
+   SIL OFL license. TTFs live in /fonts.
+   ------------------------------------------------------------ */
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Variable.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("fonts/GeistMono-Variable.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------
+   TOKENS — root
+   ------------------------------------------------------------ */
+:root {
+  /* ---------- BRAND ---------- */
+  --brand-coral:        #FF7649;    /* primary — the moring orange */
+  --brand-coral-hover:  #F65E2C;    /* press / hover deepening */
+  --brand-coral-soft:   #FFA585;    /* tints / outlined marks */
+  --brand-coral-wash:   #FFF1EA;    /* surface wash, callouts */
+
+  /* secondary — deep teal. Pairs with coral (split-complementary).
+     Used for: secondary CTAs, links, info chips, data-viz series 2,
+     editorial accents in long-form. Never replaces coral for primary actions. */
+  --brand-teal:         #0F4147;
+  --brand-teal-hover:   #082F34;
+  --brand-teal-soft:    #4B8087;
+  --brand-teal-wash:    #E6EFF0;
+
+  --brand-ink:          #0B0B0C;    /* near-black — wordmark, ink */
+  --brand-stone:        #6B6B66;    /* warm mid-gray — body de-emph */
+  --brand-mist:         #DEDEDA;    /* warm light-gray — borders, dividers */
+  --brand-bone:         #FAFAF7;    /* off-white surface */
+
+  /* ---------- NEUTRALS (warm-leaning, AI-clean) ---------- */
+  --gray-0:   #FFFFFF;
+  --gray-25:  #FBFBFA;
+  --gray-50:  #F5F5F3;
+  --gray-100: #ECECE9;
+  --gray-150: #DEDEDA;
+  --gray-200: #CFCFCA;
+  --gray-300: #B1B1AB;
+  --gray-400: #8E8E88;
+  --gray-500: #6B6B66;
+  --gray-600: #4D4D49;
+  --gray-700: #2F2F2C;
+  --gray-800: #1B1B1A;
+  --gray-900: #0B0B0C;
+
+  /* ---------- SEMANTIC SURFACES ---------- */
+  --bg:            var(--brand-bone);
+  --bg-elevated:   var(--gray-0);
+  --bg-sunken:     var(--gray-50);
+  --bg-inverse:    var(--brand-ink);
+  --bg-accent:     var(--brand-coral);
+  --bg-accent-soft:var(--brand-coral-wash);
+
+  /* ---------- TEXT ---------- */
+  --fg:        var(--brand-ink);    /* primary ink */
+  --fg-1:      var(--gray-900);     /* primary */
+  --fg-2:      var(--gray-600);     /* secondary, body de-emph */
+  --fg-3:      var(--gray-400);     /* tertiary, hints */
+  --fg-4:      var(--gray-300);     /* disabled, placeholder */
+  --fg-inverse:var(--gray-0);       /* on dark / on coral */
+  --fg-accent: var(--brand-coral);
+
+  /* ---------- BORDERS ---------- */
+  --border:        var(--gray-150);
+  --border-strong: var(--gray-300);
+  --border-faint:  var(--gray-100);
+  --border-accent: var(--brand-coral);
+
+  /* ---------- SEMANTIC STATE ---------- */
+  --success: #2E8B57;
+  --warning: #C7822E;
+  --danger:  #C0392B;
+  --info:    #2F6FB1;
+
+  /* ---------- TYPE ---------- */
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  /* Headings use Geist Mono — gives moring its technical, AI-grade tone. */
+  --font-display: var(--font-mono);
+
+  /* Type scale — modular, generous, AI/editorial */
+  --fs-2xs: 11px;
+  --fs-xs:  12px;
+  --fs-sm:  13px;
+  --fs-md:  15px;   /* body */
+  --fs-lg:  17px;
+  --fs-xl:  20px;
+  --fs-2xl: 24px;
+  --fs-3xl: 32px;
+  --fs-4xl: 44px;
+  --fs-5xl: 60px;
+  --fs-6xl: 84px;
+  --fs-7xl: 120px;
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.18;
+  --lh-normal:  1.45;
+  --lh-relaxed: 1.6;
+
+  --tracking-tighter: -0.04em;
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  -0.005em;
+  --tracking-wide:    0.04em;
+  --tracking-caps:    0.1em;
+
+  /* ---------- SPACING (4pt grid) ---------- */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ---------- RADIUS ---------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-2xl:28px;
+  --radius-full: 999px;
+
+  /* ---------- SHADOWS ---------- */
+  /* soft / quiet — matches the AI-product feel */
+  --shadow-xs: 0 1px 0 0 rgba(11,11,12,0.04);
+  --shadow-sm: 0 1px 2px rgba(11,11,12,0.06), 0 1px 0 rgba(11,11,12,0.03);
+  --shadow-md: 0 4px 12px rgba(11,11,12,0.06), 0 1px 2px rgba(11,11,12,0.04);
+  --shadow-lg: 0 12px 32px rgba(11,11,12,0.08), 0 2px 6px rgba(11,11,12,0.04);
+  --shadow-xl: 0 24px 60px rgba(11,11,12,0.12), 0 4px 10px rgba(11,11,12,0.05);
+  --shadow-inner: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 0 0 1px rgba(11,11,12,0.04);
+  --ring-coral: 0 0 0 3px rgba(255,118,73,0.25);
+  --ring-focus: 0 0 0 3px rgba(11,11,12,0.12);
+
+  /* ---------- MOTION ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);     /* default — quick out, soft land */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-1: 120ms;
+  --dur-2: 180ms;
+  --dur-3: 260ms;
+  --dur-4: 420ms;
+
+  /* ---------- LAYOUT ---------- */
+  --content-narrow: 640px;
+  --content:        780px;
+  --content-wide:   1080px;
+  --content-max:    1280px;
+}
+
+/* ------------------------------------------------------------
+   DARK MODE — for app dark surfaces / inverted decks
+   ------------------------------------------------------------ */
+[data-theme="dark"], .theme-dark {
+  --bg:            #0B0B0C;
+  --bg-elevated:   #161616;
+  --bg-sunken:     #060607;
+  --bg-inverse:    var(--gray-0);
+  --bg-accent-soft:#241510;
+
+  --fg-1:      #F4F4F1;
+  --fg-2:      #B5B5AF;
+  --fg-3:      #7A7A74;
+  --fg-4:      #4A4A47;
+  --fg:        var(--fg-1);
+  --fg-inverse:var(--gray-900);
+
+  --border:        #262624;
+  --border-strong: #3A3A37;
+  --border-faint:  #1A1A19;
+}
+
+/* ------------------------------------------------------------
+   BASE
+   ------------------------------------------------------------ */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  background: var(--bg);
+  font-feature-settings: "ss01", "cv11", "cv05";
+  text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------
+   SEMANTIC TYPE — h1..h6, body, mono, caps, etc
+   Letter-spacing tightens as size grows — editorial behavior.
+   ------------------------------------------------------------ */
+.display, h1.display {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw + 1rem, var(--fs-6xl));
+  line-height: var(--lh-tight);
+  letter-spacing: -0.05em;            /* mono needs tighter tracking at display sizes */
+  font-weight: 500;
+  color: var(--fg-1);
+}
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  color: var(--fg-1);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+h4, .h4 {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-normal);
+  font-weight: 500;
+}
+h5, .h5 {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+  font-weight: 500;
+}
+h6, .h6 {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--fg-2);
+}
+
+p, .body {
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-1);
+}
+.body-lg { font-size: var(--fs-lg); line-height: var(--lh-relaxed); }
+.body-sm { font-size: var(--fs-sm); line-height: var(--lh-normal); color: var(--fg-2); }
+.lede {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+  letter-spacing: var(--tracking-normal);
+}
+
+.eyebrow, .caps {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-weight: 500;
+  color: var(--fg-2);
+}
+.eyebrow-coral { color: var(--brand-coral); }
+
+code, .mono, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+code:not(pre code) {
+  background: var(--bg-sunken);
+  border: 1px solid var(--border-faint);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  color: var(--fg-1);
+}
+
+a {
+  color: var(--fg-1);
+  text-decoration-color: var(--gray-200);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color var(--dur-2) var(--ease-out), color var(--dur-2) var(--ease-out);
+}
+a:hover { text-decoration-color: var(--brand-coral); color: var(--brand-coral); }
+
+/* Selection & focus */
+::selection { background: var(--brand-coral); color: var(--gray-0); }
+:focus-visible { outline: 2px solid var(--brand-coral); outline-offset: 2px; }
+
+/* Reset margins on common headings/paragraphs for predictable composition */
+h1, h2, h3, h4, h5, h6, p { margin: 0; }

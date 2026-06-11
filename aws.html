@@ -3,281 +3,109 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Moring × AWS · AI-DLC, native to AWS</title>
-<meta name="description" content="Moring runs natively on AWS. Bedrock-routed gateway, IAM-aware, CloudTrail-integrated, S3 audit lake, marketplace-purchasable. The AI-DLC substrate for AWS-first engineering organizations." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="moring.css">
+<title>moring + AWS · Bedrock-native, deployed in your account</title>
+<meta name="description" content="moring runs natively on AWS — Bedrock model access, IAM-aware governance, EKS-deployed, and available through AWS Marketplace. Your AI substrate inside your own AWS account." />
+<link rel="stylesheet" href="site.css" />
 </head>
-<body>
+<body data-page="aws">
 
-<nav>
-  <div class="container nav-inner">
-    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
-    <div class="nav-links">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Solutions
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aidlc.html" class="nav-dropdown-item">
-            <span class="dd-title">AI-DLC</span>
-            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
-          </a>
-          <a href="aiops.html" class="nav-dropdown-item">
-            <span class="dd-title">AI Ops</span>
-            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
-          </a>
-        </div>
-      </div>
-      <a href="platform.html">Platform</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Verticals
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="insurance.html" class="nav-dropdown-item">
-            <span class="dd-title">Insurance</span>
-            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
-          </a>
-          <a href="fintech.html" class="nav-dropdown-item">
-            <span class="dd-title">Fintech &amp; Banks</span>
-            <span class="dd-desc">SR 11-7, FFIEC, agentic SDLC under MRM</span>
-          </a>
-        </div>
-      </div>
+<main>
 
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Partners
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aws.html" class="nav-dropdown-item">
-            <span class="dd-title">AWS</span>
-            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
-          </a>
-          <a href="anthropic.html" class="nav-dropdown-item">
-            <span class="dd-title">Anthropic</span>
-            <span class="dd-desc">Govern Claude at enterprise scale</span>
-          </a>
-        </div>
-      </div>
-
-      <a href="about.html">About</a>
-      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
+<section class="phero dark">
+  <div class="wrap phero-inner">
+    <div class="phero-copy pc-head">
+      <span class="eyebrow hero-enter">Partners · AWS</span>
+      <h1 class="hero-enter d1">Bedrock-native. <em>Deployed in your account.</em></h1>
     </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow" style="color: var(--aws-orange);">Moring × AWS</span>
-      <h1>AI-DLC, <em>native to AWS</em>.</h1>
-      <p class="hero-sub">
-        Moring's gateway routes Bedrock traffic from inside your VPC. IAM-aware,
-        CloudTrail-integrated, S3-backed audit lake. Procure via AWS Marketplace,
-        deploy to your region of choice, govern every Bedrock call across every
-        foundation model.
-      </p>
-      <div class="hero-ctas">
-        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-        <a href="#" class="btn btn-secondary btn-lg">View on AWS Marketplace</a>
+    <div class="phero-copy pc-tail">
+      <p class="lede hero-enter d2">moring runs natively on AWS. Models through Bedrock, governance through your IAM, compute on EKS, and procurement through AWS Marketplace. The AI substrate stands up inside your own account — your VPC, your KMS keys, your CloudTrail.</p>
+      <div class="phero-actions hero-enter d3">
+        <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+        <a class="btn btn-secondary btn-lg" href="platform.html">See the platform <span class="arr">→</span></a>
       </div>
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <div class="num">Bedrock</div>
-          <div class="lbl">Native routing, all FMs</div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="num">In-VPC</div>
-          <div class="lbl">Your region, your IAM</div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="num">Marketplace</div>
-          <div class="lbl">Procure on existing AWS spend</div>
-        </div>
+      <div class="phero-stats hero-enter d4">
+        <div class="stat"><div class="num" style="color:#F7F7F4">Bedrock</div><div class="lbl">Native model access</div></div>
+        <div class="stat"><div class="num" style="color:#F7F7F4">EKS</div><div class="lbl">3-AZ, private subnets</div></div>
+        <div class="stat"><div class="num" style="color:#F7F7F4">Marketplace</div><div class="lbl">Listed procurement</div></div>
       </div>
     </div>
-
-    <div class="viz-card">
-      <div class="viz-title">Reference architecture · in your AWS account</div>
-      <div class="arch-diagram" style="border: none; padding: 0;">
-        <div class="arch-lane">
-          <span class="label">Engineers</span>
-          <div class="nodes">
-            <span class="arch-node">IDE-attached agent</span>
-            <span class="arch-node">internal CLI</span>
-            <span class="arch-node">RAG pipelines</span>
-          </div>
+    <div class="phero-visual hero-enter vis">
+      <div class="aws-acct">
+        <span class="aws-tag">YOUR AWS ACCOUNT</span>
+        <span class="aws-region">ap-southeast-2 · VPC · 3-AZ</span>
+        <div class="aws-grid">
+          <div class="aws-svc"><b>Amazon Bedrock</b><i>Claude · no data retention</i></div>
+          <div class="aws-svc"><b>Amazon EKS</b><i>substrate · Helm · private subnets</i></div>
+          <div class="aws-svc"><b>S3 + KMS</b><i>audit lake · your keys</i></div>
+          <div class="aws-svc"><b>IAM · SSO · SCIM</b><i>your roles &amp; identity</i></div>
+          <div class="aws-svc"><b>CloudTrail</b><i>your audit pipeline · SIEM</i></div>
+          <div class="aws-svc"><b>PrivateLink</b><i>no public data path</i></div>
         </div>
-        <div class="arch-lane">
-          <span class="label">Moring</span>
-          <div class="nodes">
-            <span class="arch-node moring">gateway</span>
-            <span class="arch-node moring">hooks</span>
-            <span class="arch-node moring">plugin registry</span>
-          </div>
+        <div class="aws-core">
+          <div class="ac-h">moring substrate · Bedrock-native</div>
+          <div class="ac-sub">Deployed in your account — managed by our team.</div>
+          <div class="hd-pills"><span>AI Gateway</span><span>Observability</span><span>Governance</span><span>Cost</span></div>
         </div>
-        <div class="arch-lane">
-          <span class="label">AWS-native</span>
-          <div class="nodes">
-            <span class="arch-node partner">Bedrock</span>
-            <span class="arch-node partner">IAM</span>
-            <span class="arch-node partner">CloudTrail</span>
-            <span class="arch-node partner">S3 audit lake</span>
-            <span class="arch-node partner">PrivateLink</span>
-          </div>
+        <div class="aws-foot">
+          <span class="aws-exit">DATA EXIT <b>never</b></span>
+          <span class="aws-mkt">AWS Marketplace · listed procurement</span>
         </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- Why Moring on AWS -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow" style="color: var(--aws-orange);">Why Moring on AWS</span>
-      <h2>Three things you only get when the substrate is AWS-native.</h2>
-      <p>Generic LLM gateways treat AWS as one provider among many. Moring is built around
-        Bedrock's primitives, IAM's identity model, and the audit surfaces AWS already gives you.</p>
-    </div>
-    <div class="cards-grid-3">
-      <div class="card-tile">
-        <div class="role">01 · Bedrock-native routing</div>
-        <h3>Every foundation model on one rate card.</h3>
-        <p>Anthropic, Mistral, Meta, Cohere, Amazon Nova — Moring routes across all of them on Bedrock,
-          enforces tier policy, and prices each call against your existing AWS spend commitment.</p>
-        <div class="link">See routing policy</div>
-      </div>
-      <div class="card-tile">
-        <div class="role">02 · IAM is the identity model</div>
-        <h3>No second auth system to operate.</h3>
-        <p>Engineer identity, team scopes, MCP catalog grants — all expressed as IAM policies.
-          Your existing access reviews extend automatically. No new directory, no shadow ACLs.</p>
-        <div class="link">See identity model</div>
-      </div>
-      <div class="card-tile">
-        <div class="role">03 · S3 is the audit lake</div>
-        <h3>Forensics where your security team already lives.</h3>
-        <p>Every agent action lands as a structured event in S3, joinable to CloudTrail and
-          your existing SIEM. Athena query on day one; no new lake to build.</p>
-        <div class="link">See audit schema</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AWS-specific levers -->
-<section class="band" style="background: var(--cream-deep);">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow" style="color: var(--aws-orange);">AWS-specific levers</span>
-      <h2>What you can do because you're on AWS.</h2>
-      <p>Five AWS surfaces Moring leans on. Each unlocks a control or a cost win that
-        a generic gateway can't reproduce.</p>
+<section class="section">
+  <div class="rail">
+    <div class="section-head reveal">
+      <span class="eyebrow">How moring uses AWS</span>
+      <h2>Your account. Your keys. Our substrate.</h2>
+      <p>moring composes on the AWS primitives you already trust — nothing leaves your account, and procurement runs through the marketplace agreements you already have.</p>
     </div>
-    <ul class="proofs" style="border-top: 1px solid var(--line);">
-      <li><span><b>Bedrock prompt caching</b> applied automatically across cacheable prefixes. 50–90% off cacheable input tokens, region-aware.</span></li>
-      <li><span><b>Bedrock Batch inference</b> for eval, summarization, and backfill workloads. 50% off real-time pricing, queue-routed at the gateway.</span></li>
-      <li><span><b>Cross-region inference</b> for capacity smoothing without code changes. Latency-aware routing inside US-East / US-West / EU.</span></li>
-      <li><span><b>PrivateLink-only egress</b>: prompts never traverse public internet. Compliance-team-approvable in one diagram.</span></li>
-      <li><span><b>Bedrock Guardrails composable with Moring hooks</b>: provider-side content filtering plus your platform's deterministic policy. Defense in depth.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Procurement -->
-<section class="band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow" style="color: var(--aws-orange);">Procurement</span>
-      <h2>Buy on the spend you already committed.</h2>
-      <p>Moring is listed in AWS Marketplace and counts against your existing
-        EDP and PPA commitments. No new vendor onboarding, no separate paper.</p>
-    </div>
-    <div class="cards-grid-3">
-      <div class="card-tile">
-        <div class="role">Marketplace</div>
-        <h3>Listed for private offers.</h3>
-        <p>Custom terms, custom pricing, custom contract length. Sales engineering co-led with
-          your AWS account team where it makes sense.</p>
-      </div>
-      <div class="card-tile">
-        <div class="role">EDP / PPA</div>
-        <h3>Counts toward your commit.</h3>
-        <p>Marketplace purchases reduce your AWS commitment burn-down. Procurement gets a single
-          invoice path; your platform team gets a faster contracting cycle.</p>
-      </div>
-      <div class="card-tile">
-        <div class="role">Co-sell</div>
-        <h3>AWS account-team aligned.</h3>
-        <p>Moring is part of the AWS partner program. Your account manager has visibility,
-          and joint architecture reviews are routine.</p>
-      </div>
+    <div class="intg-grid reveal">
+      <div class="intg"><b>Amazon Bedrock</b><span>Native access to Claude &amp; other models, no data retention</span></div>
+      <div class="intg"><b>AWS IAM</b><span>Governance and access mapped to your existing roles</span></div>
+      <div class="intg"><b>Amazon EKS</b><span>Substrate deployed Kubernetes-native, 3-AZ</span></div>
+      <div class="intg"><b>Amazon S3 + KMS</b><span>Audit lake on your buckets, your encryption keys</span></div>
+      <div class="intg"><b>CloudTrail</b><span>Every action flows to your existing audit pipeline</span></div>
+      <div class="intg"><b>PrivateLink</b><span>No public data path; traffic stays on the AWS backbone</span></div>
+      <div class="intg"><b>AWS Marketplace</b><span>Listed — procure on your existing AWS agreement</span></div>
+      <div class="intg"><b>Terraform + Helm</b><span>Reproducible deploy, handed to your platform team</span></div>
     </div>
   </div>
 </section>
 
-<!-- bottom CTA -->
-<section class="cta-band">
-  <div class="container">
-    <span class="eyebrow" style="color: var(--aws-orange);">Book your pilot</span>
-    <h2 style="margin-top: 18px;">Native to AWS, procured on AWS, <em>governed by Moring</em>.</h2>
-    <p>Fourteen days from now, the gateway is in your VPC. Bedrock spend is per-team attributable.
-      Your security team has CloudTrail + S3 evidence on every agent action.</p>
-    <div class="hero-ctas">
-      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-      <a href="moring-ai-homepage.html" class="btn btn-secondary btn-lg">See the platform</a>
+<section class="section band" style="padding-top:clamp(64px,8vw,104px)">
+  <div class="rail">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why it matters</span>
+      <h2>The fastest path from approved cloud to live AI.</h2>
+      <p>Because moring is Bedrock-native and Marketplace-listed, your security and procurement teams are reviewing patterns they already approve — not a new vendor perimeter. The substrate is live in days, not quarters.</p>
+    </div>
+    <div class="cards reveal" style="--cols:3">
+      <div class="card-n"><div class="n">01</div><h3>No new data perimeter</h3><p>Everything runs in your account. There's no moring-hosted endpoint touching your data.</p></div>
+      <div class="card-n"><div class="n">02</div><h3>Procurement you already have</h3><p>Marketplace listing means the paper is familiar — draw down on existing AWS commitments.</p></div>
+      <div class="card-n"><div class="n">03</div><h3>Security review you've done before</h3><p>IAM, KMS, CloudTrail, PrivateLink — the controls your team already validates.</p></div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
-        <div class="foot-tagline">AI-DLC infrastructure, native to your cloud.</div>
-      </div>
-      <div>
-        <h4>Solutions</h4>
-        <a href="aidlc.html">AI-DLC · Engineering</a>
-        <a href="aiops.html">AI Ops · Operations</a>
-        <a href="platform.html">The Moring Platform</a>
-      </div>
-      <div>
-        <h4>Industries &amp; Partners</h4>
-        <a href="insurance.html">Insurance</a>
-        <a href="fintech.html">Fintech &amp; Banks</a>
-        <a href="aws.html">AWS</a>
-        <a href="anthropic.html">Anthropic</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="moring-ai-homepage.html">Platform</a>
-        <a href="signup.html">Request a workshop</a>
-        <a href="mailto:hello@moring.ai">Contact</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div>© 2026 Moring, Inc.</div>
-      <div>AWS Partner · Marketplace listed</div>
+<section class="cta">
+  <div class="wrap inner">
+    <img class="reveal" src="images/aws-moring.png" alt="moring × AWS" style="width: 280px; height: auto; margin: 0 auto 22px;" />
+    <span class="eyebrow plain reveal">Build on AWS</span>
+    <h2 class="reveal">Your AWS account is <em>already the deployment target.</em></h2>
+    <p class="reveal">A 30-minute workshop gets you an architecture sketch against your AWS landing zone, a baseline metric, and a yes/no on outcome pricing.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+      <a class="btn btn-secondary btn-lg" href="anthropic.html">See the Anthropic partnership <span class="arr">→</span></a>
     </div>
   </div>
-</footer>
+</section>
 
-<script src="moring.js" defer></script>
+</main>
+
+<script src="image-slot.js"></script>
+<script src="chrome.js"></script>
 </body>
 </html>

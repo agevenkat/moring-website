@@ -3,481 +3,228 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Moring AI-DLC · Bespoke AI development lifecycle for enterprise engineering</title>
+<title>moring AI-DLC · Governed agentic SDLC for enterprise engineering</title>
 <meta name="description" content="Bespoke AI-DLC for enterprise engineering orgs. Five live components — cost observability, governed workflow, plugin distribution, failure drill, engineering case study. Nine of 11 SDLC stages instrumented in 14 days." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="moring.css">
-<style>
-  /* page-specific viz styles */
-  .hero h1 { max-width: 18ch; }
-  .hero h1 em { font-style: italic; color: var(--orange); font-weight: 500; }
-  .viz-bar { margin-top: 16px; height: 8px; background: var(--cream-deep); border-radius: 4px; overflow: hidden; }
-  .viz-bar-fill { height: 100%; background: var(--orange); border-radius: 4px; }
-  .attack-list { display: flex; flex-direction: column; gap: 14px; }
-  .attack { border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; background: var(--cream); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px; }
-  .attack-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); }
-  .attack-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 4px; letter-spacing: 0.05em; }
-  .attack-status { font-family: 'JetBrains Mono', monospace; font-size: 11px; background: var(--green); color: #fff; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.08em; }
-  .study-metric { padding: 14px 0; border-top: 1px solid var(--line); }
-  .study-metric:first-child { border-top: none; }
-  .study-metric .lbl { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; }
-  .study-metric .val { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 600; color: var(--ink); margin-top: 2px; }
-  .study-metric .val em { color: var(--orange); font-style: normal; }
-</style>
+<link rel="stylesheet" href="site.css" />
 </head>
-<body>
+<body data-page="aidlc">
 
-<nav>
-  <div class="container nav-inner">
-    <a href="moring-ai-homepage.html" class="logo">moring<span>.ai</span></a>
-    <div class="nav-links">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Solutions
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aidlc.html" class="nav-dropdown-item">
-            <span class="dd-title">AI-DLC</span>
-            <span class="dd-desc">AI for software engineering · governed agentic SDLC</span>
-          </a>
-          <a href="aiops.html" class="nav-dropdown-item">
-            <span class="dd-title">AI Ops</span>
-            <span class="dd-desc">AI for operations · event correlation, RCA, self-healing</span>
-          </a>
-        </div>
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="phero">
+  <div class="wrap phero-inner">
+    <div class="phero-copy">
+      <span class="eyebrow hero-enter">AI for software engineering</span>
+      <h1 class="hero-enter d1">Engineering built for the <em>AI</em> era.</h1>
+      <p class="lede hero-enter d2">The AI-powered SDLC for enterprises that demand cost, control, and governance. Five live components, scoped to your stack, deployed inside your VPC. Nine of 11 SDLC stages instrumented — your platform team owns the source by day twelve.</p>
+      <div class="phero-actions hero-enter d3">
+        <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+        <a class="btn btn-secondary btn-lg" href="#components">See the five components <span class="arr">→</span></a>
       </div>
-      <a href="platform.html">Platform</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Verticals
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="insurance.html" class="nav-dropdown-item">
-            <span class="dd-title">Insurance</span>
-            <span class="dd-desc">Carriers · NAIC, MRM, claims &amp; UW agents</span>
-          </a>
-          <a href="fintech.html" class="nav-dropdown-item">
-            <span class="dd-title">Fintech &amp; Banks</span>
-            <span class="dd-desc">SR 11-7, FFIEC, regulated agentic adoption</span>
-          </a>
-        </div>
+      <div class="phero-stats hero-enter d4">
+        <div class="stat"><div class="num">14 days</div><div class="lbl">To live substrate</div></div>
+        <div class="stat"><div class="num">$5–10<b>M</b></div><div class="lbl">Y1 P&amp;L · <span>eng-only</span></div></div>
+        <div class="stat"><div class="num">9 of 11</div><div class="lbl">SDLC stages instrumented</div></div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" type="button">
-          Partners
-          <svg class="caret" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 4 L5 7 L8 4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="aws.html" class="nav-dropdown-item">
-            <span class="dd-title">AWS</span>
-            <span class="dd-desc">Bedrock-native, IAM-aware, marketplace-listed</span>
-          </a>
-          <a href="anthropic.html" class="nav-dropdown-item">
-            <span class="dd-title">Anthropic</span>
-            <span class="dd-desc">Govern Claude at enterprise scale</span>
-          </a>
-        </div>
-      </div>
-      <a href="about.html">About</a>
-      <a href="signup.html" class="btn btn-primary">Request a workshop</a>
     </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="solution-label">AI for Software Engineering</span>
-      <h1>Engineering built for the <em>AI era</em>.</h1>
-      <p class="hero-sub">
-        The AI-powered SDLC for enterprises that demand cost, control, and governance.
-        Five live components, scoped to your stack, deployed inside your VPC. Nine of 11
-        SDLC stages instrumented. Your platform team owns the source by day twelve.
-      </p>
-      <div class="hero-ctas">
-        <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-        <a href="#components" class="btn btn-secondary btn-lg">See the five components</a>
-      </div>
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <div class="num">14 days</div>
-          <div class="lbl">To live substrate</div>
+    <div class="phero-visual hero-enter vis" style="position:relative;">
+      <div class="hdiag">
+        <div class="hd-tier">
+          <div class="hd-cap">Live working session · <b>PR #4471</b></div>
+          <div class="hd-chips">
+            <span class="hd-chip"><b>VS Code</b><i>code-agent · v3</i></span>
+            <span class="hd-chip"><b>Claude Code</b><i>hooks · MCP</i></span>
+            <span class="hd-chip"><b>Cursor</b><i>runtime · pinned</i></span>
+          </div>
         </div>
-        <div class="hero-meta-item">
-          <div class="num">$5–10M</div>
-          <div class="lbl">Y1 P&amp;L, eng-only</div>
+        <div class="hd-link"></div>
+        <div class="hd-core">
+          <div class="hd-core-h">moring AI-DLC Substrate</div>
+          <div class="hd-core-sub">Governed at the substrate — not the prompt.</div>
+          <div class="hd-pills"><span>Gateway</span><span>Hooks</span><span>Scoped MCP</span><span>Plugins</span><span>Audit</span></div>
+          <div class="hd-meta" style="margin-top:12px">9 of 11 SDLC stages · <b>&lt;30ms overhead</b></div>
+          <div class="hd-meta">every call tagged · team · trace_id · PR · cost</div>
         </div>
-        <div class="hero-meta-item">
-          <div class="num">9 of 11</div>
-          <div class="lbl">SDLC stages instrumented</div>
+        <div class="hd-link"></div>
+        <div class="hd-tier">
+          <div class="hd-cap">Governed outputs · this PR</div>
+          <div class="hd-row"><b>Cost attribution</b><i>$0.42 / merged PR<br/>tagged to team + trace</i></div>
+          <div class="hd-row"><b>IP / license firewall</b><i>1 blocked import<br/>GPL snippet refused</i></div>
+          <div class="hd-row"><b>Test-gen + review</b><i>+38 tests · coverage 91%<br/>AI rationale on PR</i></div>
+          <div class="hd-stamp"><span class="chk">✓</span> logged · <b>AUD-4471-0c9</b> · forensics in &lt;1 min</div>
         </div>
       </div>
     </div>
-
-    <svg class="hero-illustration" viewBox="0 0 540 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-DLC architecture: engineers in IDE feed into Moring substrate (gateway, hooks, scoped MCP, plugins, audit) which routes to LLM providers and the audit lake in your cloud.">
-      <text x="32" y="34" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">ENGINEERS · IDE + AGENT</text>
-      <g>
-        <rect x="32" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="60" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-        <text x="82" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">VS Code</text>
-        <text x="82" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">code-agent · v3</text>
-      </g>
-      <g>
-        <rect x="196" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="224" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-        <text x="246" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Claude Code</text>
-        <text x="246" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">hooks · MCP</text>
-      </g>
-      <g>
-        <rect x="360" y="50" width="148" height="68" rx="6" fill="#fff" stroke="#DDD5C7"/>
-        <circle cx="388" cy="84" r="11" fill="#F2EDE2" stroke="#DDD5C7"/>
-        <text x="410" y="80" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Cursor</text>
-        <text x="410" y="98" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A8278">runtime · pinned</text>
-      </g>
-      <g stroke="#D85F2C" stroke-width="1.5" fill="none">
-        <path d="M 106 118 L 106 150" />
-        <path d="M 270 118 L 270 150" />
-        <path d="M 434 118 L 434 150" />
-        <path d="M 102 148 L 110 150 L 102 152" />
-        <path d="M 266 148 L 274 150 L 266 152" />
-        <path d="M 430 148 L 438 150 L 430 152" />
-      </g>
-      <rect x="32" y="158" width="476" height="184" rx="10" fill="#1A1815"/>
-      <text x="48" y="184" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C" letter-spacing="2">MORING AI-DLC SUBSTRATE</text>
-      <text x="48" y="210" font-family="'Fraunces', serif" font-size="20" fill="#FAF7F2" font-weight="600">Governed at the substrate.</text>
-      <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#FAF7F2">
-        <rect x="48" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="91" y="256" text-anchor="middle">Gateway</text>
-        <rect x="142" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="185" y="256" text-anchor="middle">Hooks</text>
-        <rect x="236" y="234" width="120" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="296" y="256" text-anchor="middle">Scoped MCP</text>
-        <rect x="364" y="234" width="86" height="34" rx="4" fill="rgba(250,247,242,0.08)" stroke="rgba(250,247,242,0.18)"/>
-        <text x="407" y="256" text-anchor="middle">Plugins</text>
-        <rect x="458" y="234" width="48" height="34" rx="4" fill="rgba(216,95,44,0.18)" stroke="#D85F2C"/>
-        <text x="482" y="256" text-anchor="middle" fill="#D85F2C">Audit</text>
-      </g>
-      <text x="48" y="296" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(250,247,242,0.55)" letter-spacing="1">9 OF 11 SDLC STAGES INSTRUMENTED · &lt;30MS OVERHEAD</text>
-      <text x="48" y="320" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(250,247,242,0.55)" letter-spacing="1">EVERY CALL TAGGED · TEAM · TRACE_ID · PR · COST</text>
-      <g stroke="#D85F2C" stroke-width="1.5" fill="none">
-        <path d="M 160 342 L 160 376" />
-        <path d="M 156 374 L 164 376 L 156 378" />
-        <path d="M 380 342 L 380 376" />
-        <path d="M 376 374 L 384 376 L 376 378" />
-      </g>
-      <text x="32" y="400" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278" letter-spacing="2">YOUR CLOUD</text>
-      <g>
-        <rect x="32" y="416" width="232" height="84" rx="6" fill="#F2EDE2" stroke="#DDD5C7"/>
-        <text x="50" y="440" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">LLM providers</text>
-        <text x="50" y="460" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278">Anthropic · Bedrock · OpenAI</text>
-        <text x="50" y="480" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D85F2C">cached + tier-routed</text>
-      </g>
-      <g>
-        <rect x="276" y="416" width="232" height="84" rx="6" fill="#F2EDE2" stroke="#DDD5C7"/>
-        <text x="294" y="440" font-family="'Fraunces', serif" font-size="14" fill="#1A1815" font-weight="600">Audit lake · S3</text>
-        <text x="294" y="460" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8278">every call · trace_id keyed</text>
-        <text x="294" y="480" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2E5D3F">SOC 2 evidence ready</text>
-      </g>
-    </svg>
   </div>
-</header>
+</section>
 
-<section class="band" id="components">
-  <div class="container">
-    <div class="band-header">
+<!-- ===== FIVE COMPONENTS ===== -->
+<section class="section" id="components">
+  <div class="rail">
+    <div class="section-head reveal">
       <span class="eyebrow">Five live components</span>
       <h2>One substrate. Five levers. Zero slides.</h2>
-      <p>Every component is curl-able, queryable, reproducible. CTO hits the API on day 4.
-        Platform team owns the source by day 12.</p>
+      <p>Every component is curl-able, queryable, reproducible. Your CTO hits the API on day 4. Your platform team owns the source by day 12.</p>
     </div>
-    <div class="components">
-      <div class="component">
-        <div class="day">Live · day 4</div>
-        <div class="num">01</div>
-        <div class="name">Cost Observability</div>
-        <div class="desc">Every AI call attributed by team, agent, and PR. One gateway, four surfaces.</div>
-      </div>
-      <div class="component">
-        <div class="day">Live · day 9</div>
-        <div class="num">02</div>
-        <div class="name">Governed Workflow</div>
-        <div class="desc">Hooks fire. MCP refuses out-of-scope. PRs auto-describe with cost and trace ID.</div>
-      </div>
-      <div class="component">
-        <div class="day">Live · day 7</div>
-        <div class="num">03</div>
-        <div class="name">Plugin Distribution</div>
-        <div class="desc">Governance ships like Helm charts. Soft, medium, hard enforcement — one dial.</div>
-      </div>
-      <div class="component">
-        <div class="day">Live · day 12</div>
-        <div class="num">04</div>
-        <div class="name">Failure Drill</div>
-        <div class="desc">Three live attacks. Zero reach the model. Every attempt audit-logged.</div>
-      </div>
-      <div class="component">
-        <div class="day">Real · days 5–12</div>
-        <div class="num">05</div>
-        <div class="name">5-Engineer Case Study</div>
-        <div class="desc">Real engineers. Real PRs. Recipe open-sourced to your platform team.</div>
-      </div>
+    <div class="cards" style="--cols:5">
+      <div class="card-n reveal"><div class="tag">Live · day 4</div><div class="n">01</div><h3>Cost Observability</h3><p>Every AI call attributed by team, agent, and PR. One gateway, four surfaces.</p></div>
+      <div class="card-n reveal"><div class="tag">Live · day 9</div><div class="n">02</div><h3>Governed Workflow</h3><p>Hooks fire. MCP refuses out-of-scope. PRs auto-describe with cost and trace ID.</p></div>
+      <div class="card-n reveal"><div class="tag">Live · day 7</div><div class="n">03</div><h3>Plugin Distribution</h3><p>Governance ships like Helm charts. Soft, medium, hard enforcement — one dial.</p></div>
+      <div class="card-n reveal"><div class="tag">Live · day 12</div><div class="n">04</div><h3>Failure Drill</h3><p>Three live attacks. Zero reach the model. Every attempt audit-logged.</p></div>
+      <div class="card-n reveal"><div class="tag">Real · days 5–12</div><div class="n">05</div><h3>5-Engineer Case Study</h3><p>Real engineers. Real PRs. Recipe open-sourced to your platform team.</p></div>
     </div>
   </div>
 </section>
 
-<section class="band" style="padding-top: 0; padding-bottom: 0;">
-  <div class="container">
-    <div class="benefit">
-      <div class="benefit-copy">
-        <div class="marker">01</div>
-        <span class="eyebrow">Cost · FinOps for AI</span>
-        <h2 style="margin-top: 14px;">Attribute every dollar of AI spend.</h2>
-        <p>Most AI bills are "around $200K somewhere." One gateway tags every call by team,
-          agent, and PR — queryable from CLI, API, Grafana, or Slack.</p>
-        <ul class="proofs">
-          <li><span><b>Per-PR cost in days, not quarters.</b></span></li>
-          <li><span><b>50–90% off cacheable input</b> via prompt caching.</span></li>
-          <li><span><b>50% off async work</b> via the Batch API. 60–80% blended savings with tier-routing.</span></li>
-          <li><span><b>$100–200k of shadow spend recovered</b> annually.</span></li>
+<!-- ===== FEATURE: COST ===== -->
+<section class="section" style="padding-top:0">
+  <div class="rail">
+    <div class="feature-row reveal">
+      <div class="fr-text">
+        <span class="eyebrow">01 · Cost · FinOps for AI</span>
+        <h2>Attribute every dollar of AI spend.</h2>
+        <p class="body" style="font-size:16px; color:var(--fg-2)">Most AI bills are "around $200K somewhere." One gateway tags every call by team, agent, and PR — queryable from CLI, API, Grafana, or Slack.</p>
+        <ul class="fr-list">
+          <li><b>Per-PR cost in days, not quarters.</b></li>
+          <li><b>50–90% off cacheable input</b> via prompt caching.</li>
+          <li><b>50% off async work</b> via the Batch API. 60–80% blended savings with tier-routing.</li>
+          <li><b>$100–200k of shadow spend recovered</b> annually.</li>
         </ul>
       </div>
-      <div class="viz-card">
-        <div class="viz-title">Y1 cost lever · 200 engineers</div>
-        <div class="viz-row"><span class="k">Naive bill</span><span class="v">$2.0M</span></div>
-        <div class="viz-row"><span class="k">After caching</span><span class="v">$1.1M</span></div>
-        <div class="viz-row"><span class="k">After batch routing</span><span class="v">$0.7M</span></div>
-        <div class="viz-row"><span class="k">After tier routing</span><span class="v">$0.4M</span></div>
-        <div class="viz-row"><span class="k" style="color: var(--orange); font-weight: 600;">Year-1 recovery</span><span class="v" style="color: var(--orange); font-weight: 600;">$1.6M</span></div>
-        <div class="viz-bar"><div class="viz-bar-fill" style="width: 80%;"></div></div>
-        <div style="margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em;">Payback &lt; 2 months on this lever alone</div>
+      <div class="panel">
+        <div class="panel-h">Y1 cost lever · 200 engineers</div>
+        <div class="panel-row"><span class="k">Naive bill</span><span class="v">$2.0M</span></div>
+        <div class="panel-row"><span class="k">After caching</span><span class="v">$1.1M</span></div>
+        <div class="panel-row"><span class="k">After batch routing</span><span class="v">$0.7M</span></div>
+        <div class="panel-row"><span class="k">After tier routing</span><span class="v">$0.4M</span></div>
+        <div class="panel-row total"><span class="k">Year-1 recovery</span><span class="v coral">$1.6M</span></div>
+        <div class="panel-foot">Payback &lt; 2 months on this lever alone</div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="band" style="padding-top: 0; padding-bottom: 0;" id="security">
-  <div class="container">
-    <div class="benefit reverse">
-      <div class="benefit-copy">
-        <div class="marker">02</div>
-        <span class="eyebrow">Governance · CISO buy-in</span>
-        <h2 style="margin-top: 14px;">Govern every agent action.</h2>
-        <p>Optimism is not a control. Policy enforced at the substrate — not in the prompt.
-          Hooks redact secrets. MCP catalogs scope tools. Plugins are signed.
-          Every decision lands in an audit lake.</p>
-        <ul class="proofs">
-          <li><span><b>Three live attacks blocked</b> — secret-in-prompt, indirect injection, unapproved MCP.</span></li>
-          <li><span><b>Soft / medium / hard enforcement</b> on one dial.</span></li>
-          <li><span><b>Audit lake in S3,</b> forensics retrievable by trace ID in under a minute.</span></li>
-          <li><span><b>&lt;30 ms latency overhead</b> across the full defense stack.</span></li>
+    <!-- FEATURE: GOVERNANCE -->
+    <div class="feature-row flip reveal">
+      <div class="fr-text">
+        <span class="eyebrow">02 · Governance · CISO buy-in</span>
+        <h2>Govern every agent action.</h2>
+        <p class="body" style="font-size:16px; color:var(--fg-2)">Optimism is not a control. Policy enforced at the substrate — not in the prompt. Hooks redact secrets. MCP catalogs scope tools. Plugins are signed. Every decision lands in an audit lake.</p>
+        <ul class="fr-list">
+          <li><b>Three live attacks blocked</b> — secret-in-prompt, indirect injection, unapproved MCP.</li>
+          <li><b>Soft / medium / hard enforcement</b> on one dial.</li>
+          <li><b>Audit lake in S3,</b> forensics retrievable by trace ID in under a minute.</li>
+          <li><b>&lt;30 ms latency overhead</b> across the full defense stack.</li>
         </ul>
       </div>
-      <div class="viz-card">
-        <div class="viz-title">Failure drill · live</div>
-        <div class="attack-list">
-          <div class="attack">
-            <div>
-              <div class="attack-title">Secret in prompt</div>
-              <div class="attack-sub">AKIA… pasted into context</div>
-            </div>
-            <span class="attack-status">REDACTED</span>
-          </div>
-          <div class="attack">
-            <div>
-              <div class="attack-title">Indirect injection</div>
-              <div class="attack-sub">"ignore previous" inside repo doc</div>
-            </div>
-            <span class="attack-status">REFUSED</span>
-          </div>
-          <div class="attack">
-            <div>
-              <div class="attack-title">Unapproved MCP</div>
-              <div class="attack-sub">External GitHub-helper server</div>
-            </div>
-            <span class="attack-status">DENIED</span>
-          </div>
-        </div>
-        <div style="margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em;">3 attacks · 0 reach the model · 3 audit entries</div>
+      <div class="panel">
+        <div class="panel-h">Failure drill · live</div>
+        <div class="panel-row"><span class="k">Secret in prompt<br/><span style="font-size:12px;color:var(--fg-3)">AKIA… pasted into context</span></span><span class="v coral">REDACTED</span></div>
+        <div class="panel-row"><span class="k">Indirect injection<br/><span style="font-size:12px;color:var(--fg-3)">"ignore previous" in repo doc</span></span><span class="v coral">REFUSED</span></div>
+        <div class="panel-row"><span class="k">Unapproved MCP<br/><span style="font-size:12px;color:var(--fg-3)">External GitHub-helper server</span></span><span class="v coral">DENIED</span></div>
+        <div class="panel-foot">3 attacks · 0 reach the model · 3 audit entries</div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="band" style="padding-top: 0;">
-  <div class="container">
-    <div class="benefit">
-      <div class="benefit-copy">
-        <div class="marker">03</div>
-        <span class="eyebrow">Proof · the case study</span>
-        <h2 style="margin-top: 14px;">Defend the ROI with your own data.</h2>
-        <p>Synthetic benchmarks won't survive your CFO. Five engineers. Ten days.
-          Real PRs through a scoped GitHub App. The deltas your board will ask about —
-          and the recipe handed to your platform team.</p>
-        <ul class="proofs">
-          <li><span><b>Real engineers, real PRs.</b> No synthetic benchmark.</span></li>
-          <li><span><b>Aggregate + per-dev dashboards,</b> privacy-respecting.</span></li>
-          <li><span><b>Open-sourced recipe</b> on day 12 — github.com/moring/aidlc-stats.</span></li>
-          <li><span><b>Year-2:</b> same recipe, n=50, no consultants.</span></li>
+    <!-- FEATURE: PROOF -->
+    <div class="feature-row reveal">
+      <div class="fr-text">
+        <span class="eyebrow">03 · Proof · the case study</span>
+        <h2>Defend the ROI with your own data.</h2>
+        <p class="body" style="font-size:16px; color:var(--fg-2)">Synthetic benchmarks won't survive your CFO. Five engineers. Ten days. Real PRs through a scoped GitHub App. The deltas your board will ask about — and the recipe handed to your platform team.</p>
+        <ul class="fr-list">
+          <li><b>Real engineers, real PRs.</b> No synthetic benchmark.</li>
+          <li><b>Aggregate + per-dev dashboards,</b> privacy-respecting.</li>
+          <li><b>Open-sourced recipe</b> on day 12 — github.com/moring/aidlc-stats.</li>
+          <li><b>Year-2:</b> same recipe, n=50, no consultants.</li>
         </ul>
       </div>
-      <div class="viz-card">
-        <div class="viz-title">5-engineer study · typical deltas</div>
-        <div class="study-metric"><div class="lbl">Review time, p50</div><div class="val">−47% <em>·</em> <em>auto-summaries land</em></div></div>
-        <div class="study-metric"><div class="lbl">Time-to-merge, p50</div><div class="val">−22%</div></div>
-        <div class="study-metric"><div class="lbl">AI cost per merged PR</div><div class="val">$0.42</div></div>
-        <div class="study-metric"><div class="lbl">SPACE friction · focus</div><div class="val">−1.1 <em>·</em> +0.7</div></div>
+      <div class="panel">
+        <div class="panel-h">5-engineer study · typical deltas</div>
+        <div class="panel-row"><span class="k">Review time, p50</span><span class="v coral">−47%</span></div>
+        <div class="panel-row"><span class="k">Time-to-merge, p50</span><span class="v">−22%</span></div>
+        <div class="panel-row"><span class="k">AI cost per merged PR</span><span class="v">$0.42</span></div>
+        <div class="panel-row"><span class="k">SPACE friction · focus</span><span class="v">−1.1 · +0.7</span></div>
+        <div class="panel-foot">Real engineers · real PRs · recipe open-sourced</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="band" style="background: var(--cream-deep);">
-  <div class="container">
-    <div class="band-header">
+<!-- ===== BUYING COMMITTEE ===== -->
+<section class="section band" style="padding-top:clamp(64px,8vw,104px)">
+  <div class="rail">
+    <div class="section-head reveal">
       <span class="eyebrow">For the buying committee</span>
       <h2>Three signers. One substrate.</h2>
-      <p>Built for the room where the CTO, CISO, and CFO all have to say yes.
-        Each gets a different answer from the same foundation.</p>
+      <p>Built for the room where the CTO, CISO, and CFO all have to say yes. Each gets a different answer from the same foundation.</p>
     </div>
-    <div class="cards-grid-3">
-      <div class="card-tile">
-        <div class="role">CTO · VP Engineering</div>
-        <h3>Agentic productivity, governed.</h3>
-        <p>Same agent UX your engineers use, governed underneath. $3.0–5.0M Y1 productivity on 200 engineers.</p>
-        <div class="link">For Engineering</div>
-      </div>
-      <div class="card-tile">
-        <div class="role">CISO · CRO</div>
-        <h3>Tested controls, not claims.</h3>
-        <p>Three live attacks blocked. Every attempt in your audit lake. Tested controls you can hand to auditors.</p>
-        <div class="link">For Security</div>
-      </div>
-      <div class="card-tile">
-        <div class="role">CFO · FinOps</div>
-        <h3>Per-PR attribution by day 4.</h3>
-        <p>Caching, batch, and routing cut blended spend 50–90%. 40–80× Y1 ROI. Payback under two months.</p>
-        <div class="link">For FinOps</div>
-      </div>
+    <div class="cards reveal" style="--cols:3">
+      <div class="card-n"><div class="tag">CTO · VP Engineering</div><h3>Agentic productivity, governed.</h3><p>Same agent UX your engineers use, governed underneath. $3.0–5.0M Y1 productivity on 200 engineers.</p><div class="metric">For Engineering →</div></div>
+      <div class="card-n"><div class="tag">CISO · CRO</div><h3>Tested controls, not claims.</h3><p>Three live attacks blocked. Every attempt in your audit lake. Tested controls you can hand to auditors.</p><div class="metric">For Security →</div></div>
+      <div class="card-n"><div class="tag">CFO · FinOps</div><h3>Per-PR attribution by day 4.</h3><p>Caching, batch, and routing cut blended spend 50–90%. 40–80× Y1 ROI. Payback under two months.</p><div class="metric">For FinOps →</div></div>
     </div>
   </div>
 </section>
 
-<section class="band">
-  <div class="container">
-    <div class="band-header">
+<!-- ===== 14-DAY PATH ===== -->
+<section class="section">
+  <div class="rail">
+    <div class="section-head reveal">
       <span class="eyebrow">How it works · the 14-day path</span>
       <h2>The demo is the artifact. The substrate is the moat.</h2>
       <p>No PoC theater. We ship in three phases. On day 14, your platform team owns the source.</p>
     </div>
-    <div class="timeline">
-      <div class="step">
-        <div class="day-range">Day 1 — 4 · Foundation</div>
-        <div class="step-num">01</div>
-        <h3>Cost layer goes live.</h3>
-        <p>LLM gateway deployed in your cloud. Every call attributed by team, agent, and PR.
-          CFO refreshes the dashboard on day four.</p>
-      </div>
-      <div class="step">
-        <div class="day-range">Day 5 — 12 · Workflow + Study</div>
-        <div class="step-num">02</div>
-        <h3>Engineers code in the substrate.</h3>
-        <p>Five volunteers run real sprint work through the governed workflow.
-          Hooks fire, MCPs scope, PRs auto-describe. Metrics roll up daily.</p>
-      </div>
-      <div class="step">
-        <div class="day-range">Day 12 — 14 · Handover</div>
-        <div class="step-num">03</div>
-        <h3>You own the moat.</h3>
-        <p>Plugin source, registry, and GitHub-stats recipe handed over.
-          Failure drill in front of the room: three attacks, all blocked.</p>
-      </div>
+    <div class="phases">
+      <div class="phase reveal"><div class="pn">01</div><div><div class="pm">Day 1–4 · Foundation</div><h3>Cost layer goes live.</h3><p>LLM gateway deployed in your cloud. Every call attributed by team, agent, and PR. CFO refreshes the dashboard on day four.</p></div></div>
+      <div class="phase reveal"><div class="pn">02</div><div><div class="pm">Day 5–12 · Workflow + Study</div><h3>Engineers code in the substrate.</h3><p>Five volunteers run real sprint work through the governed workflow. Hooks fire, MCPs scope, PRs auto-describe. Metrics roll up daily.</p></div></div>
+      <div class="phase reveal"><div class="pn">03</div><div><div class="pm">Day 12–14 · Handover</div><h3>You own the moat.</h3><p>Plugin source, registry, and GitHub-stats recipe handed over. Failure drill in front of the room: three attacks, all blocked.</p></div></div>
     </div>
   </div>
 </section>
 
-<section class="roi-band">
-  <div class="container">
-    <div class="band-header">
-      <span class="eyebrow">The number · engineering only · year one</span>
-      <h2>$5–10M defended five different ways.</h2>
-      <p>200 engineers. Engineering-only. No business-vertical claims.
-        Floor holds even if four of five levers underperform.</p>
-    </div>
-    <div class="roi-grid">
-      <div>
-        <div class="roi-big">$5–10<em>M</em></div>
-        <div class="roi-caption">Y1 P&amp;L impact · engineering only</div>
-        <div class="roi-floor">
-          <b>Downside floor:</b> if levers 2–5 entirely underperform, the cost lever alone still returns 12–16× ROI.
+<!-- ===== THE NUMBER (dark) ===== -->
+<section class="band band-number section">
+  <div class="rail">
+    <div class="num-grid">
+      <div class="num-copy">
+        <div class="section-head reveal" style="max-width:none">
+          <span class="eyebrow">The number · engineering only · year one</span>
+          <h2>$5–10M defended five different ways.</h2>
+          <p>200 engineers. Engineering-only. No business-vertical claims. Floor holds even if four of five levers underperform.</p>
         </div>
+        <div class="bignum reveal">$5–10<b>M</b></div>
+        <div class="num-lbl reveal">Y1 P&amp;L impact · engineering only</div>
+        <div class="floor reveal"><b>Downside floor:</b> if levers 2–5 entirely underperform, the cost lever alone still returns 12–16× ROI.</div>
       </div>
-      <ul class="roi-breakdown">
-        <li><span class="lever">Cost · gateway, caching, routing</span><span class="range">$0.8 — 1.7M</span></li>
-        <li><span class="lever">Productivity · 200 eng × uplift</span><span class="range">$3.0 — 5.0M</span></li>
-        <li><span class="lever">Governance · plugin distribution</span><span class="range">$0.8 — 2.0M</span></li>
-        <li><span class="lever">Risk · substrate catches incidents</span><span class="range">$0.3 — 1.0M</span></li>
-        <li><span class="lever">Cycles · DORA + retention</span><span class="range">$0.5 — 1.5M</span></li>
-      </ul>
+      <div class="panel reveal" style="background:var(--band-teal-2); border-color:rgba(255,255,255,0.12);">
+        <div class="panel-h" style="color:rgba(244,244,241,0.6)">Five levers · year one</div>
+        <div class="panel-row" style="border-color:rgba(255,255,255,0.1)"><span class="k" style="color:rgba(244,244,241,0.8)">Cost · gateway, caching, routing</span><span class="v" style="color:#fff">$0.8–1.7M</span></div>
+        <div class="panel-row" style="border-color:rgba(255,255,255,0.1)"><span class="k" style="color:rgba(244,244,241,0.8)">Productivity · 200 eng × uplift</span><span class="v coral">$3.0–5.0M</span></div>
+        <div class="panel-row" style="border-color:rgba(255,255,255,0.1)"><span class="k" style="color:rgba(244,244,241,0.8)">Governance · plugin distribution</span><span class="v" style="color:#fff">$0.8–2.0M</span></div>
+        <div class="panel-row" style="border-color:rgba(255,255,255,0.1)"><span class="k" style="color:rgba(244,244,241,0.8)">Risk · substrate catches incidents</span><span class="v" style="color:#fff">$0.3–1.0M</span></div>
+        <div class="panel-row" style="border-color:rgba(255,255,255,0.1)"><span class="k" style="color:rgba(244,244,241,0.8)">Cycles · DORA + retention</span><span class="v" style="color:#fff">$0.5–1.5M</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="container">
-    <span class="eyebrow">Book your workshop</span>
-    <h2 style="margin-top: 18px;">After 14 days the substrate is in your cloud. <em>Your CFO has a dashboard. Your CISO has forensics. Your CTO has a number.</em></h2>
-    <p>The cost lever pays back in under two months. The other four are upside.</p>
-    <div class="hero-ctas">
-      <a href="signup.html" class="btn btn-primary btn-lg">Request an AI Discovery workshop</a>
-      <a href="moring-ai-homepage.html" class="btn btn-secondary btn-lg">See both solutions</a>
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="wrap inner">
+    <img class="reveal" src="images/data-mark.png?v=2" alt="moring data mark" style="width: 120px; height: auto; margin: 0 auto 26px;" />
+    <span class="eyebrow plain reveal">Book your workshop</span>
+    <h2 class="reveal">After 14 days the substrate is in your cloud. <em>Your CFO has a dashboard. Your CISO has forensics. Your CTO has a number.</em></h2>
+    <p class="reveal">The cost lever pays back in under two months. The other four are upside.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary btn-lg" href="signup.html">Request an AI Discovery workshop</a>
+      <a class="btn btn-secondary btn-lg" href="index.html">See both solutions <span class="arr">→</span></a>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <a href="moring-ai-homepage.html" class="logo">moring<span style="color: var(--orange);">.ai</span></a>
-        <div class="foot-tagline">AI Outcomes, delivered. Bespoke AI-DLC and AI Ops for the enterprise.</div>
-      </div>
-      <div>
-        <h4>Solutions</h4>
-        <a href="aidlc.html">AI-DLC · Engineering</a>
-        <a href="aiops.html">AI Ops · Operations</a>
-        <a href="platform.html">The Moring Platform</a>
-      </div>
-      <div>
-        <h4>Industries &amp; Partners</h4>
-        <a href="insurance.html">Insurance</a>
-        <a href="fintech.html">Fintech &amp; Banks</a>
-        <a href="aws.html">AWS</a>
-        <a href="anthropic.html">Anthropic</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="signup.html">Request a workshop</a>
-        <a href="mailto:nikhil.devlapur@moring.ai">Contact sales</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div>© 2026 Moring, Inc.</div>
-      <div>The demo is the artifact · the substrate is the moat</div>
-    </div>
-  </div>
-</footer>
+</main>
 
-<script src="moring.js" defer></script>
+<script src="image-slot.js"></script>
+<script src="chrome.js"></script>
 </body>
 </html>
