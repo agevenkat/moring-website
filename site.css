@@ -305,26 +305,145 @@ img { max-width: 100%; display: block; }
 .ic-pill { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-full); padding: 9px 15px; font-size: 12px; color: var(--fg-2); }
 .ic-pill.on { background: var(--brand-coral); color: #fff; border-color: transparent; }
 .ic-replay { margin-left: auto; background: var(--band-teal); color: #fff; border-radius: var(--radius-full); padding: 9px 16px; font-size: 12px; }
-body[data-page="insurance"] .phero-inner { grid-template-columns: 1fr; gap: 0; }
-body[data-page="insurance"] .phero-copy { max-width: 760px; margin: 0 auto; text-align: center; }
-body[data-page="insurance"] .phero-copy .eyebrow { justify-content: center; }
-body[data-page="insurance"] .phero h1, body[data-page="insurance"] .phero .lede { margin-left: auto; margin-right: auto; }
-body[data-page="insurance"] .phero-actions, body[data-page="insurance"] .phero-stats { justify-content: center; }
-body[data-page="insurance"] .phero-visual { order: 1; width: 100%; margin: 8px 0 40px; }
-body[data-page="insurance"] .pc-head { order: 0; }
-body[data-page="insurance"] .pc-tail { order: 2; }
+body[data-page="insurance"] .phero-inner { grid-template-columns: 0.88fr 1.12fr; grid-template-areas: "head viz" "tail viz"; align-content: center; align-items: center; gap: 0 36px; }
+body[data-page="insurance"] .phero-copy { max-width: none; text-align: left; }
+body[data-page="insurance"] .phero-copy .eyebrow { justify-content: flex-start; }
+body[data-page="insurance"] .phero h1, body[data-page="insurance"] .phero .lede { margin-left: 0; margin-right: 0; }
+body[data-page="insurance"] .phero h1 { font-size: clamp(30px, 3vw, 44px); }
+body[data-page="insurance"] .phero .lede { font-size: clamp(14px, 1.2vw, 16px); }
+body[data-page="insurance"] .phero-actions, body[data-page="insurance"] .phero-stats { justify-content: flex-start; }
+body[data-page="insurance"] .phero-stats { flex-wrap: nowrap; gap: 16px; }
+body[data-page="insurance"] .phero-stats .stat .num { font-size: clamp(17px, 1.5vw, 21px); white-space: nowrap; }
+body[data-page="insurance"] .phero-stats .stat .lbl { font-size: 10px; }
+body[data-page="insurance"] .phero-visual { grid-area: viz; order: 0; align-self: center; width: 100%; margin: 0; }
+body[data-page="insurance"] .pc-head { grid-area: head; align-self: end; }
+body[data-page="insurance"] .pc-tail { grid-area: tail; align-self: start; margin-top: 16px; }
+/* compact insurance claim diagram */
+body[data-page="insurance"] .iso-stage { padding: 14px 4px 18px; }
+body[data-page="insurance"] .ins-claim { gap: 11px; }
+body[data-page="insurance"] .ic-claim { font-size: 11px; padding: 7px 12px; }
+body[data-page="insurance"] .ic-elapsed { font-size: 11px; padding: 7px 12px; }
+body[data-page="insurance"] .ic-step { font-size: 9px; }
+body[data-page="insurance"] .ic-step i { width: 23px; height: 23px; font-size: 10px; }
+body[data-page="insurance"] .ic-card { padding: 16px; gap: 16px; }
+body[data-page="insurance"] .ic-stage { font-size: 10px; }
+body[data-page="insurance"] .ic-headline { font-size: 16px; margin: 9px 0 12px; }
+body[data-page="insurance"] .ic-rows > div { grid-template-columns: 96px 1fr; font-size: 11px; }
+body[data-page="insurance"] .ic-act-cap { font-size: 10px; }
+body[data-page="insurance"] .ic-act-big { font-size: 28px; }
+body[data-page="insurance"] .ic-act-desc { font-size: 11px; }
+body[data-page="insurance"] .ic-act-agent { font-size: 11px; margin-top: 12px; padding-top: 11px; }
+body[data-page="insurance"] .ic-pill { font-size: 11px; padding: 7px 12px; }
+body[data-page="insurance"] .ic-replay { font-size: 11px; padding: 7px 13px; }
+@media (max-width: 860px) {
+  body[data-page="insurance"] .phero-inner { grid-template-columns: 1fr; grid-template-areas: "head" "viz" "tail"; }
+  body[data-page="insurance"] .phero-visual { margin: 14px 0 28px; }
+  body[data-page="insurance"] .pc-tail { margin-top: 0; }
+}
 
 /* ============================================================
    FINTECH HERO — KYC onboarding constellation
    ============================================================ */
-body[data-page="fintech"] .phero-inner { grid-template-columns: 1fr; gap: 0; }
-body[data-page="fintech"] .phero-copy { max-width: 760px; margin: 0 auto; text-align: center; }
-body[data-page="fintech"] .phero-copy .eyebrow { justify-content: center; }
-body[data-page="fintech"] .phero h1, body[data-page="fintech"] .phero .lede { margin-left: auto; margin-right: auto; }
-body[data-page="fintech"] .phero-actions, body[data-page="fintech"] .phero-stats { justify-content: center; }
-body[data-page="fintech"] .phero-visual { order: 1; width: 100%; margin: 8px 0 40px; }
-body[data-page="fintech"] .pc-head { order: 0; }
-body[data-page="fintech"] .pc-tail { order: 2; }
+body[data-page="fintech"] .phero-inner { grid-template-columns: 0.88fr 1.12fr; grid-template-areas: "head viz" "tail viz"; align-content: center; align-items: center; gap: 0 36px; }
+body[data-page="fintech"] .pc-head { grid-area: head; align-self: end; }
+body[data-page="fintech"] .pc-tail { grid-area: tail; align-self: start; }
+body[data-page="fintech"] .phero-copy { max-width: none; text-align: left; }
+body[data-page="fintech"] .phero-copy .eyebrow { justify-content: flex-start; }
+body[data-page="fintech"] .phero h1, body[data-page="fintech"] .phero .lede { margin-left: 0; margin-right: 0; }
+body[data-page="fintech"] .phero h1 { font-size: clamp(30px, 3vw, 44px); }
+body[data-page="fintech"] .phero .lede { font-size: clamp(14px, 1.2vw, 16px); }
+body[data-page="fintech"] .phero-actions, body[data-page="fintech"] .phero-stats { justify-content: flex-start; }
+body[data-page="fintech"] .phero-stats { flex-wrap: nowrap; gap: 16px; }
+body[data-page="fintech"] .phero-stats .stat .num { font-size: clamp(16px, 1.4vw, 20px); white-space: nowrap; }
+body[data-page="fintech"] .phero-stats .stat .lbl { font-size: 10px; }
+body[data-page="fintech"] .phero-visual { grid-area: viz; order: 0; align-self: center; width: 100%; margin: 0; }
+body[data-page="fintech"] .pc-head { grid-area: head; align-self: end; }
+body[data-page="fintech"] .pc-tail { grid-area: tail; align-self: start; margin-top: 16px; }
+@media (max-width: 860px) {
+  body[data-page="fintech"] .phero-inner { grid-template-columns: 1fr; grid-template-areas: "head" "viz" "tail"; }
+  body[data-page="fintech"] .phero-visual { margin: 14px 0 28px; }
+  body[data-page="fintech"] .pc-tail { margin-top: 0; }
+}
+/* fix scale + overlap: fixed design size, zoom-fit into the column */
+body[data-page="fintech"] .phero-visual { display: flex; justify-content: center; margin-top: -40px; margin-bottom: 0; }
+body[data-page="fintech"] .phero { padding-bottom: 160px; position: relative; z-index: 2; }
+body[data-page="fintech"] .phero-inner { padding-top: clamp(28px, 4vw, 56px); }
+body[data-page="fintech"] .fin-kyc { width: 600px; max-width: none; aspect-ratio: 1 / 1.04; zoom: 1.2; flex: none; }
+body[data-page="fintech"] .fk-card { width: 252px; top: 38%; }
+body[data-page="fintech"] .fk-verdict { width: 330px; bottom: 4%; }
+body[data-page="fintech"] .fk-cost { top: 16px; right: 16px; width: 170px; }
+body[data-page="fintech"] .fk-thru { bottom: 92px; left: 16px; width: 168px; }
+body[data-page="fintech"] .fk-seg { bottom: 92px; right: 16px; }
+body[data-page="fintech"] .fk-doc { top: 15%; left: 2%; } body[data-page="fintech"] .fk-sanc { top: 15%; right: 2%; }
+body[data-page="fintech"] .fk-pep { top: 30%; left: 1%; } body[data-page="fintech"] .fk-addr { top: 30%; right: 1%; }
+body[data-page="fintech"] .fk-ind { top: 60%; left: 3%; }
+@media (max-width: 1180px) { body[data-page="fintech"] .fin-kyc { zoom: 1.02; } }
+@media (max-width: 980px)  { body[data-page="fintech"] .fin-kyc { zoom: 0.85; } }
+@media (max-width: 860px)  { body[data-page="fintech"] .fin-kyc { zoom: 1; width: 100%; max-width: 560px; } }
+/* light theme + iso grid (matches insurance) */
+body[data-page="fintech"] .fin-kyc.kyc-light { background: none; border: 0; overflow: visible; }
+body[data-page="fintech"] .fin-kyc .iso-ground { position: absolute; left: 50%; top: 50%; width: 168%; height: 168%; transform: translate(-50%,-50%) rotateX(62deg) rotateZ(45deg); transform-origin: center; background-image: linear-gradient(rgba(15,65,71,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(15,65,71,0.18) 1px, transparent 1px); background-size: 52px 52px; -webkit-mask-image: radial-gradient(closest-side at 50% 50%, #000 34%, transparent 76%); mask-image: radial-gradient(closest-side at 50% 50%, #000 34%, transparent 76%); z-index: 0; pointer-events: none; }
+body[data-page="fintech"] .fin-kyc .iso-ground { background-image: linear-gradient(rgba(15,65,71,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(15,65,71,0.3) 1px, transparent 1px); }
+body[data-page="fintech"] .fk-rings { border-color: rgba(15,65,71,0.1); }
+body[data-page="fintech"] .fk-rings::before { border-color: rgba(15,65,71,0.08); }
+body[data-page="fintech"] .fk-cost, body[data-page="fintech"] .fk-thru { background: #FBFAF6; border: 1px solid var(--border); box-shadow: -10px 14px 26px -14px rgba(8,47,52,0.32); }
+body[data-page="fintech"] .fk-cost .big, body[data-page="fintech"] .fk-thru .big { color: var(--band-teal); }
+body[data-page="fintech"] .fk-cost .big s { color: var(--fg-3); }
+body[data-page="fintech"] .fk-thru .sub { color: var(--fg-3); }
+body[data-page="fintech"] .fk-badge { background: #FBFAF6; border: 1px solid var(--border); color: var(--fg-2); box-shadow: -8px 10px 22px -14px rgba(8,47,52,0.3); }
+body[data-page="fintech"] .fk-chip { background: #FBFAF6; border: 1px solid var(--border); box-shadow: -8px 10px 20px -14px rgba(8,47,52,0.28); }
+body[data-page="fintech"] .fk-chip .lab { color: var(--fg-3); }
+body[data-page="fintech"] .fk-chip .val { color: #1F8A5B; }
+body[data-page="fintech"] .fk-seg { background: #FBFAF6; border: 1px solid var(--border); box-shadow: -8px 10px 22px -14px rgba(8,47,52,0.3); }
+body[data-page="fintech"] .fk-seg span { color: var(--fg-2); }
+body[data-page="fintech"] .fk-verdict { background: #0A2024; border: 1px solid rgba(255,255,255,0.1); box-shadow: -14px 18px 34px -16px rgba(8,47,52,0.5); }
+
+/* clean grid layout — no overlap, rows & columns */
+body[data-page="fintech"] .fin-kyc.kyc-light {
+  width: 100%; max-width: 300px; aspect-ratio: auto; zoom: 1; min-height: 0; justify-self: end; margin-right: 0;
+  transform: none;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 8px 0;
+  grid-template-areas:
+    "badge badge"
+    "cost  thru"
+    "doc   sanc"
+    "card  card"
+    "verd  verd"
+    "seg   seg";
+}
+@media (max-width: 1180px) { body[data-page="fintech"] .fin-kyc.kyc-light { zoom: 1; } }
+@media (max-width: 980px)  { body[data-page="fintech"] .fin-kyc.kyc-light { zoom: 1; } }
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-rings { display: none; }
+body[data-page="fintech"] .fin-kyc.kyc-light > .iso-ground { display: block; position: absolute; left: 50%; top: 46%; width: 130%; height: 130%; z-index: 0; -webkit-mask-image: radial-gradient(closest-side at 50% 50%, #000 30%, transparent 72%); mask-image: radial-gradient(closest-side at 50% 50%, #000 30%, transparent 72%); }
+body[data-page="fintech"] .fin-kyc.kyc-light { position: relative; }
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-badge,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-cost,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-thru,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-seg,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-chip,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-card,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-verdict { position: relative; z-index: 1; }
+/* reset every card out of absolute scatter */
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-badge,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-cost,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-thru,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-seg,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-chip,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-card,
+body[data-page="fintech"] .fin-kyc.kyc-light > .fk-verdict {
+  position: static; inset: auto; width: auto; max-width: none; transform: none; margin: 0;
+}
+body[data-page="fintech"] .fk-badge.fk-live { grid-area: badge; justify-self: start; }
+body[data-page="fintech"] .fk-cost { grid-area: cost; }
+body[data-page="fintech"] .fk-thru { grid-area: thru; }
+body[data-page="fintech"] .fk-doc { grid-area: doc; } body[data-page="fintech"] .fk-sanc { grid-area: sanc; }
+body[data-page="fintech"] .fk-pep { grid-area: pep; } body[data-page="fintech"] .fk-addr { grid-area: addr; }
+body[data-page="fintech"] .fk-ind { grid-area: ind; }
+body[data-page="fintech"] .fk-card { grid-area: card; }
+body[data-page="fintech"] .fk-verdict { grid-area: verd; }
+body[data-page="fintech"] .fk-seg { grid-area: seg; justify-self: stretch; justify-content: center; }
+body[data-page="fintech"] .fin-kyc.kyc-light .fk-chip { justify-content: flex-start; }
+body[data-page="fintech"] .fin-kyc.kyc-light .fk-card .amt { margin-top: 10px; font-size: 28px; }
 .fin-kyc { position: relative; width: 100%; aspect-ratio: 1 / 0.8; background: radial-gradient(54% 46% at 50% 47%, rgba(255,118,73,0.12), transparent 70%), linear-gradient(180deg, #0C3036, #082529); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; font-family: var(--font-mono); color: #F4F4F1; text-align: left; transform: scale(0.6); transform-origin: top center; margin-bottom: -272px; }
 .fk-rings { position: absolute; left: 50%; top: 47%; width: 64%; aspect-ratio: 1; transform: translate(-50%,-50%); border-radius: 50%; border: 1px solid rgba(255,255,255,0.06); }
 .fk-rings::before { content: ""; position: absolute; inset: 16%; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); }
@@ -376,14 +495,24 @@ body[data-page="fintech"] .pc-tail { order: 2; }
 /* ============================================================
    AWS HERO — in-your-account boundary diagram
    ============================================================ */
-body[data-page="aws"] .phero-inner { grid-template-columns: 1fr; gap: 0; }
-body[data-page="aws"] .phero-copy { max-width: 760px; margin: 0 auto; text-align: center; }
-body[data-page="aws"] .phero-copy .eyebrow { justify-content: center; }
-body[data-page="aws"] .phero h1, body[data-page="aws"] .phero .lede { margin-left: auto; margin-right: auto; }
-body[data-page="aws"] .phero-actions, body[data-page="aws"] .phero-stats { justify-content: center; }
-body[data-page="aws"] .phero-visual { order: 1; width: 100%; max-width: 760px; margin: 12px auto 40px; }
-body[data-page="aws"] .pc-head { order: 0; }
-body[data-page="aws"] .pc-tail { order: 2; }
+body[data-page="aws"] .phero-inner { grid-template-columns: 0.78fr 1.22fr; grid-template-areas: "head viz" "tail viz"; align-content: center; align-items: center; gap: 0 30px; }
+body[data-page="aws"] .phero-copy { max-width: none; text-align: left; }
+body[data-page="aws"] .phero-copy .eyebrow { justify-content: flex-start; }
+body[data-page="aws"] .phero h1, body[data-page="aws"] .phero .lede { margin-left: 0; margin-right: 0; }
+body[data-page="aws"] .phero h1 { font-size: clamp(30px, 3vw, 44px); }
+body[data-page="aws"] .phero .lede { font-size: clamp(14px, 1.2vw, 16px); }
+body[data-page="aws"] .phero-actions, body[data-page="aws"] .phero-stats { justify-content: flex-start; }
+body[data-page="aws"] .phero-stats { flex-wrap: nowrap; gap: 16px; }
+body[data-page="aws"] .phero-stats .stat .num { font-size: clamp(17px, 1.5vw, 21px); white-space: nowrap; }
+body[data-page="aws"] .phero-stats .stat .lbl { font-size: 10px; }
+body[data-page="aws"] .phero-visual { grid-area: viz; order: 0; align-self: center; width: 100%; margin: 0; }
+body[data-page="aws"] .pc-head { grid-area: head; align-self: end; }
+body[data-page="aws"] .pc-tail { grid-area: tail; align-self: start; margin-top: 18px; }
+@media (max-width: 860px) {
+  body[data-page="aws"] .phero-inner { grid-template-columns: 1fr; grid-template-areas: "head" "viz" "tail"; }
+  body[data-page="aws"] .phero-visual { margin: 14px 0 32px; }
+  body[data-page="aws"] .pc-tail { margin-top: 0; }
+}
 .aws-acct { position: relative; width: 100%; border: 1.5px dashed rgba(255,118,73,0.5); border-radius: 18px; padding: 44px 24px 24px; font-family: var(--font-mono); color: #F4F4F1; background: radial-gradient(62% 52% at 50% 38%, rgba(255,118,73,0.08), transparent 70%); text-align: left; }
 .aws-tag { position: absolute; top: -13px; left: 22px; background: #082529; padding: 5px 13px; font-size: 11px; letter-spacing: 0.1em; color: var(--brand-coral); border: 1px solid rgba(255,118,73,0.45); border-radius: 7px; }
 .aws-region { position: absolute; top: -11px; right: 22px; background: #082529; padding: 5px 13px; font-size: 11px; letter-spacing: 0.06em; color: rgba(244,244,241,0.6); border: 1px solid rgba(255,255,255,0.12); border-radius: 7px; }
@@ -663,16 +792,102 @@ body[data-page="aiops"] .phero h1 { max-width: 17ch; }
 body[data-page="aiops"] .phero .lede { max-width: 60ch; }
 
 /* ============================================================
+   PLATFORM CONTROL-PLANE HERO (full-width)
+   ============================================================ */
+.cpf-hero { background: linear-gradient(180deg, #06262A, #082F34); color: #F4F4F1; padding: clamp(40px, 6vw, 72px) 0 clamp(48px, 6vw, 80px); }
+.cpf-head { max-width: 880px; }
+.cpf-title { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(40px, 6vw, 84px); line-height: 1.02; letter-spacing: -0.02em; color: #F7F7F4; margin: 18px 0 0; }
+.cpf-title em { font-style: italic; color: var(--brand-coral); }
+.cpf-lede { font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5; color: rgba(244,244,241,0.62); max-width: 60ch; margin: 22px 0 0; }
+
+/* tier boxes (developers / providers) */
+.cpf-tier { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; border: 1px dashed rgba(255,255,255,0.16); border-radius: 14px; padding: 20px 24px; margin-top: 40px; }
+.cpf-tier-l { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,244,241,0.45); line-height: 1.5; flex-shrink: 0; min-width: 150px; }
+.cpf-chips { display: flex; flex-wrap: wrap; gap: 12px; }
+.cpf-chip { font-family: var(--font-mono); font-size: 14px; color: #E9EEEC; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.14); border-radius: 9px; padding: 11px 18px; transition: border-color var(--dur-2) var(--ease-out), background var(--dur-2) var(--ease-out); }
+.cpf-chip:hover { border-color: rgba(255,118,73,0.6); background: rgba(255,118,73,0.07); }
+
+/* connectors */
+.cpf-conn { display: flex; justify-content: center; gap: 28%; padding: 10px 0; }
+.cpf-conn span { width: 1px; height: 26px; background: repeating-linear-gradient(180deg, rgba(255,118,73,0.5) 0 3px, transparent 3px 7px); position: relative; }
+.cpf-conn span::after { content: ""; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 5px; height: 5px; border-radius: 50%; background: var(--brand-coral); }
+
+/* control plane block */
+.cpf-plane { background: linear-gradient(160deg, #EC5A22, #E2531C 60%, #D8480F); border-radius: 18px; padding: clamp(20px, 2.6vw, 32px); box-shadow: 0 30px 70px -28px rgba(216,72,15,0.6); }
+.cpf-plane-h { font-family: var(--font-sans); font-size: clamp(17px, 1.7vw, 21px); font-weight: 600; letter-spacing: -0.01em; color: #fff; margin-bottom: 22px; }
+.cpf-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.cpf-pillar { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.16); border-radius: 12px; padding: 18px; transition: background var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out); }
+.cpf-pillar:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+.cpf-pillar .n { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.6); display: block; }
+.cpf-pillar b { display: block; font-family: var(--font-sans); font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #fff; margin: 10px 0 8px; }
+.cpf-pillar i { display: block; font-style: normal; font-family: var(--font-mono); font-size: 12.5px; color: rgba(255,255,255,0.78); }
+
+/* overview footer bar */
+.cpf-overview { display: grid; grid-template-columns: 200px 1fr 200px; gap: 32px; border: 1px solid rgba(255,255,255,0.1); border-left: 3px solid var(--brand-coral); border-radius: 14px; padding: 28px 30px; margin-top: 40px; }
+.cpf-k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,244,241,0.45); }
+.cpf-v { font-family: var(--font-mono); font-size: 13px; color: rgba(244,244,241,0.7); margin-top: 8px; }
+.cpf-ov-title { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: clamp(20px, 2.2vw, 26px); color: #F7F7F4; }
+.cpf-ov-m p { font-size: 14px; line-height: 1.55; color: rgba(244,244,241,0.62); margin: 10px 0 0; max-width: 56ch; }
+.cpf-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.cpf-stack span { font-family: var(--font-mono); font-size: 12px; color: rgba(244,244,241,0.8); border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; padding: 6px 10px; }
+
+@media (max-width: 860px) {
+  .cpf-grid { grid-template-columns: repeat(2, 1fr); }
+  .cpf-overview { grid-template-columns: 1fr; gap: 22px; }
+  .cpf-conn { gap: 40%; }
+}
+@media (max-width: 520px) {
+  .cpf-grid { grid-template-columns: 1fr; }
+  .cpf-tier { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+
+/* ============================================================
    PLATFORM HERO — 8-layer platform map
    ============================================================ */
-body[data-page="platform"] .phero-inner { grid-template-columns: 1fr; gap: 0; }
-body[data-page="platform"] .phero-copy { max-width: 760px; margin: 0 auto; text-align: center; }
-body[data-page="platform"] .phero-copy .eyebrow { justify-content: center; }
-body[data-page="platform"] .phero h1, body[data-page="platform"] .phero .lede { margin-left: auto; margin-right: auto; }
-body[data-page="platform"] .phero-actions, body[data-page="platform"] .phero-stats { justify-content: center; }
-body[data-page="platform"] .phero-visual { order: 1; width: 100%; margin: 8px 0 40px; }
-body[data-page="platform"] .pc-head { order: 0; }
-body[data-page="platform"] .pc-tail { order: 2; }
+body[data-page="platform"] .phero-inner { grid-template-columns: 0.78fr 1.22fr; grid-template-areas: "head viz" "tail viz"; align-content: center; align-items: center; gap: 0 30px; }
+body[data-page="platform"] .phero-copy { max-width: none; text-align: left; }
+body[data-page="platform"] .phero-copy .eyebrow { justify-content: flex-start; }
+body[data-page="platform"] .phero h1, body[data-page="platform"] .phero .lede { margin-left: 0; margin-right: 0; }
+body[data-page="platform"] .phero h1 { max-width: none; white-space: normal; font-size: clamp(30px, 3vw, 46px); }
+body[data-page="platform"] .phero-actions, body[data-page="platform"] .phero-stats { justify-content: flex-start; }
+body[data-page="platform"] .phero-stats { flex-wrap: nowrap; gap: 16px; }
+body[data-page="platform"] .phero-stats .stat .num { font-size: clamp(17px, 1.5vw, 21px); white-space: nowrap; }
+body[data-page="platform"] .phero-stats .stat .lbl { font-size: 10px; }
+body[data-page="platform"] .phero-visual { grid-area: viz; order: 0; align-self: center; width: 100%; margin: 0; }
+body[data-page="platform"] .pc-head { grid-area: head; align-self: end; }
+body[data-page="platform"] .pc-tail { grid-area: tail; align-self: start; margin-top: 18px; }
+/* compact control-plane diagram for the right half-column */
+body[data-page="platform"] .cpf-svg { width: 100%; max-width: none; height: auto; display: block; border-radius: 14px; }
+body[data-page="platform"] .cpf-diagram { transform: scale(0.9) translateX(3%); transform-origin: top right; margin-bottom: -10%; background: linear-gradient(180deg, #0A2E33, #07262A); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px; }
+body[data-page="platform"] .cpf-conn { display: none; }
+body[data-page="platform"] .cpf-grid { grid-template-columns: repeat(2, 1fr); gap: 7px; }
+body[data-page="platform"] .cpf-plane { padding: 14px; border-radius: 13px; }
+body[data-page="platform"] .cpf-plane-h { font-size: 13px; margin-bottom: 11px; }
+body[data-page="platform"] .cpf-pillar { padding: 10px 11px; border-radius: 9px; }
+body[data-page="platform"] .cpf-pillar .n { font-size: 10px; }
+body[data-page="platform"] .cpf-pillar b { font-size: 13px; margin: 5px 0 4px; }
+body[data-page="platform"] .cpf-pillar i { font-size: 10.5px; }
+body[data-page="platform"] .cpf-tier { padding: 12px 14px; gap: 9px; border-radius: 11px; margin-top: 10px; }
+body[data-page="platform"] .cpf-tier-l { min-width: 0; width: 100%; font-size: 10px; }
+body[data-page="platform"] .cpf-chips { gap: 7px; }
+body[data-page="platform"] .cpf-chip { font-size: 11px; padding: 7px 11px; border-radius: 7px; }
+body[data-page="platform"] .cpf-conn { padding: 2px 0; gap: 36%; }
+body[data-page="platform"] .cpf-conn span { height: 12px; }
+body[data-page="platform"] .cpf-overview { grid-template-columns: 1fr; gap: 10px; padding: 14px 16px; border-radius: 11px; margin-top: 12px; }
+body[data-page="platform"] .cpf-k { font-size: 10px; }
+body[data-page="platform"] .cpf-v { font-size: 11px; margin-top: 5px; }
+body[data-page="platform"] .cpf-ov-title { font-size: 16px; }
+body[data-page="platform"] .cpf-ov-m p { font-size: 11.5px; margin-top: 6px; }
+body[data-page="platform"] .cpf-stack span { font-size: 10.5px; padding: 5px 8px; }
+@media (max-width: 860px) {
+  body[data-page="platform"] .phero-inner { grid-template-columns: 1fr; grid-template-areas: "head" "viz" "tail"; }
+  body[data-page="platform"] .phero-visual { margin: 14px 0 32px; }
+  body[data-page="platform"] .pc-tail { margin-top: 0; }
+  body[data-page="platform"] .cpf-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  body[data-page="platform"] .cpf-grid { grid-template-columns: 1fr; }
+}
 .plat-map { font-family: var(--font-mono); position: relative; width: 100%; color: #F4F4F1; transform: scale(0.6); transform-origin: top center; margin-bottom: -293px; }
 .pm-apps-head { display: flex; justify-content: space-between; align-items: center; font-size: 12px; letter-spacing: 0.12em; }
 .pm-apps-head .e { color: var(--brand-coral); }
@@ -756,6 +971,14 @@ body[data-page="platform"] .pc-tail { order: 2; }
 .aic-card .big { font-family: var(--font-mono); font-size: 30px; color: var(--band-teal); letter-spacing: -0.03em; line-height: 1; }
 .aic-card .big .arr { color: var(--brand-coral); }
 .aic-card .big .den { font-size: 16px; color: var(--fg-3); }
+
+/* clean grid layout — cards in rows & columns under the console (no overlap) */
+.aiops-console { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-content: start; }
+.aiops-console > .aic-tabs { grid-column: 1 / -1; }
+.aiops-console > .aic-win { grid-column: 1 / -1; }
+.aiops-console > .aic-replay { display: none; }
+.aiops-console > .aic-card { position: static; inset: auto; width: auto; max-width: none; }
+.aiops-console > .card-audit { grid-column: 1 / -1; }
 .card-identity { top: -18px; right: 18px; }
 .card-noise { top: 178px; right: 16px; }
 .card-rca { top: 300px; right: 16px; }

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 588.61 517.17">
+  
+  <g id="Layer_1">
+    <rect x="5.53" y="4.86" width="577.55" height="507.46" rx="8" ry="8" fill="#0b2526"></rect>
+    <rect x="14.94" y="36.79" width="558.72" height="47.68" rx="4" ry="4" fill="none" stroke="#1c4b4d" stroke-dasharray="2 2" stroke-miterlimit="10"></rect>
+    <text transform="translate(28.02 56.95)" fill="#7c9c9e" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="8"><tspan x="0" y="0">DEVELOPERS &amp;</tspan><tspan x="0" y="9.6">AI CODING CLIENTS</tspan></text>
+    <rect x="127.56" y="49.7" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="201.95" y="49.7" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="276.34" y="49.7" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="350.73" y="49.7" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="425.13" y="49.7" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="499.52" y="50.1" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="14.94" y="117.35" width="558.72" height="174.11" rx="4" ry="4" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="14.94" y="397.19" width="558.72" height="76.1" rx="4" ry="4" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <text transform="translate(25 148.13)" fill="#c2e1e2" font-family="Geist-Regular, Geist" font-size="15"><tspan x="0" y="0">Moring Control Plane · the foundational layer</tspan></text>
+    <rect x="25" y="167.88" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <rect x="161.89" y="167.88" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <rect x="298.79" y="167.88" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <rect x="435.69" y="167.88" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <text transform="translate(32.87 181.08)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">01</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Identity &amp; Trust</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">SSO · BYOK · audit</tspan></tspan></text>
+    <text transform="translate(169.76 181.08)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">02</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Routing &amp; Efficiency</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="26">Intent · cache · failover</tspan></tspan></text>
+    <text transform="translate(306.66 181.08)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">03</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Budgets &amp; Showback</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">Quotas · chargeback · ROI</tspan></tspan></text>
+    <text transform="translate(443.56 181.08)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">04</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Guardrails &amp; Safety</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">PII · IP firewall · MCP gate</tspan></tspan></text>
+    <rect x="23.77" y="224.96" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <rect x="160.67" y="224.96" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <rect x="297.57" y="224.96" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <rect x="434.46" y="224.96" width="130.37" height="45.53" rx="4" ry="4" fill="#f1724b"></rect>
+    <text transform="translate(31.64 238.16)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">05</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Context &amp; Knowledge</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">RAG · style guide · prompts</tspan></tspan></text>
+    <text transform="translate(168.54 238.16)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">06</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Evals &amp; Quality</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">Eval harness · shadow A/B</tspan></tspan></text>
+    <text transform="translate(305.44 238.16)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">07</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">Insights &amp; Coaching</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">Heatmaps · scorecards</tspan></tspan></text>
+    <text transform="translate(442.34 238.16)" fill="#fff"><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">08</tspan></tspan><tspan font-family="Geist-Medium, Geist" font-size="12" font-weight="500"><tspan x="0" y="13">SDLC Orchestration</tspan></tspan><tspan font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="26">Stage policy · PR linkage</tspan></tspan></text>
+    <text transform="translate(130.8 63.42)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Claude code</tspan></text>
+    <rect x="201.95" y="49.7" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <text transform="translate(205.2 63.42)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Cursor</tspan></text>
+    <text transform="translate(280.2 63.42)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Codex CLI</tspan></text>
+    <text transform="translate(354.23 63.42)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">VS Code</tspan></text>
+    <text transform="translate(429.17 63.53)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Auto Agent</tspan></text>
+    <text transform="translate(504.44 63.53)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">MCP Clients</tspan></text>
+    <rect x="14.94" y="320.49" width="558.72" height="47.68" rx="4" ry="4" fill="none" stroke="#1c4b4d" stroke-dasharray="2 2" stroke-miterlimit="10"></rect>
+    <text transform="translate(28.02 340.65)" fill="#7c9c9e" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="8"><tspan x="0" y="0">MODEL &amp; TOOL </tspan><tspan x="0" y="9.6">PROVIDERS ·ROUTED</tspan></text>
+    <text transform="translate(29.12 439.68)" fill="#7c9c9e" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="8"><tspan x="0" y="0">control-plane.v1</tspan></text>
+    <rect x="137.56" y="333.39" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="211.95" y="333.39" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="297.73" y="333.39" width="95.02" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="400.3" y="333.79" width="66.54" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="474.38" y="333.79" width="88.22" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <text transform="translate(140.8 347.11)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Haiku &amp; Fast</tspan></text>
+    <rect x="211.95" y="333.39" width="78.25" height="23.19" rx="2.29" ry="2.29" fill="#143639" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <text transform="translate(215.2 347.11)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Sonet - workhorse</tspan></text>
+    <text transform="translate(301.23 347.11)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Opus - deep reasoning</tspan></text>
+    <text transform="translate(404.33 347.63)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">Open AI - os</tspan></text>
+    <text transform="translate(479.29 347.23)" fill="#c2e1e2" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="7"><tspan x="0" y="0">MCP servers - gated</tspan></text>
+    <text transform="translate(28.74 423.51)" fill="#f1724b" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="10"><tspan x="0" y="0">OVERVIEW</tspan></text>
+    <text transform="translate(137.56 423.67)" fill="#fff" font-family="GeistMono-Bold, &#39;Geist Mono&#39;" font-size="15" font-weight="700"><tspan x="0" y="0">One control plane. Eight pillars.</tspan></text>
+    <text transform="translate(138.04 445.61)" fill="#c2e1e2" font-family="Geist-Regular, Geist" font-size="10"><tspan x="0" y="0">Hover any tile, chip, or capability to see what it does, what it </tspan><tspan x="0" y="12">depends on, and what it produces.</tspan></text>
+    <rect x="445.99" y="427.34" width="56.78" height="13.32" rx="2.78" ry="2.78" fill="#0b2526" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="445.99" y="447.91" width="56.78" height="13.32" rx="2.78" ry="2.78" fill="#0b2526" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <rect x="508.06" y="427.56" width="56.78" height="13.32" rx="2.78" ry="2.78" fill="#0b2526" stroke="#1c4b4d" stroke-miterlimit="10"></rect>
+    <text transform="translate(450.39 419.53)" fill="#f1724b" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="9"><tspan x="0" y="0">Stack</tspan></text>
+    <text transform="translate(451.68 436.24)" fill="#f1724b" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="0">AWS native</tspan></text>
+    <text transform="translate(451.84 455.61)" fill="#f1724b" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="0">Multi cloud</tspan></text>
+    <text transform="translate(514.43 436.35)" fill="#f1724b" font-family="GeistMono-Regular, &#39;Geist Mono&#39;" font-size="6"><tspan x="0" y="0">VPC Highlited</tspan></text>
+    <line x1="109.35" y1="84.47" x2="109.35" y2="115.06" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="202.66" y1="86.76" x2="202.66" y2="117.35" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="295.97" y1="84.47" x2="295.97" y2="115.06" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="389.29" y1="84.47" x2="389.29" y2="115.06" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="482.6" y1="84.47" x2="482.6" y2="115.06" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="111.11" y1="291.46" x2="111.11" y2="318.47" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="204.42" y1="293.48" x2="204.42" y2="320.49" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="297.73" y1="291.46" x2="297.73" y2="318.47" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="391.05" y1="291.46" x2="391.05" y2="318.47" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="484.36" y1="291.46" x2="484.36" y2="318.47" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="109.35" y1="369.68" x2="109.35" y2="396.69" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="202.66" y1="371.7" x2="202.66" y2="398.71" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="295.97" y1="369.68" x2="295.97" y2="396.69" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="389.29" y1="369.68" x2="389.29" y2="396.69" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+    <line x1="482.6" y1="369.68" x2="482.6" y2="396.69" fill="none" stroke="#1c4b4d" stroke-dasharray="2" stroke-miterlimit="10"></line>
+  </g>
+  <g id="Layer_2">
+    <circle cx="109.35" cy="84.47" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="109.35" cy="291.46" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="109.35" cy="369.68" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="202.66" cy="84.47" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="202.66" cy="291.46" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="202.66" cy="369.68" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="295.97" cy="84.47" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="295.97" cy="291.46" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="295.97" cy="369.68" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="389.29" cy="84.47" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="389.29" cy="291.46" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="389.29" cy="369.68" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="482.6" cy="84.47" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="482.6" cy="291.46" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+    <circle cx="482.6" cy="369.68" r="2.21" fill="#f1724b">
+      
+      
+    </circle>
+  </g>
+</svg>
