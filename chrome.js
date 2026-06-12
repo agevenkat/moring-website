@@ -74,6 +74,7 @@
         '<a href="about.html">About</a><a href="signup.html">Request a workshop</a><a href="mailto:nikhil.devlapur@moring.ai">Contact sales</a></div>' +
     '</div>' +
     '<div class="footer-bottom"><span class="c">\u00A9 2026 moring, Inc.</span>' +
+      '<a class="footer-li" href="https://www.linkedin.com/company/moring-ai" aria-label="moring on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v14H.2V8zm7.5 0h4.4v1.9h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v8.48h-4.6v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97V22H7.7V8z"></path></svg></a>' +
       '<span class="m">OUTCOMES, NOT TOOLS, NOT HOURS.</span></div>' +
     '</div></footer>';
 
