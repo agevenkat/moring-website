@@ -94,6 +94,9 @@ img { max-width: 100%; display: block; }
 .logo .wm { color: var(--fg-1); height: 31px; }
 .band .logo .wm, .footer .logo .wm { color: var(--fg-1); }
 .logo svg { display: block; height: 100%; width: auto; }
+/* nav logo explicit sizing */
+.nav .logo .mk svg { height: auto; width: 46px; }
+.nav .logo .wm svg { height: auto; width: 100px; }
 
 /* ============================================================
    NAV
